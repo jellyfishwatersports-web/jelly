@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth antialiased">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>Jellyfish Watersports </title>
+    <link rel="icon" type="image/png" href="logo.png">
+<meta name="title" content="Experiential Learning on the Chaliyar River | Outdoor Education in Calicut (Kozhikode)">
+<meta name="description" content="Experiential learning programs on the Chaliyar River in Calicut (Kozhikode), Kerala. Jellyfish Watersports offers outdoor education, adventure-based learning, kayaking, SUP, team building and nature immersion for students and institutions.">
+<meta name="keywords" content="Experiential Learning Kerala, Outdoor Education Calicut, Experiential Learning Kozhikode, Chaliyar River Learning Programs, Adventure Based Learning Kerala, Kayaking for Students Calicut, SUP Learning Programs, Team Building Activities Kerala, Jellyfish Watersports Learning">
+<meta name="author" content="Jellyfish Watersports">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="language" content="English">
+<meta name="geo.region" content="IN-KL">
+<meta name="geo.placename" content="Calicut, Kozhikode">
+<meta name="geo.position" content="11.1866;75.8077">
+<meta name="ICBM" content="11.1866, 75.8077">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jellyfishwatersports.com/experiential-learning.html">
+<meta property="og:title" content="Experiential Learning on the Chaliyar River | Calicut, Kerala">
+<meta property="og:description" content="Hands-on experiential learning and outdoor education on the Chaliyar River in Calicut. Adventure-based programs including kayaking, SUP, team building and environmental learning.">
+<meta property="og:image" content="learning/1.png">
+<meta property="og:locale" content="en_IN">
+<meta property="og:site_name" content="Jellyfish Watersports">
+
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://jellyfishwatersports.com/experiential-learning.html">
+<meta property="twitter:title" content="Experiential Learning Programs | Chaliyar River, Calicut">
+<meta property="twitter:description" content="Outdoor experiential learning, adventure education and team building programs on the Chaliyar River in Calicut (Kozhikode), Kerala.">
+<meta property="twitter:image" content="learning/1.png">
+
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            orange: '#F97316', 
+                            black: '#0a0a0a', 
+                            charcoal: '#1c1c1c',
+                            gray: '#6b7280',
+                            light: '#FAFAFA',
+                            cream: '#F2F0E9', 
+                            surface: '#ffffff'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Manrope', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    boxShadow: {
+                        'glass': '0 4px 30px rgba(0, 0, 0, 0.1)',
+                        'glow': '0 0 20px rgba(249, 115, 22, 0.15)',
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* SCROLL FIX */
+        html { scroll-behavior: smooth; scroll-padding-top: 120px; }
+
+        /* Base Styles */
+        ::-webkit-scrollbar { width: 0.5rem; }
+        ::-webkit-scrollbar-track { background: #F2F0E9; }
+        ::-webkit-scrollbar-thumb { background: rgba(249, 115, 22, 0.6); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(249, 115, 22, 1); }
+        ::selection { background: #F97316; color: white; }
+        body { cursor: default; }
+        
+        /* Glassmorphism */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        /* Animations */
+        .reveal-up { opacity: 0; transform: translateY(2.5rem); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+        .reveal-up.active { opacity: 1; transform: translateY(0); }
+        
+        /* Blob Nav Styles */
+        .blob-nav-item {
+            width: 0.75rem;
+            height: 0.75rem;
+            border-radius: 9999px;
+            background-color: #d1d5db;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .blob-nav-item::after {
+            content: attr(data-label);
+            position: absolute;
+            right: 1.5rem;
+            top: 50%;
+            transform: translateY(-50%) translateX(10px);
+            opacity: 0;
+            background: #F97316;
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+            font-weight: bold;
+            white-space: nowrap;
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+        .blob-nav-item:hover::after { opacity: 1; transform: translateY(-50%) translateX(0); }
+        .blob-nav-item.active { background-color: #F97316; height: 2rem; }
+    </style>
+</head>
+<body class="bg-brand-cream text-brand-black relative overflow-x-hidden">
+
+    <div class="fixed right-8 top-1/2 -translate-y-1/2 z-50 hidden lg:flex flex-col gap-4 items-center">
+        <a href="#hero" class="blob-nav-item active" data-label="Top"></a>
+        <a href="#concept" class="blob-nav-item" data-label="Concept"></a>
+        <a href="#www" class="blob-nav-item" data-label="Digital Detox"></a>
+        <a href="#frameworks" class="blob-nav-item" data-label="Frameworks"></a>
+        <a href="#catch" class="blob-nav-item" data-label="Catch of the Day"></a>
+        <a href="#academy" class="blob-nav-item" data-label="Academy"></a>
+        <a href="#chaliyar" class="blob-nav-item" data-label="River Festival"></a>
+    </div>
+
+    <nav id="navbar" class="fixed top-0 inset-x-0 z-50 transition-all duration-500 py-6">
+        <div class="max-w-[95rem] mx-auto px-6">
+            <div class="glass-panel rounded-full px-8 py-4 flex justify-between items-center shadow-glass transition-all duration-500 hover:shadow-lg">
+                <a href="index.html" class="block w-24 md:w-32 z-50 relative shrink-0">
+                    <img src="logo.png" alt="Jellyfish Logo" class="w-full h-auto object-contain">
+                </a>
+                <div class="hidden lg:flex items-center gap-6 xl:gap-8">
+                    <div class="flex items-center gap-5 xl:gap-7 text-[0.8rem] font-medium tracking-wide uppercase whitespace-nowrap">
+                        <a href="index.html#hero" class="hover:text-brand-orange transition-colors">Who are we</a>
+                        <a href="blog.html" class="hover:text-brand-orange transition-colors">Blog</a>
+                        <a href="exp.html" class="hover:text-brand-orange transition-colors">Book an Experience</a>
+                        <a href="explearn.html" class="text-brand-orange transition-colors">Experiential Learning</a>
+                        <a href="food.html" class="hover:text-brand-orange transition-colors">Food & Stay</a>
+                        <a href="yacht.html" class="hover:text-brand-orange transition-colors"> Yacht Club</a>
+                        <a href="shop.html" class="hover:text-brand-orange transition-colors">Shop</a>
+                    </div>
+                    <a href="exp.html" class="group relative px-6 py-2.5 rounded-full bg-brand-black text-white text-[0.8rem] font-bold tracking-wider overflow-hidden transition-all hover:scale-105 shrink-0 block text-center">
+                        <div class="absolute inset-0 bg-brand-orange translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></div>
+                        <span class="relative z-10">Book Now</span>
+                    </a>
+                </div>
+                <button id="mobile-menu-btn" class="lg:hidden p-2 text-brand-black hover:text-brand-orange transition z-50">
+                    <i class="ph ph-list text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div id="mobile-menu" class="fixed inset-0 z-[60] bg-brand-cream transform translate-x-full transition-transform duration-500 lg:hidden flex flex-col justify-center items-center space-y-6 text-center">
+        <button id="close-mobile-menu" class="absolute top-8 right-8 p-4 text-3xl hover:text-brand-orange transition-colors z-[70]"><i class="ph ph-x"></i></button>
+        <a href="index.html#hero" class="mobile-link font-serif text-[1.5rem] hover:text-brand-orange transition-colors">Who are we</a>
+        <a href="blog.html" class="mobile-link font-serif text-[1.5rem] hover:text-brand-orange transition-colors">Blog</a>
+        <a href="exp.html" class="mobile-link font-serif text-[1.5rem] hover:text-brand-orange transition-colors">Book an Experience</a>
+        <a href="explearn.html" class="mobile-link font-serif text-[1.5rem] text-brand-orange transition-colors">Experiential Learning</a>
+        <a href="food.html" class="mobile-link font-serif text-[1.5rem] hover:text-brand-orange transition-colors">Food and Stay</a>
+        <a href="yacht.html" class="mobile-link font-serif text-[1.5rem] hover:text-brand-orange transition-colors">Jellyfish Yacht Club</a>
+        <a href="shop.html" class="mobile-link font-serif text-[1.5rem] hover:text-brand-orange transition-colors">Shop</a>
+        <a href="exp.html" class="px-8 py-3 rounded-full bg-brand-orange text-white text-lg font-bold tracking-wide mt-4 inline-block">Book Now</a>
+    </div>
+
+    <section id="hero" class="relative h-[80vh] w-full flex items-center justify-center overflow-hidden bg-brand-charcoal -mt-[120px]">
+        <div class="absolute inset-0 z-0 opacity-60">
+            <img src="explearn/1.png" alt="Experiential Learning" class="w-full h-full object-cover">
+        </div>
+        <div class="relative z-10 text-center px-6 reveal-up active">
+            <span class="text-brand-orange font-bold tracking-[0.3em] uppercase text-xs mb-4 block animate-pulse">Weekend Without Web</span>
+            <h1 class="font-serif text-[3.5rem] lg:text-[6rem] text-white leading-none">Learning <span class="italic text-brand-orange">Unplugged.</span></h1>
+            <p class="text-white/80 mt-6 max-w-xl mx-auto text-lg font-light">
+                Disconnect to reconnect. Authentic outdoor education that builds character, resilience, and teamwork.
+            </p>
+        </div>
+    </section>
+
+    <section id="concept" class="py-24 bg-brand-cream relative">
+        <div class="max-w-[90rem] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            
+            <div class="reveal-up">
+                <span class="text-brand-orange font-bold tracking-[0.2em] uppercase text-xs mb-4 block">The Philosophy</span>
+                <h2 class="font-serif text-4xl lg:text-5xl text-brand-black mb-8 leading-tight">What is <br>Experiential Learning?</h2>
+                <p class="text-brand-gray text-lg leading-relaxed mb-6">
+                    It is the process of learning through reflection on doing. At Jellyfish, we take this out of the classroom and into the wild. We believe in the "Weekend Without Web"—a deliberate break from digital distractions to foster real-world connections.
+                </p>
+                <p class="text-brand-gray text-lg leading-relaxed">
+                    Our programs are designed to push boundaries safely, encouraging participants to develop leadership skills, environmental awareness, and adaptability through hands-on engagement with nature.
+                </p>
+            </div>
+
+            <div class="relative reveal-up" style="transition-delay: 200ms;">
+                <div class="absolute inset-0 bg-brand-orange/20 rounded-full blur-3xl transform translate-x-12 translate-y-12"></div>
+                <div class="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3] group">
+                    <img src="explearn/2.png" alt="Team Building" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500"></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="www" class="py-24 bg-brand-charcoal relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-[500px] h-[500px] bg-brand-orange/10 rounded-full blur-[100px] -translate-x-1/2 -translate-y-1/2"></div>
+        <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-blue-500/5 rounded-full blur-[100px] translate-x-1/2 translate-y-1/2"></div>
+
+        <div class="max-w-[90rem] mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                
+                <div class="reveal-up">
+                    <span class="inline-block px-3 py-1 rounded-full border border-brand-orange/30 bg-brand-orange/10 text-brand-orange font-bold tracking-[0.2em] uppercase text-[0.65rem] mb-6">Digital Detox Initiative</span>
+                    <h2 class="font-serif text-4xl lg:text-5xl text-white mb-6">Weekend Without Web <br><span class="italic text-brand-orange text-2xl lg:text-3xl block mt-4 font-light">"Step away from the web, step into real life."</span></h2>
+                    
+                    <p class="text-white/70 text-lg leading-relaxed mb-8">
+                        Jellyfish's unique initiative designed to help families, adults, and school children unplug from mobile gadgets. By keeping guests engaged in adventure, play, and community experiences, we ensure you are distracted from screens and reconnected with nature and each other.
+                    </p>
+
+                    <div class="bg-white/5 backdrop-blur-sm p-6 rounded-2xl border border-white/10 mb-10 hover:bg-white/10 transition-colors duration-300">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-full bg-brand-orange flex items-center justify-center text-white text-xl shrink-0 shadow-glow">
+                                <i class="ph-fill ph-plugs-connected"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm uppercase tracking-wider mb-2">3 Ways to Unplug</h4>
+                                <p class="text-xs text-white/60 leading-relaxed">
+                                    Offered as <strong>Week</strong>, <strong>Weekend</strong>, or <strong>Wednesday</strong> packages. Immersive curated activities designed to break the digital cycle.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/919400893112?text=Hi,%20I%20would%20love%20to%20learn%20more%20about%20Weekend%20Without%20Web" target="_blank" class="inline-flex items-center gap-3 px-8 py-4 bg-brand-orange text-white rounded-full font-bold uppercase tracking-widest text-xs hover:bg-white hover:text-brand-orange transition-all duration-300 shadow-glow group">
+                        <i class="ph-fill ph-whatsapp-logo text-lg"></i>
+                        <span>Enquire on WhatsApp</span>
+                        <i class="ph-bold ph-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+
+                <div class="relative reveal-up" style="transition-delay: 200ms;">
+                    <div class="relative rounded-[2.5rem] overflow-hidden shadow-2xl border border-white/10 group aspect-[4/5] lg:aspect-square">
+                        <img src="explearn/3.png" alt="No Phones Allowed" class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110">
+                        
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-black/80 via-transparent to-transparent"></div>
+                        
+                        <div class="absolute bottom-8 left-8 right-8 bg-white/10 backdrop-blur-md border border-white/20 p-4 rounded-xl transform translate-y-0 transition-transform duration-300">
+                            <p class="text-white text-sm font-medium flex items-center gap-3">
+                                <i class="ph-fill ph-prohibit text-brand-orange text-xl"></i>
+                                <span>No Wi-Fi. No Signal. Just Connection.</span>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] border border-dashed border-white/10 rounded-full animate-[spin_60s_linear_infinite]"></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="frameworks" class="py-24 bg-white">
+        <div class="max-w-[90rem] mx-auto px-6">
+            
+            <div class="text-center mb-20 reveal-up">
+                <span class="text-brand-orange font-bold tracking-[0.2em] uppercase text-xs mb-4 block">International Standards</span>
+                <h2 class="font-serif text-4xl lg:text-5xl text-brand-black">Curricular & Recognized Frameworks</h2>
+                <p class="text-brand-gray mt-6 max-w-2xl mx-auto">
+                    For international schools and institutions, we facilitate structured experiential learning aligned with globally recognized awards and curriculums.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
+                <div class="bg-brand-cream p-10 rounded-3xl hover:shadow-xl transition-all duration-300 group reveal-up">
+                    <div class="w-14 h-14 bg-brand-orange/10 rounded-full flex items-center justify-center text-brand-orange text-2xl mb-6 group-hover:bg-brand-orange group-hover:text-white transition-colors">
+                        <i class="ph-fill ph-medal"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl text-brand-black mb-4">Duke of Edinburgh & IAYP</h3>
+                    <p class="text-brand-gray text-sm leading-relaxed">
+                        We facilitate the Adventurous Journey section for The Duke of Edinburgh’s International Award and The International Award for Young People (IAYP) across the Bronze, Silver, and Gold levels.
+                    </p>
+                </div>
+
+                <div class="bg-brand-cream p-10 rounded-3xl hover:shadow-xl transition-all duration-300 group reveal-up" style="transition-delay: 100ms;">
+                    <div class="w-14 h-14 bg-brand-orange/10 rounded-full flex items-center justify-center text-brand-orange text-2xl mb-6 group-hover:bg-brand-orange group-hover:text-white transition-colors">
+                        <i class="ph-fill ph-globe-hemisphere-west"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl text-brand-black mb-4">IB CAS Program</h3>
+                    <p class="text-brand-gray text-sm leading-relaxed">
+                        Aligned with the International Baccalaureate (IB) curriculum. We provide opportunities for Creativity, Activity, and Service (CAS) through river conservation, physical challenges, and skill-building workshops.
+                    </p>
+                </div>
+
+                <div class="bg-brand-cream p-10 rounded-3xl hover:shadow-xl transition-all duration-300 group reveal-up" style="transition-delay: 200ms;">
+                    <div class="w-14 h-14 bg-brand-orange/10 rounded-full flex items-center justify-center text-brand-orange text-2xl mb-6 group-hover:bg-brand-orange group-hover:text-white transition-colors">
+                        <i class="ph-fill ph-puzzle-piece"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl text-brand-black mb-4">Custom Curriculums</h3>
+                    <p class="text-brand-gray text-sm leading-relaxed">
+                        Whether non-curricular or curricular, Jellyfish adapts each program to the specific needs of the school or organization, ensuring progression, authenticity, and measurable impact.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="catch" class="py-24 bg-brand-cream relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-green-100 rounded-full blur-[100px] translate-x-1/2 -translate-y-1/2"></div>
+        
+        <div class="max-w-[90rem] mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="order-2 lg:order-1 reveal-up">
+                    <img src="explearn/4.png" alt="River Cleanup" class="rounded-[2rem] shadow-2xl w-full h-auto rotate-1 hover:rotate-0 transition-transform duration-500">
+                </div>
+                
+                <div class="order-1 lg:order-2 reveal-up">
+                    <span class="text-green-600 font-bold tracking-[0.2em] uppercase text-xs mb-4 block">CSR Initiative</span>
+                    <h2 class="font-serif text-4xl lg:text-5xl text-brand-black mb-6">Catch of the Day: <br>Paddle to Preserve.</h2>
+                    <p class="text-brand-gray text-lg leading-relaxed mb-6">
+                        Launched in 2013, <strong>Catch of the Day</strong> is our flagship environmental responsibility initiative. Participants collect floating garbage while paddling, after which the waste is sorted, weighed, and sent for recycling with our partner Greenworms.
+                    </p>
+                    <div class="bg-white/60 backdrop-blur-sm p-6 rounded-2xl border border-green-200 mb-8">
+                        <div class="flex items-start gap-4">
+                            <i class="ph-fill ph-trophy text-3xl text-yellow-500 shrink-0"></i>
+                            <div>
+                                <h4 class="font-bold text-brand-black text-sm uppercase tracking-wider mb-1">Award Winning</h4>
+                                <p class="text-xs text-brand-gray">Honored with the <strong>PROMISE Sustainability Award in 2022</strong> (European Union SWITCH Asia Programme).</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-brand-gray text-sm italic mb-8">
+                        *Participants receive a waste audit report and a discount on their next visit.
+                    </p>
+                    <a href="garbage.html" class="inline-flex items-center gap-3 px-8 py-4 border border-brand-black text-brand-black rounded-full font-bold uppercase tracking-widest text-xs hover:bg-green-700 hover:border-green-700 hover:text-white transition-all duration-300">
+                        <span>Join the Mission</span>
+                        <i class="ph-bold ph-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="academy" class="py-24 bg-white border-t border-brand-black/5">
+        <div class="max-w-[90rem] mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-7 reveal-up">
+                    <div class="relative rounded-3xl overflow-hidden aspect-video shadow-2xl">
+                        <img src="explearn/5.png" alt="Jellyfish Academy" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent flex items-center p-12">
+                            <div class="text-white">
+                                <i class="ph-duotone ph-graduation-cap text-6xl text-brand-orange mb-4"></i>
+                                <h3 class="font-serif text-4xl font-bold">Jellyfish Academy</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5 reveal-up">
+                    <span class="text-brand-orange font-bold tracking-[0.2em] uppercase text-xs mb-4 block">Professional Training</span>
+                    <h2 class="font-serif text-4xl lg:text-5xl text-brand-black mb-6">Master the Water. <br>Get Certified.</h2>
+                    <p class="text-brand-gray text-lg mb-8">
+                        Looking for professional certification or advanced skill development? The Jellyfish Academy offers rigorous training courses for enthusiasts and future instructors.
+                    </p>
+                    
+                    <a href="acad.html" class="inline-flex items-center gap-3 px-8 py-4 bg-brand-black text-white rounded-full font-bold uppercase tracking-widest text-xs hover:bg-brand-orange hover:gap-5 transition-all duration-300 group">
+                        <span>Explore the Academy</span>
+                        <i class="ph-bold ph-arrow-right group-hover:text-white"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="chaliyar" class="py-24 bg-brand-charcoal text-white relative">
+        <div class="max-w-[90rem] mx-auto px-6">
+            <div class="border border-white/10 rounded-[3rem] p-12 lg:p-20 relative overflow-hidden text-center reveal-up">
+                <div class="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+                <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-brand-orange/20 blur-[100px] rounded-t-full"></div>
+
+                <div class="relative z-10">
+                    <span class="text-brand-orange font-bold tracking-[0.2em] uppercase text-xs mb-4 block">Annual Signature Event</span>
+                    <h2 class="font-serif text-4xl lg:text-6xl text-white mb-6">The Chaliyar River Paddle</h2>
+                    <p class="text-xl text-white/70 max-w-2xl mx-auto mb-10 font-light">
+                        A 3-day source-to-sea paddling journey from Nilambur to Beypore covering 68 km. Join us for scenic paddling, riverside camping, and community bonding.
+                    </p>
+                    
+                    <div class="flex flex-wrap justify-center gap-4 mb-12">
+                        <div class="px-6 py-3 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm">
+                            <span class="block text-xs text-brand-gray uppercase tracking-wider mb-1">When</span>
+                            <span class="font-bold text-white">1st Weekend of October</span>
+                        </div>
+                        <div class="px-6 py-3 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm">
+                            <span class="block text-xs text-brand-gray uppercase tracking-wider mb-1">Distance</span>
+                            <span class="font-bold text-white">68 Kilometers</span>
+                        </div>
+                        <div class="px-6 py-3 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm">
+                            <span class="block text-xs text-brand-gray uppercase tracking-wider mb-1">Route</span>
+                            <span class="font-bold text-white">Nilambur to Beypore</span>
+                        </div>
+                    </div>
+
+                    <a href="chaliyar.html" class="inline-flex items-center gap-3 px-10 py-5 bg-white text-brand-black rounded-full font-bold uppercase tracking-widest text-xs hover:bg-brand-orange hover:text-white transition-all duration-300 transform hover:scale-105 shadow-glow">
+                        <span>View Event Details</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-white pt-20 pb-12 border-t border-brand-black/5">
+        <div class="max-w-[90rem] mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16 reveal-up">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="w-24 mb-6">
+                         <img src="logo.png" alt="Logo" class="w-full" loading="lazy">
+                    </div>
+                    <p class="text-brand-gray text-sm leading-relaxed max-w-xs">
+                        Kerala's premier watersports hub. Adventure, conservation, and community.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-serif text-lg font-bold text-brand-black mb-6">Contact Us</h4>
+                    <div class="space-y-2 text-brand-gray text-sm">
+                        <p>kayak@jellyfishwatersports.com</p>
+                        <p>+91 9400 23 88 33</p>
+                        <div class="flex gap-4 mt-4">
+                            <a href="https://www.instagram.com/jellyfish_watersports" class="text-brand-black hover:text-brand-orange transition-colors"><i class="ph-fill ph-instagram-logo text-xl"></i></a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-serif text-lg font-bold text-brand-black mb-6">Scan to Chat</h4>
+                    <div class="w-32 h-32 border border-brand-black/10 p-2 rounded-lg bg-white">
+                        <img src="link.png" alt="Scan QR Code" class="w-full h-full object-contain" loading="lazy">
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-brand-black/5 pt-10 text-center text-[0.75rem] text-brand-gray/60 font-medium uppercase tracking-wider">
+                <p>&copy; 2025 Jellyfish Watersports. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // --- Navbar Logic ---
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.remove('py-6');
+                navbar.classList.add('py-3');
+                navbar.querySelector('.glass-panel').classList.add('bg-white/90', 'backdrop-blur-xl', 'shadow-xl');
+            } else {
+                navbar.classList.add('py-6');
+                navbar.classList.remove('py-3');
+                navbar.querySelector('.glass-panel').classList.remove('bg-white/90', 'backdrop-blur-xl', 'shadow-xl');
+            }
+        });
+
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const closeMobileMenuBtn = document.getElementById('close-mobile-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.remove('translate-x-full'));
+        closeMobileMenuBtn.addEventListener('click', () => mobileMenu.classList.add('translate-x-full'));
+
+        // --- Animations ---
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        });
+        document.querySelectorAll('.reveal-up').forEach(el => observer.observe(el));
+
+        // --- Scroll Spy Logic ---
+        const navItems = document.querySelectorAll('.blob-nav-item');
+        const sections = document.querySelectorAll('section');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= (sectionTop - 300)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href') === '#' + current) {
+                    item.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

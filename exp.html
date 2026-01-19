@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth antialiased">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>Jellyfish Watersports </title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <meta name="title" content="Jellyfish Experiences | Queen of Chaliyar Houseboat, Kayaking & Adventure Pass">
+    <meta name="description" content="Book the luxury Queen of Chaliyar Houseboat cruise in Calicut. Experience Kayaking, Fishing, and Land Adventures. Updated pricing effective Jan 1, 2026.">
+    <meta name="keywords" content="Queen of Chaliyar Houseboat, Houseboat Cruise Calicut, Luxury Houseboat Kerala, Book Kayaking Kerala, Knight of Chaliyar Speedboat, YOLO Boat Ride, Adventure Park Day Pass, Fishing Trips Kerala, Wall Climbing">
+    <meta name="author" content="Jellyfish Watersports">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="language" content="English">
+    <meta name="geo.region" content="IN-KL">
+    <meta name="geo.placename" content="Kozhikode">
+    <meta name="geo.position" content="11.1866;75.8077">
+    <meta name="ICBM" content="11.1866, 75.8077">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jellyfishwatersports.com/exp.html">
+    <meta property="og:title" content="Jellyfish Experiences | Queen of Chaliyar Houseboat">
+    <meta property="og:description" content="Luxury Houseboat Cruises, Kayaking & Adventure. New pricing effective Jan 1, 2026.">
+    <meta property="og:image" content="exp/1.png">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="Jellyfish Watersports">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://jellyfishwatersports.com/exp.html">
+    <meta property="twitter:title" content="Jellyfish Experiences | Queen of Chaliyar Houseboat">
+    <meta property="twitter:description" content="Luxury Houseboat Cruises, Kayaking & Adventure. New pricing effective Jan 1, 2026.">
+    <meta property="twitter:image" content="exp/1.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SportsActivityLocation",
+      "name": "Jellyfish Watersports Experiences",
+      "image": "exp/1.png",
+      "@id": "https://jellyfishwatersports.com/exp.html",
+      "url": "https://jellyfishwatersports.com/exp.html",
+      "telephone": "+919400238833",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Chaliyar River Bank",
+        "addressLocality": "Calicut",
+        "addressRegion": "Kerala",
+        "postalCode": "673001",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 11.1866,
+        "longitude": 75.8077
+      },
+      "priceRange": "$$"
+    }
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            orange: '#F97316', 
+                            black: '#0a0a0a', 
+                            charcoal: '#1c1c1c',
+                            gray: '#6b7280',
+                            light: '#FAFAFA',
+                            cream: '#F2F0E9', 
+                            surface: '#ffffff'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Manrope', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    boxShadow: {
+                        'glass': '0 4px 30px rgba(0, 0, 0, 0.1)',
+                        'glow': '0 0 20px rgba(249, 115, 22, 0.15)',
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* SCROLL FIX: Ensures sections land correctly below the fixed navbar */
+        html { 
+            scroll-behavior: smooth; 
+            scroll-padding-top: 120px; 
+        }
+
+        /* Base Styles */
+        ::-webkit-scrollbar { width: 0.5rem; }
+        ::-webkit-scrollbar-track { background: #F2F0E9; }
+        ::-webkit-scrollbar-thumb { background: rgba(249, 115, 22, 0.6); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(249, 115, 22, 1); }
+        ::selection { background: #F97316; color: white; }
+        body { cursor: default; }
+        
+        /* Glassmorphism */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        /* Animations */
+        .reveal-up { opacity: 0; transform: translateY(2.5rem); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+        .reveal-up.active { opacity: 1; transform: translateY(0); }
+        
+        /* Grid Transition */
+        #activity-grid {
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+        .grid-hidden {
+            opacity: 0;
+            transform: translateY(20px);
+            pointer-events: none;
+        }
+        
+        /* Blob Nav Styles */
+        .blob-nav-item {
+            width: 0.75rem;
+            height: 0.75rem;
+            border-radius: 9999px;
+            background-color: #d1d5db;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .blob-nav-item::after {
+            content: attr(data-label);
+            position: absolute;
+            right: 1.5rem;
+            top: 50%;
+            transform: translateY(-50%) translateX(10px);
+            opacity: 0;
+            background: #F97316;
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+            font-weight: bold;
+            white-space: nowrap;
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+        .blob-nav-item:hover::after { opacity: 1; transform: translateY(-50%) translateX(0); }
+        .blob-nav-item.active { background-color: #F97316; height: 2rem; }
+    </style>
+
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+
+</head>
+<body class="bg-brand-cream text-brand-black relative overflow-x-hidden">
+
+    <div class="fixed right-8 top-1/2 -translate-y-1/2 z-50 hidden lg:flex flex-col gap-4 items-center">
+        <a href="#explore" class="blob-nav-item active" data-label="Activities"></a>
+        <a href="#packages" class="blob-nav-item" data-label="Packages"></a>
+        <a href="#curate" class="blob-nav-item" data-label="Contact Us"></a>
+    </div>
+
+    <nav id="navbar" class="fixed top-0 inset-x-0 z-50 transition-all duration-500 py-6">
+        <div class="max-w-[95rem] mx-auto px-6">
+            <div class="glass-panel rounded-full px-8 py-4 flex justify-between items-center shadow-glass transition-all duration-500 hover:shadow-lg">
+                <a href="index.html" class="block w-24 md:w-32 z-50 relative shrink-0">
+                    <img src="logo.png" alt="Jellyfish Logo" class="w-full h-auto object-contain">
+                </a>
+                <div class="hidden lg:flex items-center gap-6 xl:gap-8">
+                    <div class="flex items-center gap-5 xl:gap-7 text-[0.8rem] font-medium tracking-wide uppercase whitespace-nowrap">
+                        <a href="index.html#hero" class="hover:text-brand-orange transition-colors">Who are we</a>
+                        <a href="blog.html" class="hover:text-brand-orange transition-colors">Blog</a>
+                        <a href="exp.html" class="text-brand-orange transition-colors">Book an Experience</a>
+                        <a href="explearn.html" class="hover:text-brand-orange transition-colors">Experiential Learning</a>
+                        <a href="food.html" class="hover:text-brand-orange transition-colors">Food & Stay</a>
+                        <a href="yacht.html" class="hover:text-brand-orange transition-colors"> Yacht Club</a>
+                        <a href="shop.html" class="hover:text-brand-orange transition-colors">Shop</a>
+                    </div>
+                    <a href="exp.html" class="group relative px-6 py-2.5 rounded-full bg-brand-black text-white text-[0.8rem] font-bold tracking-wider overflow-hidden transition-all hover:scale-105 shrink-0 block text-center">
+                        <div class="absolute inset-0 bg-brand-orange translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></div>
+                        <span class="relative z-10">Book Now</span>
+                    </a>
+                </div>
+                <button id="mobile-menu-btn" class="lg:hidden p-2 text-brand-black hover:text-brand-orange transition z-50">
+                    <i class="ph ph-list text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div id="mobile-menu" class="fixed inset-0 z-[60] bg-brand-cream transform translate-x-full transition-transform duration-500 lg:hidden flex flex-col justify-center items-center space-y-6 text-center">
+        <button id="close-mobile-menu" class="absolute top-8 right-8 p-4 text-3xl hover:text-brand-orange transition-colors z-[70]"><i class="ph ph-x"></i></button>
+        <a href="index.html#hero" class="mobile-link font-serif text-[1.5rem] hover:text-brand-orange transition-colors">Who are we</a>
+        <a href="blog.html" class="mobile-link font-serif text-[1.5rem] hover:text-brand-orange transition-colors">Blog</a>
+        <a href="exp.html" class="mobile-link font-serif text-[1.5rem] text-brand-orange transition-colors">Book an Experience</a>
+        <a href="explearn.html" class="mobile-link font-serif text-[1.5rem] hover:text-brand-orange transition-colors">Experiential Learning</a>
+        <a href="food.html" class="mobile-link font-serif text-[1.5rem] hover:text-brand-orange transition-colors">Food and Stay</a>
+        <a href="yacht.html" class="mobile-link font-serif text-[1.5rem] hover:text-brand-orange transition-colors">Jellyfish Yacht Club</a>
+        <a href="shop.html" class="mobile-link font-serif text-[1.5rem] hover:text-brand-orange transition-colors">Shop</a>
+        <a href="exp.html" class="px-8 py-3 rounded-full bg-brand-orange text-white text-lg font-bold tracking-wide mt-4 inline-block">Book Now</a>
+    </div>
+
+    <section id="hero" class="relative h-[80vh] w-full flex items-center justify-center overflow-hidden bg-brand-charcoal -mt-[120px]">
+        <div class="absolute inset-0 z-0 opacity-60">
+            <img src="exp/1.png" alt="Adventure" class="w-full h-full object-cover" fetchpriority="high">
+        </div>
+        <div class="relative z-10 text-center px-6">
+            <span class="text-brand-orange font-bold tracking-[0.3em] uppercase text-xs mb-4 block animate-pulse">Choose Your Thrill</span>
+            <h1 class="font-serif text-[3.5rem] lg:text-[6rem] text-white leading-none">Curated <span class="italic text-brand-orange">Experiences.</span></h1>
+        </div>
+    </section>
+
+    <section id="explore" class="py-20 bg-brand-cream relative">
+        <div class="max-w-[90rem] mx-auto px-6">
+            
+            <div class="flex flex-wrap justify-center gap-4 mb-16 reveal-up active">
+                <button class="filter-btn active-filter px-8 py-3 rounded-full text-sm font-bold tracking-widest uppercase transition-all duration-300 bg-brand-black text-white shadow-lg transform hover:scale-105" data-filter="all">All</button>
+                <button class="filter-btn px-8 py-3 rounded-full text-sm font-bold tracking-widest uppercase transition-all duration-300 bg-white text-brand-gray hover:text-brand-black shadow-sm hover:shadow-md transform hover:scale-105" data-filter="Aqua">Aqua</button>
+                <button class="filter-btn px-8 py-3 rounded-full text-sm font-bold tracking-widest uppercase transition-all duration-300 bg-white text-brand-gray hover:text-brand-black shadow-sm hover:shadow-md transform hover:scale-105" data-filter="Motor">Motor</button>
+                <button class="filter-btn px-8 py-3 rounded-full text-sm font-bold tracking-widest uppercase transition-all duration-300 bg-white text-brand-gray hover:text-brand-black shadow-sm hover:shadow-md transform hover:scale-105" data-filter="Land">Land</button>
+            </div>
+
+            <div id="activity-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-500">
+                </div>
+        </div>
+    </section>
+
+    <section id="packages" class="py-24 bg-white border-t border-brand-black/5">
+        <div class="max-w-[90rem] mx-auto px-6">
+            <div class="text-center mb-16 reveal-up">
+                <span class="text-brand-orange font-bold tracking-[0.2em] uppercase text-xs mb-4 block">Specialised Itineraries</span>
+                <h2 class="font-serif text-4xl lg:text-5xl text-brand-black">Excursions & Expeditions</h2>
+                <p class="text-brand-gray mt-4">Extended journeys for explorers, nature lovers, and thrill-seekers.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <div class="bg-brand-cream rounded-3xl p-8 hover:shadow-xl transition-all duration-300 reveal-up">
+                    <div class="flex items-center gap-3 mb-6">
+                        <i class="ph-fill ph-binoculars text-3xl text-brand-orange"></i>
+                        <h3 class="font-serif text-2xl text-brand-black">Eco-Exploration</h3>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="border-b border-brand-black/10 pb-4">
+                            <div class="flex justify-between items-baseline mb-1">
+                                <h4 class="font-bold text-brand-black">Kadalundi & Bird Sanctuary</h4>
+                                <span class="text-brand-orange font-bold text-lg">₹1,499</span>
+                            </div>
+                            <p class="text-xs text-brand-gray">Half-Day Sit-in Kayak Tour. Spot otters & migratory birds.</p>
+                        </div>
+                        <div class="border-b border-brand-black/10 pb-4">
+                            <div class="flex justify-between items-baseline mb-1">
+                                <h4 class="font-bold text-brand-black">Full-Day River Expedition</h4>
+                                <span class="text-brand-orange font-bold text-lg">₹2,999</span>
+                            </div>
+                            <p class="text-xs text-brand-gray">Chaliyar to Beypore Port. Includes local meals.</p>
+                        </div>
+                    </div>
+                    <button onclick="openCalendly('Kadalundi & Bird Sanctuary', 'Eco-Exploration')" class="w-full mt-8 py-3 rounded-full border border-brand-black text-brand-black font-bold uppercase text-xs tracking-widest hover:bg-brand-black hover:text-white transition-colors">Book Expedition</button>
+                </div>
+
+                <div class="bg-brand-black text-white rounded-3xl p-8 hover:shadow-xl transition-all duration-300 reveal-up" style="transition-delay: 100ms;">
+                    <div class="flex items-center gap-3 mb-6">
+                        <i class="ph-fill ph-waves text-3xl text-brand-orange"></i>
+                        <h3 class="font-serif text-2xl text-white">Coastal Challenges</h3>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="border-b border-white/10 pb-4">
+                            <div class="flex justify-between items-baseline mb-1">
+                                <h4 class="font-bold">Sea Kayaking (Half-Day)</h4>
+                                <span class="text-brand-orange font-bold text-lg">₹3,499</span>
+                            </div>
+                            <p class="text-xs text-white/60">Malabar Coast & Breakwater exploration. Experienced paddlers only.</p>
+                        </div>
+                        <div class="border-b border-white/10 pb-4">
+                            <div class="flex justify-between items-baseline mb-1">
+                                <h4 class="font-bold">Surfski Ocean Run</h4>
+                                <span class="text-brand-orange font-bold text-lg">₹4,499</span>
+                            </div>
+                            <p class="text-xs text-white/60">High-speed open ocean paddling. Half-day session.</p>
+                        </div>
+                        <div class="border-b border-white/10 pb-4">
+                            <div class="flex justify-between items-baseline mb-1">
+                                <h4 class="font-bold">Full-Day Sea Expedition</h4>
+                                <span class="text-brand-orange font-bold text-lg">₹5,999</span>
+                            </div>
+                            <p class="text-xs text-white/60">Extended coastal journey with safety crew & meals.</p>
+                        </div>
+                    </div>
+                    <button onclick="openCalendly('Sea Kayaking', 'Coastal Challenge')" class="w-full mt-8 py-3 rounded-full bg-brand-orange text-white font-bold uppercase text-xs tracking-widest hover:bg-white hover:text-brand-black transition-colors">Book Sea Challenge</button>
+                </div>
+
+                <div class="bg-brand-cream rounded-3xl p-8 hover:shadow-xl transition-all duration-300 reveal-up" style="transition-delay: 200ms;">
+                    <div class="flex items-center gap-3 mb-6">
+                        <i class="ph-fill ph-compass text-3xl text-brand-orange"></i>
+                        <h3 class="font-serif text-2xl text-brand-black">High-Adrenaline</h3>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="border-b border-brand-black/10 pb-4">
+                            <div class="flex justify-between items-baseline mb-1">
+                                <h4 class="font-bold text-brand-black">Whitewater Rapids Run</h4>
+                                <span class="text-brand-orange font-bold text-lg">₹4,999</span>
+                            </div>
+                            <p class="text-xs text-brand-gray">Half-Day at Kodanchery (Chalippuzha River).</p>
+                        </div>
+                        <div class="border-b border-brand-black/10 pb-4">
+                            <div class="flex justify-between items-baseline mb-1">
+                                <h4 class="font-bold text-brand-black">Full-Day Whitewater</h4>
+                                <span class="text-brand-orange font-bold text-lg">₹5,999</span>
+                            </div>
+                            <p class="text-xs text-brand-gray">Extended run + Meals + Dormitory Stay.</p>
+                        </div>
+                        <div class="border-b border-brand-black/10 pb-4">
+                            <div class="flex justify-between items-baseline mb-1">
+                                <h4 class="font-bold text-brand-black">Vallamkali Experience</h4>
+                                <span class="text-brand-orange font-bold text-lg">₹20,000</span>
+                            </div>
+                            <p class="text-xs text-brand-gray">Half-Day Snakeboat culture experience (Per Boat, Max 25 Pax).</p>
+                        </div>
+                    </div>
+                    <button onclick="openCalendly('Whitewater / Vallamkali', 'High Adrenaline')" class="w-full mt-8 py-3 rounded-full border border-brand-black text-brand-black font-bold uppercase text-xs tracking-widest hover:bg-brand-black hover:text-white transition-colors">Book Adventure</button>
+                </div>
+
+            </div>
+            
+            <div class="mt-12 text-center">
+                 <p class="text-xs text-brand-gray uppercase tracking-widest">* Prices effective from Jan 1, 2026. Prices exclusive of GST. Sea & Whitewater activities require prior experience or certification.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="curate" class="py-20 bg-brand-cream border-t border-brand-black/5">
+        <div class="max-w-[90rem] mx-auto px-6">
+            <div class="bg-white rounded-3xl p-12 lg:p-20 shadow-2xl relative overflow-hidden text-center reveal-up">
+                <div class="absolute top-0 left-0 w-64 h-64 bg-brand-orange/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+                <div class="absolute bottom-0 right-0 w-64 h-64 bg-brand-orange/10 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
+
+                <div class="relative z-10">
+                    <span class="text-brand-orange font-bold tracking-[0.2em] uppercase text-xs mb-6 block">Custom Itineraries</span>
+                    <h2 class="font-serif text-4xl lg:text-5xl text-brand-black mb-8">Want to curate a package? <br> <span class="italic text-brand-gray">Let us know.</span></h2>
+                    
+                    <div class="flex flex-col items-center gap-8">
+                        <a href="tel:+919876543210" class="text-2xl lg:text-3xl font-bold text-brand-black hover:text-brand-orange transition-colors tracking-tight">
+                            +91 9400 23 88 33
+                        </a>
+                        
+                        <div class="group relative w-48 h-48 bg-white p-3 rounded-2xl shadow-xl rotate-3 hover:rotate-0 transition-transform duration-500 cursor-pointer">
+                            <div class="w-full h-full border-2 border-dashed border-brand-orange/30 rounded-xl overflow-hidden p-2">
+                                <img src="link.png" alt="Scan QR Code" class="w-full h-full object-contain mix-blend-multiply" loading="lazy">
+                            </div>
+                            <div class="absolute -bottom-10 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+                                <span class="text-xs font-bold text-brand-black uppercase tracking-widest bg-white px-3 py-1 rounded-full shadow-md">Scan to Chat</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="modal-backdrop" class="fixed inset-0 z-[60] bg-black/60 backdrop-blur-sm hidden flex items-center justify-center p-4 transition-opacity duration-300 opacity-0">
+        <div id="modal-content" class="bg-white w-full max-w-4xl max-h-[90vh] rounded-3xl overflow-hidden shadow-2xl transform scale-95 transition-transform duration-300 flex flex-col lg:flex-row">
+            <div class="lg:w-2/5 h-64 lg:h-auto relative">
+                <img id="modal-img" src="" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-8">
+                    <div>
+                        <span id="modal-category" class="text-xs font-bold text-brand-orange uppercase tracking-widest mb-2 block"></span>
+                        <h2 id="modal-title" class="font-serif text-3xl text-white leading-tight"></h2>
+                    </div>
+                </div>
+                <button onclick="closeModal()" class="absolute top-4 right-4 lg:hidden w-10 h-10 bg-white/20 backdrop-blur rounded-full flex items-center justify-center text-white hover:bg-brand-orange transition-colors">
+                    <i class="ph-bold ph-x"></i>
+                </button>
+            </div>
+            <div class="lg:w-3/5 p-8 lg:p-12 overflow-y-auto bg-brand-light">
+                <div class="flex justify-between items-start mb-6">
+                    <p id="modal-desc" class="text-brand-gray font-light text-lg leading-relaxed"></p>
+                    <button onclick="closeModal()" class="hidden lg:flex w-10 h-10 bg-brand-black/5 rounded-full items-center justify-center text-brand-black hover:bg-brand-orange hover:text-white transition-colors shrink-0 ml-4">
+                        <i class="ph-bold ph-x"></i>
+                    </button>
+                </div>
+                <div class="w-full h-px bg-brand-black/10 my-6"></div>
+                <h3 class="font-serif text-2xl text-brand-black mb-6">Select a Package</h3>
+                <div id="modal-packages" class="space-y-4"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-white pt-20 pb-12 border-t border-brand-black/5">
+        <div class="max-w-[90rem] mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16 reveal-up">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="w-24 mb-6">
+                         <img src="logo.png" alt="Logo" class="w-full" loading="lazy">
+                    </div>
+                    <p class="text-brand-gray text-sm leading-relaxed max-w-xs">
+                        Kerala's premier watersports hub. Adventure, conservation, and community.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-serif text-lg font-bold text-brand-black mb-6">Contact Us</h4>
+                    <div class="space-y-2 text-brand-gray text-sm">
+                        <p>kayak@jellyfishwatersports.com</p>
+                        <p>+91 9400 23 88 33</p>
+                        <div class="flex gap-4 mt-4">
+                            <a href="https://www.instagram.com/jellyfish_watersports" class="text-brand-black hover:text-brand-orange transition-colors"><i class="ph-fill ph-instagram-logo text-xl"></i></a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-serif text-lg font-bold text-brand-black mb-6">Scan to Chat</h4>
+                    <div class="w-32 h-32 border border-brand-black/10 p-2 rounded-lg bg-white">
+                        <img src="link.png" alt="Scan QR Code" class="w-full h-full object-contain" loading="lazy">
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-brand-black/5 pt-10 text-center text-[0.75rem] text-brand-gray/60 font-medium uppercase tracking-wider">
+                <p>&copy; 2025 Jellyfish Watersports. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // --- Full Data Source ---
+        const activities = [
+            // --- MOTOR Activities (Prioritized for First Position) ---
+            {
+                id: 'houseboat',
+                name: 'Queen of Chaliyar Houseboat',
+                category: 'Motor',
+                image: 'exp/2.png',
+                desc: 'Luxury cruising for up to 30 guests. Note: "Person" refers to adults and kids of all ages. Outside food is not allowed.',
+                packages: [
+                    { subcategory: 'Hourly Cruise (Base 15 Pax)', title: 'Weekday (Mon-Thu)', price: '₹3,499 / hr', desc: 'Extra Guest: ₹149/hr. Max 30 Pax. Includes: Welcome drink + tea/coffee with biscuits.' },
+                    { subcategory: 'Hourly Cruise (Base 15 Pax)', title: 'Weekend & Public Holidays', price: '₹3,999 / hr', desc: 'Extra Guest: ₹199/hr. Max 30 Pax. Includes: Welcome drink + tea/coffee with biscuits.' },
+                    { subcategory: 'Day Cruise (7 Hours: 5 Cruise + 2 Shore)', title: 'Weekday Package', price: '₹14,999', desc: 'Base 25 Pax. Extra: ₹499/pax. Includes: Welcome drink + fruit platter + tea/coffee.' },
+                    { subcategory: 'Day Cruise (7 Hours: 5 Cruise + 2 Shore)', title: 'Weekend Package', price: '₹17,499', desc: 'Base 25 Pax. Extra: ₹999/pax. Includes: Welcome drink + fruit platter + tea/coffee.' },
+                    { subcategory: 'Food Options', title: 'Food Package', price: '₹400 / person', desc: 'Options: Veg Sadya (21-item), Mini Sadya + Fish Fry, or Chicken Biriyani/Curry. Special catering at extra cost.' }
+                ]
+            },
+            {
+                id: 'speedboat',
+                name: 'Knight of Chaliyar Speedboat',
+                category: 'Motor',
+                image: 'exp/3.png',
+                desc: 'Zip through the water on the Knight of Chaliyar.',
+                packages: [
+                    { title: 'Group Ride', price: '₹400 / person', desc: '15 Mins. Min 3 pax, Max 7 pax.' },
+                    { title: 'Private Charter', price: '₹7,500 / hr', desc: 'Max 7 pax. Exclusive use.' }
+                ]
+            },
+            {
+                id: 'miniboat',
+                name: 'YOLO Miniboat',
+                category: 'Motor',
+                image: 'exp/4.png',
+                desc: 'Quick and fun dinghy motorboat rides.',
+                packages: [
+                    { title: 'Group Ride', price: '₹200 / person', desc: '15 Mins. Min 2 pax, Max 4 pax.' },
+                    { title: 'Private Charter', price: '₹3,000 / hr', desc: 'Max 4 pax.' }
+                ]
+            },
+            
+            // --- AQUA (Water) Activities ---
+            {
+                id: 'kayaking',
+                name: 'Kayaking',
+                category: 'Aqua',
+                image: 'exp/5.png',
+                desc: 'From beginner-friendly Sit-on-Top rides on the calm Chaliyar to adrenaline-pumping Whitewater action and Ocean endurance.',
+                packages: [
+                    { subcategory: 'Sit-on-Top (Chaliyar)', title: '2-Hour Basic', price: '₹999', desc: 'Guided paddle for beginners. 2 Hours.' },
+                    { subcategory: 'Sit-on-Top (Chaliyar)', title: 'Full-Day Adventure', price: '₹1,999', desc: 'Full day paddling + local meals.' },
+                    { subcategory: 'Sit-on-Top (Chaliyar)', title: 'Group (5 Pax)', price: '₹899 / person', desc: 'Discounted rate for groups.' },
+                    { subcategory: 'Whitewater (Kodanchery)', title: 'Half-Day Rapids', price: '₹4,999', desc: 'Guided run through rapids (Seasonal).' },
+                    { subcategory: 'Whitewater (Kodanchery)', title: 'Full-Day Expedition', price: '₹5,999', desc: 'Extended run + meals & dorm stay.' },
+                    { subcategory: 'Sit-in Touring', title: 'Half-Day Exploration', price: '₹1,499', desc: 'Guided tours covering 1-2 destinations.' },
+                    { subcategory: 'Sit-in Touring', title: 'Full-Day Expedition', price: '₹2,999', desc: 'Complete day touring + meals.' },
+                    { subcategory: 'Sea Kayaking', title: 'Half-Day Coastal', price: '₹3,499', desc: 'Guided session along coast. Experienced only.' },
+                    { subcategory: 'Sea Kayaking', title: 'Full-Day Expedition', price: '₹5,999', desc: 'Open water journey + meals.' },
+                    { subcategory: 'Surfski', title: 'Half-Day Session', price: '₹4,499', desc: 'Ocean paddling. Experienced only.' },
+                    { subcategory: 'Surfski', title: 'Full-Day Expedition', price: '₹6,999', desc: 'Advanced open-water adventure + meals.' }
+                ]
+            },
+            {
+                id: 'sup',
+                name: 'Stand-Up Paddling',
+                category: 'Aqua',
+                image: 'exp/6.png',
+                desc: 'Stand tall on the Chaliyar. Great for core fitness.',
+                packages: [
+                    { subcategory: 'River', title: '2-Hour Basic', price: '₹999', desc: 'Essentials of balance & paddling.' },
+                    { subcategory: 'River', title: 'Full-Day Adventure', price: '₹1,999', desc: 'Master SUP + meals.' },
+                    { subcategory: 'Beach', title: '2-Hour Session', price: '₹2,499', desc: 'Min 2 pax. Ocean balance challenge.' }
+                ]
+            },
+            {
+                id: 'rafting-white',
+                name: 'Whitewater Rafting',
+                category: 'Aqua',
+                image: 'exp/7.png',
+                desc: 'Team-based thrill on the Chalippuzha & Iruvanjippuzha rapids (Seasonal: June-Sept).',
+                packages: [
+                    { title: '2-Hour Rapids', price: '₹999', desc: 'Exciting guided session.' },
+                    { title: 'Full-Day Expedition', price: '₹4,499', desc: 'Multiple rapids + meals & dorm.' },
+                    { title: 'Overnight Expedition', price: '₹5,999', desc: 'Rafting + Camping under stars.' }
+                ]
+            },
+            {
+                id: 'rafting-flat',
+                name: 'Flatwater Rafting',
+                category: 'Aqua',
+                image: 'exp/8.png',
+                desc: 'Relaxed group floating on calm river stretches. Ideal for families.',
+                packages: [
+                    { title: '2-Hour Basic', price: '₹999', desc: 'Min 3 Pax. Guided float.' }
+                ]
+            },
+            {
+                id: 'snakeboat',
+                name: 'Snakeboat (Vallamkali)',
+                category: 'Aqua',
+                image: 'exp/9.png',
+                desc: 'Step into tradition. Paddle the massive Churulan Vallam as a team.',
+                packages: [
+                    { title: '1-Hour Group', price: '₹5,000 / boat', desc: 'Max 25 people.' },
+                    { title: 'Half-Day Experience', price: '₹18,000 / boat', desc: 'Max 25 people + meals.' },
+                    { title: 'Individual Seat', price: '₹600 / person', desc: 'Join a mixed group (Min 10 pax).' }
+                ]
+            },
+            {
+                id: 'rowing',
+                name: 'Rowing',
+                category: 'Aqua',
+                image: 'exp/10.png',
+                desc: 'Rhythm and endurance in sleek sculling boats (Single or Double Scull).',
+                packages: [
+                    { title: '2-Hour Basic', price: '₹1,500', desc: 'Learn boat setup & strokes.' },
+                    { title: 'Full-Day Adventure', price: '₹3,500', desc: 'Refine technique + meals.' }
+                ]
+            },
+            {
+                id: 'fishing',
+                name: 'Fishing',
+                category: 'Aqua',
+                image: 'exp/11.png',
+                desc: 'Relax by the river or try your hand at traditional fishing. A calm, rewarding pastime.',
+                packages: [
+                    { title: 'Fishing Trip', price: 'Contact for Price', desc: 'Traditional rod and line fishing.' }
+                ]
+            },
+
+            // --- LAND Activities (Consolidated) ---
+            { 
+                id: 'land-pass', 
+                name: 'Land Activity Day Pass', 
+                category: 'Land', 
+                image: 'exp/12.png', 
+                desc: 'Unlimited access to our adventure park. Includes Wall Climbing, Trampoline, Soft Archery, Giant Chess, Rope Course, Mountain Biking, and Fishing.', 
+                packages: [
+                    { title: 'Day Pass', price: '₹500', desc: 'Per Person + GST. Access to all land activities for the day.' }
+                ] 
+            }
+        ];
+
+        // --- CALENDLY INTEGRATION ---
+        function openCalendly(pkgTitle, actName) {
+            const fullName = `${actName} - ${pkgTitle}`;
+            Calendly.initPopupWidget({
+                url: 'https://calendly.com/raynjellyfish?hide_landing_page_details=1&hide_gdpr_banner=1&primary_color=ffb000&a1=' + encodeURIComponent(fullName)
+            });
+            return false;
+        }
+
+        // --- Filter Logic ---
+        const grid = document.getElementById('activity-grid');
+        const filterBtns = document.querySelectorAll('.filter-btn');
+
+        function renderGrid(filterType) {
+            grid.classList.add('grid-hidden');
+            setTimeout(() => {
+                grid.innerHTML = '';
+                const filtered = filterType === 'all' 
+                    ? activities 
+                    : activities.filter(a => a.category === filterType);
+
+                if (filtered.length === 0) {
+                    grid.innerHTML = '<p class="col-span-full text-center text-brand-gray py-12">No activities found in this category.</p>';
+                } else {
+                    filtered.forEach((act, index) => {
+                        const card = document.createElement('div');
+                        card.className = `group relative aspect-[4/5] rounded-2xl overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-500 reveal-up`;
+                        card.style.animationDelay = `${index * 100}ms`;
+                        card.onclick = () => openModal(act.id);
+                        card.innerHTML = `
+                            <div class="w-full h-full bg-gray-200 overflow-hidden">
+                                <img src="${act.image}" alt="${act.name}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy">
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-8">
+                                <span class="text-[10px] font-bold text-brand-orange uppercase tracking-widest mb-2">${act.category}</span>
+                                <h3 class="font-serif text-2xl text-white mb-1 group-hover:text-brand-orange transition-colors">${act.name}</h3>
+                                <div class="h-0 group-hover:h-auto overflow-hidden transition-all duration-300 opacity-0 group-hover:opacity-100">
+                                    <p class="text-white/70 text-xs font-light mt-2 line-clamp-2">${act.desc}</p>
+                                    <span class="inline-block mt-4 text-xs font-bold text-white uppercase tracking-wider border-b border-brand-orange pb-1">View Packages</span>
+                                </div>
+                            </div>
+                        `;
+                        grid.appendChild(card);
+                    });
+                }
+                grid.classList.remove('grid-hidden');
+                
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) entry.target.classList.add('active');
+                    });
+                });
+                document.querySelectorAll('.reveal-up').forEach(el => observer.observe(el));
+            }, 300);
+        }
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                filterBtns.forEach(b => {
+                    b.classList.remove('bg-brand-black', 'text-white', 'shadow-lg');
+                    b.classList.add('bg-white', 'text-brand-gray', 'hover:text-brand-black');
+                });
+                e.target.classList.remove('bg-white', 'text-brand-gray', 'hover:text-brand-black');
+                e.target.classList.add('bg-brand-black', 'text-white', 'shadow-lg');
+                renderGrid(e.target.getAttribute('data-filter'));
+            });
+        });
+
+        // --- Modal Logic ---
+        const modalBackdrop = document.getElementById('modal-backdrop');
+        const modalContent = document.getElementById('modal-content');
+
+        function openModal(id) {
+            const act = activities.find(a => a.id === id);
+            if(!act) return;
+
+            document.getElementById('modal-img').src = act.image;
+            document.getElementById('modal-category').innerText = act.category;
+            document.getElementById('modal-title').innerText = act.name;
+            document.getElementById('modal-desc').innerText = act.desc;
+
+            const pkgContainer = document.getElementById('modal-packages');
+            pkgContainer.innerHTML = '';
+
+            let lastSubcategory = '';
+
+            act.packages.forEach(pkg => {
+                if(pkg.subcategory && pkg.subcategory !== lastSubcategory) {
+                    const header = document.createElement('h4');
+                    header.className = 'font-bold text-brand-orange text-sm uppercase tracking-widest mt-6 mb-2 border-b border-brand-orange/20 pb-1';
+                    header.innerText = pkg.subcategory;
+                    pkgContainer.appendChild(header);
+                    lastSubcategory = pkg.subcategory;
+                }
+
+                const row = document.createElement('div');
+                row.className = 'bg-white border border-brand-black/5 rounded-xl p-6 hover:shadow-md transition-shadow group mb-3';
+                row.innerHTML = `
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-bold text-lg text-brand-black">${pkg.title}</h4>
+                        <span class="font-serif text-xl text-brand-orange whitespace-nowrap">${pkg.price}</span>
+                    </div>
+                    <p class="text-brand-gray text-sm font-light mb-4">${pkg.desc}</p>
+                    <button onclick="openCalendly('${pkg.title}', '${act.name}')" class="w-full py-2 rounded-lg border border-brand-black text-xs font-bold uppercase tracking-widest hover:bg-brand-black hover:text-white transition-all">Book This</button>
+                `;
+                pkgContainer.appendChild(row);
+            });
+
+            modalBackdrop.classList.remove('hidden');
+            setTimeout(() => {
+                modalBackdrop.classList.remove('opacity-0');
+                modalContent.classList.remove('scale-95');
+                modalContent.classList.add('scale-100');
+            }, 10);
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            modalBackdrop.classList.add('opacity-0');
+            modalContent.classList.remove('scale-100');
+            modalContent.classList.add('scale-95');
+            setTimeout(() => {
+                modalBackdrop.classList.add('hidden');
+            }, 300);
+            document.body.style.overflow = 'auto';
+        }
+
+        modalBackdrop.addEventListener('click', (e) => {
+            if (e.target === modalBackdrop) closeModal();
+        });
+
+        // --- Init ---
+        window.onload = function() {
+            renderGrid('all');
+            
+            // Updated Badge Widget
+            Calendly.initBadgeWidget({
+                url: 'https://calendly.com/raynjellyfish?hide_gdpr_banner=1&primary_color=ffa303',
+                text: 'Book a session',
+                color: '#ffa500',
+                textColor: '#ffffff',
+                branding: true
+            });
+            
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.remove('py-6');
+                    navbar.classList.add('py-3');
+                    navbar.querySelector('.glass-panel').classList.add('bg-white/90', 'backdrop-blur-xl', 'shadow-xl');
+                } else {
+                    navbar.classList.add('py-6');
+                    navbar.classList.remove('py-3');
+                    navbar.querySelector('.glass-panel').classList.remove('bg-white/90', 'backdrop-blur-xl', 'shadow-xl');
+                }
+            });
+
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const closeMobileMenuBtn = document.getElementById('close-mobile-menu');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.remove('translate-x-full'));
+            closeMobileMenuBtn.addEventListener('click', () => mobileMenu.classList.add('translate-x-full'));
+
+            // Fixed Scroll Spy Logic
+            const navItems = document.querySelectorAll('.blob-nav-item');
+            const sections = document.querySelectorAll('section');
+
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    if (pageYOffset >= (sectionTop - 150)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navItems.forEach(item => {
+                    item.classList.remove('active');
+                    if (item.getAttribute('href') === '#' + current) {
+                        item.classList.add('active');
+                    }
+                });
+            });
+        };
+    </script>
+</body>
+</html>

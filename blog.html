@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth antialiased">
+<head>
+    <link rel="icon" type="image/png" href="logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>Jellyfish Watersports </title>
+    <meta name="title" content="The River Chronicles | Jellyfish Watersports Blog">
+    <meta name="description" content="Discover stories from the Chaliyar River. Expert kayaking guides, conservation news, and travel tips from Kerala's premier watersports community.">
+    <meta name="keywords" content="Kayaking Kerala, Chaliyar River, Watersports Blog, Eco Tourism, Adventure Travel India">
+    <meta name="robots" content="index, follow">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            orange: '#F97316', 
+                            black: '#0a0a0a', 
+                            charcoal: '#1c1c1c',
+                            gray: '#6b7280',
+                            light: '#FAFAFA',
+                            cream: '#F2F0E9', 
+                            surface: '#ffffff'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Manrope', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    boxShadow: {
+                        'glass': '0 4px 30px rgba(0, 0, 0, 0.1)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Shared Styles */
+        html { scroll-behavior: smooth; }
+        ::-webkit-scrollbar { width: 0.5rem; }
+        ::-webkit-scrollbar-track { background: #F2F0E9; }
+        ::-webkit-scrollbar-thumb { background: rgba(249, 115, 22, 0.6); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(249, 115, 22, 1); }
+        ::selection { background: #F97316; color: white; }
+        body { cursor: default; }
+        
+        .glass-panel { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.3); }
+        .glass-card { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.5); }
+        
+        .reveal-up { opacity: 0; transform: translateY(2.5rem); transition: all 1s cubic-bezier(0.16, 1, 0.3, 1); }
+        .reveal-up.active { opacity: 1; transform: translateY(0); }
+
+        .line-clamp-3 {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="bg-brand-cream text-brand-black relative overflow-x-hidden">
+
+    <nav id="navbar" class="fixed top-0 inset-x-0 z-50 transition-all duration-500 py-6">
+        <div class="max-w-[95rem] mx-auto px-6">
+            <div class="glass-panel rounded-full px-8 py-4 flex justify-between items-center shadow-glass transition-all duration-500 hover:shadow-lg">
+                <a href="index.html" class="block w-24 md:w-32 z-50 relative shrink-0">
+                    <img src="logo.png" alt="Jellyfish Logo" class="w-full h-auto object-contain">
+                </a>
+                <div class="hidden lg:flex items-center gap-6 xl:gap-8">
+                    <div class="flex items-center gap-5 xl:gap-7 text-[0.8rem] font-medium tracking-wide uppercase whitespace-nowrap">
+                        <a href="index.html#hero" class="hover:text-brand-orange transition-colors">Who are we</a>
+                        <a href="blog.html" class="text-brand-orange transition-colors">Blog</a>
+                        <a href="exp.html" class="hover:text-brand-orange transition-colors">Book an Experience</a>
+                        <a href="explearn.html" class="hover:text-brand-orange transition-colors">Experiential Learning</a>
+                        <a href="food.html" class="hover:text-brand-orange transition-colors">Food & Stay</a>
+                        <a href="yacht.html" class="hover:text-brand-orange transition-colors"> Yacht Club</a>
+                        <a href="shop.html" class="hover:text-brand-orange transition-colors">Shop</a>
+                    </div>
+                    <a href="exp.html" class="group relative px-6 py-2.5 rounded-full bg-brand-black text-white text-[0.8rem] font-bold tracking-wider overflow-hidden transition-all hover:scale-105 shrink-0 block text-center">
+                        <div class="absolute inset-0 bg-brand-orange translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></div>
+                        <span class="relative z-10">Book Now</span>
+                    </a>
+                </div>
+                <button id="mobile-menu-btn" class="lg:hidden p-2 text-brand-black hover:text-brand-orange transition z-50">
+                    <i class="ph ph-list text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div id="mobile-menu" class="fixed inset-0 z-[60] bg-brand-cream transform translate-x-full transition-transform duration-500 lg:hidden flex flex-col justify-center items-center space-y-6 text-center">
+        <button id="close-mobile-menu" class="absolute top-8 right-8 p-4 text-3xl hover:text-brand-orange transition-colors z-[70]"><i class="ph ph-x"></i></button>
+        <a href="index.html#hero" class="mobile-link font-serif text-[1.5rem] hover:text-brand-orange transition-colors">Who are we</a>
+        <a href="blog.html" class="mobile-link font-serif text-[1.5rem] text-brand-orange transition-colors">Blog</a>
+        <a href="exp.html" class="mobile-link font-serif text-[1.5rem] hover:text-brand-orange transition-colors">Book an Experience</a>
+        <a href="explearn.html" class="mobile-link font-serif text-[1.5rem] hover:text-brand-orange transition-colors">Experiential Learning</a>
+        <a href="food.html" class="mobile-link font-serif text-[1.5rem] hover:text-brand-orange transition-colors">Food and Stay</a>
+        <a href="yacht.html" class="mobile-link font-serif text-[1.5rem] hover:text-brand-orange transition-colors">Jellyfish Yacht Club</a>
+        <a href="shop.html" class="mobile-link font-serif text-[1.5rem] hover:text-brand-orange transition-colors">Shop</a>
+        <a href="exp.html" class="px-8 py-3 rounded-full bg-brand-orange text-white text-lg font-bold tracking-wide mt-4 inline-block">Book Now</a>
+    </div>
+
+    <header class="relative pt-48 pb-20 px-6">
+        <div class="max-w-[90rem] mx-auto text-center reveal-up">
+            <span class="text-brand-orange font-bold tracking-[0.2em] uppercase text-[0.75rem] mb-4 block">Our Journal</span>
+            <h1 class="font-serif text-[3.5rem] md:text-[5rem] lg:text-[6rem] leading-[0.9] text-brand-black mb-8">
+                The River <span class="italic text-brand-gray/50">Chronicles.</span>
+            </h1>
+            <p class="text-brand-gray text-lg md:text-xl font-light max-w-2xl mx-auto">
+                Adventures, conservation updates, and stories from the banks of the Chaliyar.
+            </p>
+        </div>
+    </header>
+
+    <section class="px-6 mb-24">
+        <div class="max-w-[90rem] mx-auto" id="featured-container">
+            </div>
+    </section>
+
+    <main class="max-w-[90rem] mx-auto px-6 pb-32">
+        <div class="flex flex-col lg:flex-row gap-16">
+            
+            <aside class="lg:w-1/4 reveal-up">
+                <div class="sticky top-32 glass-card p-8 rounded-2xl">
+                    <h3 class="font-serif text-2xl mb-6">Explore Topics</h3>
+                    <div class="flex flex-col gap-3" id="category-list">
+                        <button onclick="filterPosts('All')" class="category-btn active text-left px-4 py-3 rounded-lg hover:bg-brand-orange/10 hover:text-brand-orange transition-all text-sm font-medium border border-transparent">All Stories</button>
+                        </div>
+                    </div>
+            </aside>
+
+            <div class="lg:w-3/4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12" id="blog-grid">
+                    </div>
+                
+                <div class="mt-20 flex justify-center gap-2">
+                    <button class="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center hover:border-brand-orange hover:text-brand-orange transition-colors"><i class="ph ph-caret-left"></i></button>
+                    <button class="w-10 h-10 rounded-full bg-brand-black text-white flex items-center justify-center">1</button>
+                    <button class="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center hover:border-brand-orange hover:text-brand-orange transition-colors"><i class="ph ph-caret-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-white pt-20 pb-12 border-t border-brand-black/5">
+        <div class="max-w-[90rem] mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16 reveal-up">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="w-24 mb-6">
+                         <img src="logo.png" alt="Logo" class="w-full" loading="lazy">
+                    </div>
+                    <p class="text-brand-gray text-sm leading-relaxed max-w-xs">
+                        Kerala's premier watersports hub. Adventure, conservation, and community.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-serif text-lg font-bold text-brand-black mb-6">Contact Us</h4>
+                    <div class="space-y-2 text-brand-gray text-sm">
+                        <p>kayak@jellyfishwatersports.com</p>
+                        <p>+91 9400 23 88 33</p>
+                        <div class="flex gap-4 mt-4">
+                            <a href="https://www.instagram.com/jellyfish_watersports" class="text-brand-black hover:text-brand-orange transition-colors"><i class="ph-fill ph-instagram-logo text-xl"></i></a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-serif text-lg font-bold text-brand-black mb-6">Scan to Chat</h4>
+                    <div class="w-32 h-32 border border-brand-black/10 p-2 rounded-lg bg-white">
+                        <img src="link.png" alt="Scan QR Code" class="w-full h-full object-contain" loading="lazy">
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-brand-black/5 pt-10 text-center text-[0.75rem] text-brand-gray/60 font-medium uppercase tracking-wider">
+                <p>&copy; 2025 Jellyfish Watersports. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // --- 1. EASY BLOG MANAGEMENT SYSTEM ---
+        
+        // PASTE YOUR NEW BLOG POSTS INSIDE THIS ARRAY
+        const blogPosts = [
+            /* // --- TEMPLATE ---
+            // Copy this block below to add a post. The first post in the list becomes the "Featured Hero" post.
+            {
+                id: 1,
+                title: "Your Post Title Here",
+                category: "Adventure",
+                date: "October 10, 2025",
+                author: "Author Name",
+                image: "https://your-image-url.com/image.jpg",
+                excerpt: "A short summary of the post goes here. Keep it to about 2-3 sentences.",
+                link: "your-post-page.html"
+            }
+            */
+        ];
+
+        // --- 2. RENDER LOGIC ---
+
+        function initBlog() {
+            const featuredContainer = document.getElementById('featured-container');
+            const blogGrid = document.getElementById('blog-grid');
+            const categoryList = document.getElementById('category-list');
+            
+            // Handle Empty State
+            if (blogPosts.length === 0) {
+                blogGrid.innerHTML = `<p class="text-brand-gray text-lg col-span-2 text-center py-20">No stories found yet. Stay tuned!</p>`;
+                return;
+            }
+
+            // 1. Render Featured Post (First item in array)
+            const featured = blogPosts[0];
+            if(featured) {
+                featuredContainer.innerHTML = `
+                    <div class="relative w-full h-[60vh] md:h-[70vh] rounded-3xl overflow-hidden group reveal-up active">
+                        <img src="${featured.image}" alt="${featured.title}" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-8 md:p-16 max-w-4xl">
+                            <span class="inline-block px-4 py-2 bg-brand-orange text-white text-xs font-bold uppercase tracking-widest rounded-full mb-6 hover:bg-white hover:text-brand-orange transition-colors">${featured.category}</span>
+                            <h2 class="font-serif text-3xl md:text-5xl lg:text-6xl text-white mb-6 leading-tight hover:underline decoration-brand-orange underline-offset-8 decoration-2 cursor-pointer">
+                                <a href="${featured.link}">${featured.title}</a>
+                            </h2>
+                            <p class="text-white/80 text-lg md:text-xl line-clamp-3 mb-8 font-light max-w-2xl">${featured.excerpt}</p>
+                            <div class="flex items-center gap-4 text-white/60 text-sm font-medium uppercase tracking-wider">
+                                <span>${featured.date}</span>
+                                <span class="w-1 h-1 bg-brand-orange rounded-full"></span>
+                                <span>By ${featured.author}</span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+
+            // 2. Extract Categories automatically
+            const categories = ['All', ...new Set(blogPosts.map(post => post.category))];
+            
+            // 3. Render Category Buttons
+            categoryList.innerHTML = ''; 
+            categories.forEach(cat => {
+                const btn = document.createElement('button');
+                btn.innerText = cat === 'All' ? 'All Stories' : cat;
+                btn.className = `category-btn w-full text-left px-4 py-3 rounded-lg transition-all text-sm font-medium border border-transparent ${cat === 'All' ? 'bg-brand-black text-white' : 'text-brand-gray hover:bg-brand-orange/10 hover:text-brand-orange'}`;
+                btn.onclick = () => filterPosts(cat);
+                categoryList.appendChild(btn);
+            });
+
+            // 4. Render Grid (Skipping the featured post)
+            renderGrid(blogPosts.slice(1));
+        }
+
+        function renderGrid(posts) {
+            const blogGrid = document.getElementById('blog-grid');
+            blogGrid.innerHTML = '';
+            
+            if (posts.length === 0 && blogPosts.length > 1) {
+                 blogGrid.innerHTML = `<p class="text-brand-gray text-sm col-span-2 py-10">No other stories in this category.</p>`;
+                 return;
+            }
+
+            posts.forEach((post, index) => {
+                const delay = (index % 4) * 100; // Stagger animation
+                const card = `
+                    <article class="group flex flex-col h-full reveal-up" style="transition-delay: ${delay}ms">
+                        <a href="${post.link}" class="block overflow-hidden rounded-2xl mb-6 aspect-[4/3] relative">
+                            <div class="absolute top-4 left-4 z-10 bg-white/90 backdrop-blur px-3 py-1 rounded text-[0.65rem] font-bold uppercase tracking-widest text-brand-orange">
+                                ${post.category}
+                            </div>
+                            <img src="${post.image}" alt="${post.title}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        </a>
+                        <div class="flex-1 flex flex-col">
+                            <div class="flex items-center gap-3 text-xs text-brand-gray/60 mb-3 font-medium uppercase tracking-wide">
+                                <span>${post.date}</span>
+                                <span class="w-1 h-1 bg-brand-gray/30 rounded-full"></span>
+                                <span>${post.author}</span>
+                            </div>
+                            <h3 class="font-serif text-2xl md:text-3xl text-brand-black mb-4 leading-tight group-hover:text-brand-orange transition-colors">
+                                <a href="${post.link}">${post.title}</a>
+                            </h3>
+                            <p class="text-brand-gray font-light leading-relaxed mb-6 line-clamp-3 flex-1">
+                                ${post.excerpt}
+                            </p>
+                            <a href="${post.link}" class="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-brand-black hover:gap-4 transition-all">
+                                Read Article <i class="ph-bold ph-arrow-right text-brand-orange"></i>
+                            </a>
+                        </div>
+                    </article>
+                `;
+                blogGrid.innerHTML += card;
+            });
+            
+            // Re-trigger animations
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) entry.target.classList.add('active');
+                });
+            });
+            document.querySelectorAll('#blog-grid .reveal-up').forEach(el => observer.observe(el));
+        }
+
+        function filterPosts(category) {
+            document.querySelectorAll('.category-btn').forEach(btn => {
+                const text = btn.innerText;
+                const isMatch = (category === 'All' && text === 'All Stories') || text === category;
+                
+                if (isMatch) {
+                    btn.classList.remove('text-brand-gray', 'hover:bg-brand-orange/10', 'hover:text-brand-orange');
+                    btn.classList.add('bg-brand-black', 'text-white');
+                } else {
+                    btn.classList.add('text-brand-gray', 'hover:bg-brand-orange/10', 'hover:text-brand-orange');
+                    btn.classList.remove('bg-brand-black', 'text-white');
+                }
+            });
+
+            if (category === 'All') {
+                renderGrid(blogPosts.slice(1));
+            } else {
+                const filtered = blogPosts.filter(post => post.category === category);
+                // Note: We might be filtering out the featured post if it matches the category,
+                // but usually the hero stays static. If you want the hero to change, logic would be more complex.
+                // Currently, the grid shows everything matching the category.
+                renderGrid(filtered);
+            }
+        }
+
+        // --- 3. PAGE INITIALIZATION ---
+        window.onload = function() {
+            initBlog(); 
+
+            // Scroll Logic for Navbar
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.remove('py-6');
+                    navbar.classList.add('py-3');
+                    navbar.querySelector('.glass-panel').classList.add('bg-white/90', 'backdrop-blur-xl', 'shadow-xl');
+                } else {
+                    navbar.classList.add('py-6');
+                    navbar.classList.remove('py-3');
+                    navbar.querySelector('.glass-panel').classList.remove('bg-white/90', 'backdrop-blur-xl', 'shadow-xl');
+                }
+            });
+
+            // Reveal Animation
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) entry.target.classList.add('active');
+                });
+            });
+            document.querySelectorAll('.reveal-up').forEach(el => observer.observe(el));
+
+            // Mobile Menu
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileBtn = document.getElementById('mobile-menu-btn');
+            const mobileClose = document.getElementById('close-mobile-menu');
+            
+            mobileBtn.addEventListener('click', () => mobileMenu.classList.remove('translate-x-full'));
+            mobileClose.addEventListener('click', () => mobileMenu.classList.add('translate-x-full'));
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth antialiased">
+<head>
+    <link rel="icon" type="image/png" href="logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>Jellyfish Adventure Academy | Professional Watersports Training Kerala</title>
+
+    <meta name="title" content="Jellyfish Adventure Academy | Whitewater, Sea Kayaking & Sailing Schools">
+    <meta name="description" content="Join Kerala's premier outdoor academy. Certified courses in Whitewater Kayaking (Kodanchery), Sea Kayaking, Dinghy Sailing, and Outdoor Survival Skills. IAYP & CAS certified programs available.">
+    <meta name="keywords" content="Whitewater Kayaking Course India, Sea Kayaking Certification, Sailing School Kerala, Outdoor First Responder Course, IAYP Adventure Journey, Wilderness Survival Training">
+    <meta name="author" content="Jellyfish Watersports">
+    <meta name="robots" content="index, follow">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            orange: '#F97316', 
+                            black: '#0a0a0a', 
+                            charcoal: '#1c1c1c',
+                            gray: '#6b7280',
+                            light: '#FAFAFA',
+                            cream: '#F2F0E9', 
+                            surface: '#ffffff'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Manrope', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    boxShadow: {
+                        'glass': '0 4px 30px rgba(0, 0, 0, 0.1)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; scroll-padding-top: 120px; }
+        ::-webkit-scrollbar { width: 0.5rem; }
+        ::-webkit-scrollbar-track { background: #F2F0E9; }
+        ::-webkit-scrollbar-thumb { background: rgba(249, 115, 22, 0.6); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(249, 115, 22, 1); }
+        ::selection { background: #F97316; color: white; }
+        body { cursor: default; }
+        .glass-panel { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.3); }
+        .reveal-up { opacity: 0; transform: translateY(2.5rem); transition: all 1s cubic-bezier(0.16, 1, 0.3, 1); }
+        .reveal-up.active { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body class="bg-brand-cream text-brand-black relative overflow-x-hidden">
+
+    <nav id="navbar" class="fixed top-0 inset-x-0 z-50 transition-all duration-500 py-6">
+        <div class="max-w-[95rem] mx-auto px-6">
+            <div class="glass-panel rounded-full px-8 py-4 flex justify-between items-center shadow-glass transition-all duration-500 hover:shadow-lg">
+                <a href="index.html" class="block w-24 md:w-32 z-50 relative shrink-0">
+                    <img src="logo.png" alt="Jellyfish Logo" class="w-full h-auto object-contain">
+                </a>
+                <div class="hidden lg:flex items-center gap-6 xl:gap-8">
+                    <div class="flex items-center gap-5 xl:gap-7 text-[0.8rem] font-medium tracking-wide uppercase whitespace-nowrap">
+                        <a href="index.html" class="hover:text-brand-orange transition-colors">Who are we</a>
+                        <a href="blog.html" class="hover:text-brand-orange transition-colors">Blog</a>
+                        <a href="exp.html" class="hover:text-brand-orange transition-colors">Book an Experience</a>
+                        <a href="#" class="text-brand-orange transition-colors">Experiential Learning</a> <a href="food.html" class="hover:text-brand-orange transition-colors">Food and Stay</a>
+                        <a href="yacht.html" class="hover:text-brand-orange transition-colors">Jellyfish Yacht Club</a>
+                        <a href="shop.html" class="hover:text-brand-orange transition-colors">Shop</a>
+                    </div>
+                    <a href="exp.html" class="group relative px-6 py-2.5 rounded-full bg-brand-black text-white text-[0.8rem] font-bold tracking-wider overflow-hidden transition-all hover:scale-105 shrink-0 block text-center">
+                        <div class="absolute inset-0 bg-brand-orange translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></div>
+                        <span class="relative z-10">Book Now</span>
+                    </a>
+                </div>
+                <button id="mobile-menu-btn" class="lg:hidden p-2 text-brand-black hover:text-brand-orange transition z-50">
+                    <i class="ph ph-list text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div id="mobile-menu" class="fixed inset-0 z-[60] bg-brand-cream transform translate-x-full transition-transform duration-500 lg:hidden flex flex-col justify-center items-center space-y-6 text-center">
+        <button id="close-mobile-menu" class="absolute top-8 right-8 p-4 text-3xl hover:text-brand-orange transition-colors z-[70]"><i class="ph ph-x"></i></button>
+        <a href="index.html" class="mobile-link font-serif text-[1.5rem] hover:text-brand-orange transition-colors">Who are we</a>
+        <a href="blog.html" class="mobile-link font-serif text-[1.5rem] hover:text-brand-orange transition-colors">Blog</a>
+        <a href="exp.html" class="mobile-link font-serif text-[1.5rem] hover:text-brand-orange transition-colors">Book an Experience</a>
+        <a href="#" class="mobile-link font-serif text-[1.5rem] text-brand-orange transition-colors">Experiential Learning</a>
+        <a href="food.html" class="mobile-link font-serif text-[1.5rem] hover:text-brand-orange transition-colors">Food and Stay</a>
+        <a href="yacht.html" class="mobile-link font-serif text-[1.5rem] hover:text-brand-orange transition-colors">Jellyfish Yacht Club</a>
+        <a href="shop.html" class="mobile-link font-serif text-[1.5rem] hover:text-brand-orange transition-colors">Shop</a>
+        <a href="exp.html" class="px-8 py-3 rounded-full bg-brand-orange text-white text-lg font-bold tracking-wide mt-4 inline-block">Book Now</a>
+    </div>
+
+    <header class="relative h-[80vh] w-full overflow-hidden flex items-center justify-center -mt-[120px] pt-[120px]">
+        <div class="absolute inset-0 z-0">
+            <img src="acad/1.png" alt="Academy Training" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/40"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-brand-cream"></div>
+        </div>
+        <div class="relative z-10 text-center max-w-5xl px-6 reveal-up active">
+            <span class="text-brand-orange font-bold tracking-[0.2em] uppercase text-xs md:text-sm mb-4 block">Jellyfish Adventure Academy</span>
+            <h1 class="font-serif text-[3.5rem] md:text-[5rem] lg:text-[6.5rem] leading-[0.95] text-white mb-8 tracking-tighter">
+                Learning Lived,<br><span class="italic font-light text-white/90">Not Just Taught.</span>
+            </h1>
+            <p class="text-white/80 text-lg md:text-xl font-light max-w-2xl mx-auto leading-relaxed">
+                We believe that the most profound lessons happen outdoors. From whitewater rapids to ocean swells, we build confidence, teamwork, and lifelong skills through immersive experiences.
+            </p>
+        </div>
+    </header>
+
+    <section class="py-24 px-6 relative">
+        <div class="max-w-[90rem] mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+                <div class="lg:col-span-5 reveal-up">
+                    <h2 class="font-serif text-[2.5rem] md:text-[3.5rem] leading-[1.1] mb-8 text-brand-black">
+                        Two Pathways <br><span class="italic text-brand-gray/60">One Mission.</span>
+                    </h2>
+                    <p class="text-brand-gray text-lg font-light leading-relaxed mb-6">
+                        We tailor our experiences to ensure every group—whether international schools, corporate teams, or solo explorers—gains meaningful skills.
+                    </p>
+                    
+                    <div class="space-y-8 mt-10">
+                        <div class="flex gap-6 group">
+                            <span class="w-12 h-12 rounded-full bg-brand-orange/10 flex items-center justify-center shrink-0 text-brand-orange text-2xl group-hover:bg-brand-orange group-hover:text-white transition-colors duration-300"><i class="ph-fill ph-certificate"></i></span>
+                            <div>
+                                <strong class="block text-brand-black font-serif text-xl mb-2">Curricular Programs</strong>
+                                <p class="text-sm text-brand-gray leading-relaxed">Structured learning aligned with recognized frameworks like the <span class="text-brand-black font-medium">Duke of Edinburgh's International Award (IAYP)</span> and <span class="text-brand-black font-medium">IB CAS</span> programs.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 group">
+                            <span class="w-12 h-12 rounded-full bg-brand-orange/10 flex items-center justify-center shrink-0 text-brand-orange text-2xl group-hover:bg-brand-orange group-hover:text-white transition-colors duration-300"><i class="ph-fill ph-users-three"></i></span>
+                            <div>
+                                <strong class="block text-brand-black font-serif text-xl mb-2">Non-Curricular Programs</strong>
+                                <p class="text-sm text-brand-gray leading-relaxed">Focusing on team-building, leadership, and ecological awareness for schools, colleges, and corporate offsites.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-7 relative reveal-up delay-100">
+                    <img src="acad/2.png" alt="Students learning" class="rounded-3xl shadow-2xl w-full h-auto object-cover aspect-[16/9]">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-white" id="curriculum">
+        <div class="max-w-[90rem] mx-auto px-6">
+            <div class="text-center mb-20 reveal-up">
+                <span class="text-brand-orange font-bold tracking-[0.2em] uppercase text-[0.75rem] mb-4 block">Professional Curriculum</span>
+                <h2 class="font-serif text-[3rem] md:text-[4.5rem] text-brand-black leading-[1]">The Schools.</h2>
+            </div>
+
+            <div class="space-y-24">
+
+                <div class="reveal-up">
+                    <div class="flex flex-col lg:flex-row gap-10 items-stretch bg-brand-cream rounded-[2.5rem] overflow-hidden p-6 md:p-10 border border-brand-black/5 shadow-sm hover:shadow-xl transition-all duration-500">
+                        <div class="lg:w-1/3 flex flex-col">
+                            <div class="aspect-[4/3] rounded-2xl overflow-hidden mb-6 flex-shrink-0 relative group">
+                                <img src="acad/3.png" alt="Whitewater Kayaking" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                                <div class="absolute top-4 left-4 bg-white/90 backdrop-blur px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest text-brand-black">Kodanchery</div>
+                            </div>
+                            <h3 class="font-serif text-3xl text-brand-black mb-3">Whitewater Kayaking</h3>
+                            <p class="text-brand-gray mb-6 text-sm leading-relaxed flex-grow">
+                                Based at our International Kayaking Center. Learn to navigate rapids, read river features, and master self-rescue under the guidance of certified international instructors.
+                            </p>
+                            <a href="exp.html" class="inline-block w-full text-center px-8 py-4 bg-brand-black text-white rounded-full font-bold text-xs tracking-widest uppercase hover:bg-brand-orange transition-colors mt-auto">Book Course</a>
+                        </div>
+                        
+                        <div class="lg:w-2/3 bg-white rounded-2xl p-6 md:p-8 flex flex-col justify-center">
+                            <div class="overflow-x-auto">
+                                <table class="w-full text-left border-collapse min-w-[600px]">
+                                    <thead>
+                                        <tr class="border-b border-brand-black/10 text-brand-gray/60 text-[0.7rem] uppercase tracking-widest">
+                                            <th class="py-4 pl-2 font-semibold">Course Level</th>
+                                            <th class="py-4 font-semibold">Duration</th>
+                                            <th class="py-4 font-semibold w-2/5">Curriculum Focus</th>
+                                            <th class="py-4 pr-2 font-semibold text-right">Fee (Excl. Tax)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="text-brand-black text-sm">
+                                        <tr class="border-b border-brand-black/5 group hover:bg-brand-light transition-colors">
+                                            <td class="py-5 pl-2 font-bold text-lg group-hover:text-brand-orange transition-colors">Beginner</td>
+                                            <td class="py-5 font-medium">5 Days</td>
+                                            <td class="py-5 text-brand-gray leading-relaxed pr-4">River safety, reading features, wet exits, basic strokes, Class I-II rapids.</td>
+                                            <td class="py-5 pr-2 text-right font-serif text-lg">₹20,000</td>
+                                        </tr>
+                                        <tr class="border-b border-brand-black/5 group hover:bg-brand-light transition-colors">
+                                            <td class="py-5 pl-2 font-bold text-lg group-hover:text-brand-orange transition-colors">Intermediate</td>
+                                            <td class="py-5 font-medium">3 Days</td>
+                                            <td class="py-5 text-brand-gray leading-relaxed pr-4">Eddy turns, peel-outs, ferry glides, rolling intro, Class II-III rapids.</td>
+                                            <td class="py-5 pr-2 text-right font-serif text-lg">₹20,000</td>
+                                        </tr>
+                                        <tr class="group hover:bg-brand-light transition-colors">
+                                            <td class="py-5 pl-2 font-bold text-lg group-hover:text-brand-orange transition-colors">Advanced</td>
+                                            <td class="py-5 font-medium">2 Days</td>
+                                            <td class="py-5 text-brand-gray leading-relaxed pr-4">Combat rolls, swiftwater rescue, scouting, leadership, Class III+ rapids.</td>
+                                            <td class="py-5 pr-2 text-right font-serif text-lg">₹10,000</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reveal-up">
+                    <div class="flex flex-col lg:flex-row gap-10 items-stretch bg-brand-cream rounded-[2.5rem] overflow-hidden p-6 md:p-10 border border-brand-black/5 shadow-sm hover:shadow-xl transition-all duration-500">
+                        <div class="lg:w-1/3 flex flex-col">
+                            <div class="aspect-[4/3] rounded-2xl overflow-hidden mb-6 flex-shrink-0 relative group">
+                                <img src="acad/4.png" alt="Sea Kayaking" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                                <div class="absolute top-4 left-4 bg-white/90 backdrop-blur px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest text-brand-black">Malabar Coast</div>
+                            </div>
+                            <h3 class="font-serif text-3xl text-brand-black mb-3">Sea Kayaking</h3>
+                            <p class="text-brand-gray mb-6 text-sm leading-relaxed flex-grow">
+                                The ultimate test of endurance. Explore estuaries and open seas. strictly for experienced paddlers with certifications.
+                            </p>
+                            <a href="exp.html" class="inline-block w-full text-center px-8 py-4 bg-brand-black text-white rounded-full font-bold text-xs tracking-widest uppercase hover:bg-brand-orange transition-colors mt-auto">Book Expedition</a>
+                        </div>
+                        
+                        <div class="lg:w-2/3 bg-white rounded-2xl p-6 md:p-8 flex flex-col justify-center">
+                            <div class="overflow-x-auto">
+                                <table class="w-full text-left border-collapse min-w-[600px]">
+                                    <thead>
+                                        <tr class="border-b border-brand-black/10 text-brand-gray/60 text-[0.7rem] uppercase tracking-widest">
+                                            <th class="py-4 pl-2 font-semibold">Program</th>
+                                            <th class="py-4 font-semibold">Focus</th>
+                                            <th class="py-4 font-semibold w-2/5">Details</th>
+                                            <th class="py-4 pr-2 font-semibold text-right">Fee (Excl. Tax)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="text-brand-black text-sm">
+                                        <tr class="border-b border-brand-black/5 group hover:bg-brand-light transition-colors">
+                                            <td class="py-5 pl-2 font-bold text-lg group-hover:text-brand-orange transition-colors">Coastal Challenge</td>
+                                            <td class="py-5 font-medium">Half-Day</td>
+                                            <td class="py-5 text-brand-gray leading-relaxed pr-4">Guided session along select coastal routes. Includes safety briefing & gear.</td>
+                                            <td class="py-5 pr-2 text-right font-serif text-lg">₹3,499</td>
+                                        </tr>
+                                        <tr class="border-b border-brand-black/5 group hover:bg-brand-light transition-colors">
+                                            <td class="py-5 pl-2 font-bold text-lg group-hover:text-brand-orange transition-colors">Ocean Expedition</td>
+                                            <td class="py-5 font-medium">Full-Day</td>
+                                            <td class="py-5 text-brand-gray leading-relaxed pr-4">Extended open-water journey across multiple coastal points with meals.</td>
+                                            <td class="py-5 pr-2 text-right font-serif text-lg">₹5,999</td>
+                                        </tr>
+                                        <tr class="group hover:bg-brand-light transition-colors">
+                                            <td class="py-5 pl-2 font-bold text-lg group-hover:text-brand-orange transition-colors">Surfski Performance</td>
+                                            <td class="py-5 font-medium">Half/Full Day</td>
+                                            <td class="py-5 text-brand-gray leading-relaxed pr-4">High-performance downwind paddling on racing skis. For advanced athletes.</td>
+                                            <td class="py-5 pr-2 text-right font-serif text-lg">₹4,499 - ₹6,999</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reveal-up">
+                    <div class="flex flex-col lg:flex-row gap-10 items-stretch bg-brand-cream rounded-[2.5rem] overflow-hidden p-6 md:p-10 border border-brand-black/5 shadow-sm hover:shadow-xl transition-all duration-500">
+                        <div class="lg:w-1/3 flex flex-col">
+                            <div class="aspect-[4/3] rounded-2xl overflow-hidden mb-6 flex-shrink-0 relative group">
+                                <img src="acad/5.png" alt="Sailing School" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                                <div class="absolute top-4 left-4 bg-white/90 backdrop-blur px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest text-brand-black">Chaliyar</div>
+                            </div>
+                            <h3 class="font-serif text-3xl text-brand-black mb-3">Dinghy Sailing</h3>
+                            <p class="text-brand-gray mb-6 text-sm leading-relaxed flex-grow">
+                                Learn wind awareness, rigging, and boat handling on world-class dinghies. Our camps are held in December and April.
+                            </p>
+                            <a href="mailto:academy@jellyfishwatersports.com" class="inline-block w-full text-center px-8 py-4 bg-brand-black text-white rounded-full font-bold text-xs tracking-widest uppercase hover:bg-brand-orange transition-colors mt-auto">Inquire for Camps</a>
+                        </div>
+                        
+                        <div class="lg:w-2/3 bg-white rounded-2xl p-6 md:p-8 flex flex-col justify-center">
+                            <div class="overflow-x-auto">
+                                <table class="w-full text-left border-collapse min-w-[600px]">
+                                    <thead>
+                                        <tr class="border-b border-brand-black/10 text-brand-gray/60 text-[0.7rem] uppercase tracking-widest">
+                                            <th class="py-4 pl-2 font-semibold">Vessel</th>
+                                            <th class="py-4 font-semibold">Target Group</th>
+                                            <th class="py-4 font-semibold w-2/5">Skills Learned</th>
+                                            <th class="py-4 pr-2 font-semibold text-right">Availability</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="text-brand-black text-sm">
+                                        <tr class="border-b border-brand-black/5 group hover:bg-brand-light transition-colors">
+                                            <td class="py-5 pl-2 font-bold text-lg group-hover:text-brand-orange transition-colors">Optimist</td>
+                                            <td class="py-5 font-medium">Age &lt; 15</td>
+                                            <td class="py-5 text-brand-gray leading-relaxed pr-4">Single-handed pram hull. Safe and stable foundation for youth sailing.</td>
+                                            <td class="py-5 pr-2 text-right font-serif">Seasonal Camp</td>
+                                        </tr>
+                                        <tr class="border-b border-brand-black/5 group hover:bg-brand-light transition-colors">
+                                            <td class="py-5 pl-2 font-bold text-lg group-hover:text-brand-orange transition-colors">Topper</td>
+                                            <td class="py-5 font-medium">Youth/Adult</td>
+                                            <td class="py-5 text-brand-gray leading-relaxed pr-4">Versatile 11-foot dinghy. Covers rigging, center-main handling, and racing.</td>
+                                            <td class="py-5 pr-2 text-right font-serif">Seasonal Camp</td>
+                                        </tr>
+                                        <tr class="group hover:bg-brand-light transition-colors">
+                                            <td class="py-5 pl-2 font-bold text-lg group-hover:text-brand-orange transition-colors">Laser 2</td>
+                                            <td class="py-5 font-medium">Intermediate</td>
+                                            <td class="py-5 text-brand-gray leading-relaxed pr-4">Two-person high performance. Trapeze work, spinnaker handling, and regatta tactics.</td>
+                                            <td class="py-5 pr-2 text-right font-serif">Seasonal Camp</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reveal-up">
+                    <div class="flex flex-col lg:flex-row gap-10 items-stretch bg-brand-cream rounded-[2.5rem] overflow-hidden p-6 md:p-10 border border-brand-black/5 shadow-sm hover:shadow-xl transition-all duration-500">
+                        <div class="lg:w-1/3 flex flex-col">
+                            <div class="aspect-[4/3] rounded-2xl overflow-hidden mb-6 flex-shrink-0 relative group">
+                                <img src="acad/6.png" alt="Outdoor Survival" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                                <div class="absolute top-4 left-4 bg-white/90 backdrop-blur px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest text-brand-black">Wilderness</div>
+                            </div>
+                            <h3 class="font-serif text-3xl text-brand-black mb-3">Outdoor Skills & Survival</h3>
+                            <p class="text-brand-gray mb-6 text-sm leading-relaxed flex-grow">
+                                We teach the art of camping and survival specifically for the tropics. Learn to stay safe, resilient, and resourceful in humid forests and riverbanks.
+                            </p>
+                            <a href="mailto:academy@jellyfishwatersports.com" class="inline-block w-full text-center px-8 py-4 bg-brand-black text-white rounded-full font-bold text-xs tracking-widest uppercase hover:bg-brand-orange transition-colors mt-auto">Inquire for Groups</a>
+                        </div>
+                        
+                        <div class="lg:w-2/3 bg-white rounded-2xl p-6 md:p-8 flex flex-col justify-center">
+                            <div class="overflow-x-auto">
+                                <table class="w-full text-left border-collapse min-w-[600px]">
+                                    <thead>
+                                        <tr class="border-b border-brand-black/10 text-brand-gray/60 text-[0.7rem] uppercase tracking-widest">
+                                            <th class="py-4 pl-2 font-semibold">Module</th>
+                                            <th class="py-4 font-semibold">Level</th>
+                                            <th class="py-4 font-semibold w-2/5">Key Skills</th>
+                                            <th class="py-4 pr-2 font-semibold text-right">Pricing</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="text-brand-black text-sm">
+                                        <tr class="border-b border-brand-black/5 group hover:bg-brand-light transition-colors">
+                                            <td class="py-5 pl-2 font-bold text-lg group-hover:text-brand-orange transition-colors">First Responder</td>
+                                            <td class="py-5 font-medium">All Levels</td>
+                                            <td class="py-5 text-brand-gray leading-relaxed pr-4">Snakebite awareness, heatstroke management, flood response, and CPR.</td>
+                                            <td class="py-5 pr-2 text-right font-serif">On Request</td>
+                                        </tr>
+                                        <tr class="border-b border-brand-black/5 group hover:bg-brand-light transition-colors">
+                                            <td class="py-5 pl-2 font-bold text-lg group-hover:text-brand-orange transition-colors">Tropical Camping</td>
+                                            <td class="py-5 font-medium">Beginner-Adv</td>
+                                            <td class="py-5 text-brand-gray leading-relaxed pr-4">Tent setup, shelter building, water sourcing, and cooking in humid environments.</td>
+                                            <td class="py-5 pr-2 text-right font-serif">On Request</td>
+                                        </tr>
+                                        <tr class="group hover:bg-brand-light transition-colors">
+                                            <td class="py-5 pl-2 font-bold text-lg group-hover:text-brand-orange transition-colors">Wall Climbing</td>
+                                            <td class="py-5 font-medium">All Levels</td>
+                                            <td class="py-5 text-brand-gray leading-relaxed pr-4">Harness safety, grip techniques, footwork, and route-reading on our structured wall.</td>
+                                            <td class="py-5 pr-2 text-right font-serif">On Request</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-brand-charcoal text-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-[50rem] h-[50rem] bg-brand-orange/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
+        <div class="max-w-[90rem] mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                <div class="reveal-up">
+                    <span class="text-brand-orange font-bold tracking-[0.2em] uppercase text-[0.75rem] mb-4 block">Corporate Offsites</span>
+                    <h2 class="font-serif text-[3rem] mb-6 leading-tight">Team Fusion <br>Days.</h2>
+                    <p class="text-white/70 text-lg font-light leading-relaxed mb-8">
+                        Design paddling-based adventures that help teams bond and recharge. From high-energy snakeboat racing to meaningful CSR initiatives.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="glass-dark p-6 rounded-2xl border border-white/10 hover:bg-white/5 transition-colors">
+                            <i class="ph ph-boat text-3xl text-brand-orange mb-3"></i>
+                            <h4 class="font-serif text-xl mb-1">Snakeboat Race</h4>
+                            <p class="text-xs text-white/50 leading-relaxed">The ultimate test of rhythm and unity in a Churulan Vallam.</p>
+                        </div>
+                        <div class="glass-dark p-6 rounded-2xl border border-white/10 hover:bg-white/5 transition-colors">
+                            <i class="ph ph-recycle text-3xl text-brand-orange mb-3"></i>
+                            <h4 class="font-serif text-xl mb-1">CSR Clean-Up</h4>
+                            <p class="text-xs text-white/50 leading-relaxed">"Catch of the Day" - collect floating waste while paddling.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reveal-up delay-100">
+                    <div class="bg-brand-cream/5 backdrop-blur-sm p-10 rounded-3xl border border-white/10">
+                        <span class="text-brand-orange font-bold tracking-[0.2em] uppercase text-[0.75rem] mb-4 block">Institutional</span>
+                        <h2 class="font-serif text-[2.5rem] mb-6 leading-tight">Accredited Learning.</h2>
+                        <ul class="space-y-6">
+                            <li class="flex items-start gap-4">
+                                <i class="ph-fill ph-check-circle text-brand-orange text-xl mt-1"></i>
+                                <div>
+                                    <h4 class="font-bold text-lg">IAYP / Duke of Edinburgh</h4>
+                                    <p class="text-sm text-white/50 leading-relaxed">Authorized service provider for the Adventurous Journey section.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <i class="ph-fill ph-check-circle text-brand-orange text-xl mt-1"></i>
+                                <div>
+                                    <h4 class="font-bold text-lg">IB CAS Programs</h4>
+                                    <p class="text-sm text-white/50 leading-relaxed">Creativity, Activity, Service modules customized for schools.</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <a href="mailto:schools@jellyfishwatersports.com" class="inline-block mt-8 px-8 py-3 bg-white text-brand-black rounded-full font-bold text-xs tracking-widest uppercase hover:bg-brand-orange hover:text-white transition-colors">Contact for Schools</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-white pt-20 pb-12 border-t border-brand-black/5">
+        <div class="max-w-[90rem] mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16 reveal-up">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="w-24 mb-6">
+                         <img src="logo.png" alt="Logo" class="w-full" loading="lazy">
+                    </div>
+                    <p class="text-brand-gray text-sm leading-relaxed max-w-xs">
+                        Kerala's premier watersports hub. Adventure, conservation, and community.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-serif text-lg font-bold text-brand-black mb-6">Contact Us</h4>
+                    <div class="space-y-2 text-brand-gray text-sm">
+                        <p>kayak@jellyfishwatersports.com</p>
+                        <p>+91 9400 23 88 33</p>
+                        <div class="flex gap-4 mt-4">
+                            <a href="#" class="text-brand-black hover:text-brand-orange transition-colors"><i class="ph-fill ph-instagram-logo text-xl"></i></a>
+                            <a href="#" class="text-brand-black hover:text-brand-orange transition-colors"><i class="ph-fill ph-facebook-logo text-xl"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-serif text-lg font-bold text-brand-black mb-6">Scan to Chat</h4>
+                    <div class="w-32 h-32 border border-brand-black/10 p-2 rounded-lg bg-white">
+                        <img src="link.png" alt="Scan QR Code" class="w-full h-full object-contain" loading="lazy">
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-brand-black/5 pt-10 text-center text-[0.75rem] text-brand-gray/60 font-medium uppercase tracking-wider">
+                <p>&copy; 2025 Jellyfish Watersports. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll Logic & Animations
+        const navbar = document.getElementById('navbar');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileClose = document.getElementById('close-mobile-menu');
+        
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.remove('py-6');
+                navbar.classList.add('py-3');
+                navbar.querySelector('.glass-panel').classList.add('bg-white/90', 'backdrop-blur-xl', 'shadow-xl');
+            } else {
+                navbar.classList.add('py-6');
+                navbar.classList.remove('py-3');
+                navbar.querySelector('.glass-panel').classList.remove('bg-white/90', 'backdrop-blur-xl', 'shadow-xl');
+            }
+        });
+
+        // Mobile Menu
+        function openMobileMenu() { mobileMenu.classList.remove('translate-x-full'); }
+        function closeMobileMenu() { mobileMenu.classList.add('translate-x-full'); }
+        mobileBtn.addEventListener('click', openMobileMenu);
+        mobileClose.addEventListener('click', closeMobileMenu);
+
+        // Reveal Animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        });
+        setTimeout(() => {
+            document.querySelectorAll('.reveal-up').forEach(el => observer.observe(el));
+        }, 100);
+    </script>
+</body>
+</html>

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth antialiased">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>Jellyfish Watersports </title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <meta name="title" content="Garbage Credit | Catch of the Day Eco Initiative">
+    <meta name="description" content="Join our 'Catch of the Day' river clean-up initiative. Paddle, collect floating waste, and earn a 20% discount credit. Partnered with Greenworms for responsible recycling.">
+    <meta name="keywords" content="River Cleanup Kerala, Eco Friendly Kayaking, Jellyfish Garbage Credit, Catch of the Day, Greenworms Partnership, Sustainable Tourism Calicut, CSR Activities Kerala">
+    <meta name="author" content="Jellyfish Watersports">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="language" content="English">
+    <meta name="geo.region" content="IN-KL">
+    <meta name="geo.placename" content="Kozhikode">
+    <meta name="geo.position" content="11.1866;75.8077">
+    <meta name="ICBM" content="11.1866, 75.8077">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jellyfishwatersports.com/garbage.html">
+    <meta property="og:title" content="Paddle for a Purpose | Garbage Credit">
+    <meta property="og:description" content="Turn your kayaking trip into an eco-mission. Collect waste, save the river, and earn rewards.">
+    <meta property="og:image" content="garbage/1.png">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="Jellyfish Watersports">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://jellyfishwatersports.com/garbage.html">
+    <meta property="twitter:title" content="Paddle for a Purpose | Garbage Credit">
+    <meta property="twitter:description" content="Turn your kayaking trip into an eco-mission. Collect waste, save the river, and earn rewards.">
+    <meta property="twitter:image" content="garbage/1.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": "Catch of the Day River Cleanup",
+      "description": "Ongoing river cleanup initiative where kayakers collect floating waste for recycling.",
+      "organizer": {
+        "@type": "Organization",
+        "name": "Jellyfish Watersports",
+        "url": "https://jellyfishwatersports.com",
+        "telephone": "+919947231000"
+      },
+      "location": {
+        "@type": "Place",
+        "name": "Chaliyar River",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Calicut",
+          "addressRegion": "Kerala",
+          "addressCountry": "IN"
+        }
+      },
+      "image": "garbage/1.png",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
+    }
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            orange: '#F97316', 
+                            black: '#0a0a0a', 
+                            charcoal: '#1c1c1c',
+                            gray: '#6b7280',
+                            light: '#FAFAFA',
+                            cream: '#F2F0E9', 
+                            surface: '#ffffff'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Manrope', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    boxShadow: {
+                        'glass': '0 4px 30px rgba(0, 0, 0, 0.1)',
+                        'glow': '0 0 20px rgba(249, 115, 22, 0.15)',
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* SCROLL FIX */
+        html { 
+            scroll-behavior: smooth; 
+            scroll-padding-top: 100px; 
+        }
+
+        /* Base Styles */
+        ::-webkit-scrollbar { width: 0.5rem; }
+        ::-webkit-scrollbar-track { background: #F2F0E9; }
+        ::-webkit-scrollbar-thumb { background: rgba(249, 115, 22, 0.6); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(249, 115, 22, 1); }
+        ::selection { background: #F97316; color: white; }
+        body { cursor: default; }
+        .glass-panel { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.3); }
+        .reveal-up { opacity: 0; transform: translateY(2.5rem); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+        .reveal-up.active { opacity: 1; transform: translateY(0); }
+        
+        /* Blob Nav */
+        .blob-nav-item { width: 0.75rem; height: 0.75rem; border-radius: 9999px; background-color: #d1d5db; transition: all 0.3s ease; position: relative; }
+        .blob-nav-item::after { content: attr(data-label); position: absolute; right: 1.5rem; top: 50%; transform: translateY(-50%) translateX(10px); opacity: 0; background: #F97316; color: white; padding: 0.25rem 0.75rem; border-radius: 0.25rem; font-size: 0.75rem; font-weight: bold; white-space: nowrap; transition: all 0.3s ease; pointer-events: none; }
+        .blob-nav-item:hover::after { opacity: 1; transform: translateY(-50%) translateX(0); }
+        .blob-nav-item.active { background-color: #F97316; height: 2rem; }
+    </style>
+</head>
+<body class="bg-brand-cream text-brand-black relative overflow-x-hidden">
+
+    <div class="fixed right-8 top-1/2 -translate-y-1/2 z-50 hidden lg:flex flex-col gap-4 items-center">
+        <a href="#hero" class="blob-nav-item active" data-label="Garbage Credit"></a>
+        <a href="#mission" class="blob-nav-item" data-label="The Mission"></a>
+        <a href="#process" class="blob-nav-item" data-label="How it Works"></a>
+        <a href="#impact" class="blob-nav-item" data-label="Impact"></a>
+    </div>
+
+    <nav id="navbar" class="fixed top-0 inset-x-0 z-50 transition-all duration-500 py-6">
+        <div class="max-w-[95rem] mx-auto px-6">
+            <div class="glass-panel rounded-full px-8 py-4 flex justify-between items-center shadow-glass transition-all duration-500 hover:shadow-lg">
+                <a href="index.html" class="block w-24 md:w-32 z-50 relative shrink-0">
+                    <img src="logo.png" alt="Jellyfish Logo" class="w-full h-auto object-contain">
+                </a>
+                <div class="hidden lg:flex items-center gap-6 xl:gap-8">
+                    <div class="flex items-center gap-5 xl:gap-7 text-[0.8rem] font-medium tracking-wide uppercase whitespace-nowrap">
+                        <a href="index.html#hero" class="hover:text-brand-orange transition-colors">Who are we</a>
+                        <a href="blog.html" class="hover:text-brand-orange transition-colors">Blog</a>
+                        <a href="exp.html" class="hover:text-brand-orange transition-colors">Book an Experience</a>
+                        <a href="explearn.html" class="hover:text-brand-orange transition-colors">Experiential Learning</a>
+                        <a href="food.html" class="hover:text-brand-orange transition-colors">Food & Stay</a>
+                        <a href="yacht.html" class="hover:text-brand-orange transition-colors"> Yacht Club</a>
+                        <a href="shop.html" class="hover:text-brand-orange transition-colors">Shop</a>
+                    </div>
+                    <a href="exp.html" class="group relative px-6 py-2.5 rounded-full bg-brand-black text-white text-[0.8rem] font-bold tracking-wider overflow-hidden transition-all hover:scale-105 shrink-0 block text-center">
+                        <div class="absolute inset-0 bg-brand-orange translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></div>
+                        <span class="relative z-10">Book Now</span>
+                    </a>
+                </div>
+                <button id="mobile-menu-btn" class="lg:hidden p-2 text-brand-black hover:text-brand-orange transition z-50">
+                    <i class="ph ph-list text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div id="mobile-menu" class="fixed inset-0 z-[60] bg-brand-cream transform translate-x-full transition-transform duration-500 lg:hidden flex flex-col justify-center items-center space-y-6 text-center">
+        <button id="close-mobile-menu" class="absolute top-8 right-8 p-4 text-3xl hover:text-brand-orange transition-colors z-[70]"><i class="ph ph-x"></i></button>
+        <a href="index.html#hero" class="mobile-link font-serif text-[1.5rem] hover:text-brand-orange transition-colors">Who are we</a>
+        <a href="blog.html" class="mobile-link font-serif text-[1.5rem] hover:text-brand-orange transition-colors">Blog</a>
+        <a href="exp.html" class="mobile-link font-serif text-[1.5rem] hover:text-brand-orange transition-colors">Book an Experience</a>
+        <a href="explearn.html" class="mobile-link font-serif text-[1.5rem] hover:text-brand-orange transition-colors">Experiential Learning</a>
+        <a href="food.html" class="mobile-link font-serif text-[1.5rem] hover:text-brand-orange transition-colors">Food and Stay</a>
+        <a href="yacht.html" class="mobile-link font-serif text-[1.5rem] hover:text-brand-orange transition-colors">Jellyfish Yacht Club</a>
+        <a href="shop.html" class="mobile-link font-serif text-[1.5rem] hover:text-brand-orange transition-colors">Shop</a>
+        <a href="exp.html" class="px-8 py-3 rounded-full bg-brand-orange text-white text-lg font-bold tracking-wide mt-4 inline-block">Book Now</a>
+    </div>
+
+    <section id="hero" class="relative h-[80vh] w-full flex items-center justify-center overflow-hidden bg-brand-charcoal -mt-[120px]">
+        <div class="absolute inset-0 z-0 opacity-60">
+            <img src="garbage/1.png" alt="Cleaning the River" class="w-full h-full object-cover" fetchpriority="high">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-brand-cream"></div>
+            <div class="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-brand-cream to-transparent"></div>
+        </div>
+        <div class="relative z-10 text-center px-6 mt-20">
+            <span class="text-brand-orange font-bold tracking-[0.3em] uppercase text-xs mb-4 block animate-pulse">Sustainability Initiative</span>
+            <h1 class="font-serif text-[3.5rem] lg:text-[6rem] text-white leading-none">Catch of <span class="italic text-brand-orange">The Day.</span></h1>
+            <p class="text-white/80 max-w-xl mx-auto mt-6 font-light text-lg">
+                Where fun on the water meets environmental responsibility. Paddle, Collect, Recycle.
+            </p>
+        </div>
+    </section>
+
+    <section id="mission" class="py-12 bg-brand-cream">
+        <div class="max-w-[90rem] mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="reveal-up">
+                    <h2 class="font-serif text-[3rem] lg:text-[4rem] text-brand-black leading-[1] mb-6">
+                        Paddle to <br><span class="italic text-brand-orange">Preserve.</span>
+                    </h2>
+                    <p class="text-brand-gray text-[1.125rem] font-light leading-relaxed mb-6">
+                        Launched in 2013, "Catch of the Day" is our flagship environmental initiative. It transforms a regular kayaking trip into a meaningful act of conservation.
+                    </p>
+                    <p class="text-brand-gray text-[1.125rem] font-light leading-relaxed mb-8">
+                        Participants collect floating garbage while paddling. The waste is then sorted, weighed, and sent for responsible recycling through our partner, <strong>Greenworms</strong>. [cite_start]This initiative was honored with the <strong>PROMISE Sustainability Award</strong> in 2022. [cite: 583-586]
+                    </p>
+                </div>
+                <div class="relative aspect-square reveal-up delay-100">
+                    <div class="w-full h-full rounded-2xl overflow-hidden shadow-2xl relative z-10 bg-gray-200">
+                        <img src="garbage/2.png" alt="River Cleanup" class="w-full h-full object-cover" loading="lazy">
+                    </div>
+                    <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-green-500/10 rounded-full blur-xl z-0"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="process" class="py-12 bg-white">
+        <div class="max-w-[90rem] mx-auto px-6">
+            <div class="text-center mb-16 reveal-up">
+                <span class="text-brand-orange font-bold tracking-[0.2em] uppercase text-[0.75rem] mb-4 block">The Process</span>
+                <h2 class="font-serif text-[3rem] text-brand-black leading-[1]">How It Works</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="p-8 bg-brand-light rounded-2xl border border-brand-black/5 text-center group hover:border-brand-orange transition-colors reveal-up">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm text-2xl text-brand-black group-hover:text-brand-orange group-hover:scale-110 transition-all">
+                        <i class="ph-fill ph-presentation"></i>
+                    </div>
+                    <h3 class="font-serif text-xl mb-3">1. Briefing</h3>
+                    <p class="text-sm text-brand-gray font-light">Receive safety gear and a briefing on identifying collectable river waste.</p>
+                </div>
+
+                <div class="p-8 bg-brand-light rounded-2xl border border-brand-black/5 text-center group hover:border-brand-orange transition-colors reveal-up delay-100">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm text-2xl text-brand-black group-hover:text-brand-orange group-hover:scale-110 transition-all">
+                        <i class="ph-fill ph-trash"></i>
+                    </div>
+                    <h3 class="font-serif text-xl mb-3">2. Collect</h3>
+                    <p class="text-sm text-brand-gray font-light">Paddle through the river and use nets/grabbers to collect floating debris.</p>
+                </div>
+
+                <div class="p-8 bg-brand-light rounded-2xl border border-brand-black/5 text-center group hover:border-brand-orange transition-colors reveal-up delay-200">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm text-2xl text-brand-black group-hover:text-brand-orange group-hover:scale-110 transition-all">
+                        <i class="ph-fill ph-scales"></i>
+                    </div>
+                    <h3 class="font-serif text-xl mb-3">3. Weigh & Sort</h3>
+                    <p class="text-sm text-brand-gray font-light">Return to base. We weigh your catch and sort it for Greenworms to recycle.</p>
+                </div>
+
+                <div class="p-8 bg-brand-charcoal text-white rounded-2xl shadow-xl text-center transform scale-105 reveal-up delay-300 relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-br from-brand-orange/20 to-transparent"></div>
+                    <div class="relative z-10">
+                        <div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm text-2xl text-brand-orange">
+                            <i class="ph-fill ph-gift"></i>
+                        </div>
+                        <h3 class="font-serif text-xl mb-3">4. Get Rewarded</h3>
+                        <p class="text-sm text-white/80 font-light">Receive a waste audit report and a discount on your next adventure.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="impact" class="py-24 bg-brand-charcoal text-white relative overflow-hidden">
+        <div class="absolute -left-20 -bottom-20 w-96 h-96 bg-green-500/10 rounded-full blur-3xl"></div>
+        
+        <div class="max-w-[90rem] mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="reveal-up">
+                    <span class="text-green-400 font-bold tracking-[0.2em] uppercase text-[0.75rem] mb-4 block">The Incentive</span>
+                    <h2 class="font-serif text-[3rem] lg:text-[4.5rem] leading-[1] mb-6">Earn Your Credit.</h2>
+                    <p class="text-white/70 text-lg font-light leading-relaxed mb-8">
+                        We believe that protecting nature should be rewarding. For every bag of garbage collected during your session, you earn a <strong class="text-brand-orange">20% Discount Credit</strong> redeemable on your next Jellyfish kayak session.
+                    </p>
+                    <div class="flex flex-col gap-4">
+                        <div class="flex items-center gap-4">
+                            <i class="ph-fill ph-check-circle text-green-400 text-xl"></i>
+                            <span class="text-sm tracking-widest uppercase">Measurable Impact Report</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <i class="ph-fill ph-check-circle text-green-400 text-xl"></i>
+                            <span class="text-sm tracking-widest uppercase">Certificate of Participation</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <i class="ph-fill ph-check-circle text-green-400 text-xl"></i>
+                            <span class="text-sm tracking-widest uppercase">Verified Recycling Partner</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white/5 backdrop-blur border border-white/10 p-10 rounded-3xl text-center reveal-up delay-100">
+                    <h3 class="font-serif text-2xl mb-6">Perfect For</h3>
+                    <div class="space-y-4">
+                        <div class="p-4 bg-white/5 rounded-xl border border-white/5 hover:bg-white/10 transition-colors">
+                            <h4 class="font-bold">Corporate CSR</h4>
+                            <p class="text-xs text-white/50 mt-1">Team building with social impact.</p>
+                        </div>
+                        <div class="p-4 bg-white/5 rounded-xl border border-white/5 hover:bg-white/10 transition-colors">
+                            <h4 class="font-bold">School Projects</h4>
+                            <p class="text-xs text-white/50 mt-1">Hands-on environmental education.</p>
+                        </div>
+                        <div class="p-4 bg-white/5 rounded-xl border border-white/5 hover:bg-white/10 transition-colors">
+                            <h4 class="font-bold">Individual Changemakers</h4>
+                            <p class="text-xs text-white/50 mt-1">Adventure with a conscience.</p>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/919947231000?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20the%20cleanup%20drive" class="inline-block mt-8 text-brand-orange font-bold text-sm border-b border-brand-orange pb-1 hover:text-white hover:border-white transition-colors">
+                        Organize a Clean-Up Drive? Contact us at +91 9947 23 10 00 for more info
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-white pt-20 pb-12 border-t border-brand-black/5">
+        <div class="max-w-[90rem] mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16 reveal-up">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="w-24 mb-6">
+                         <img src="logo.png" alt="Logo" class="w-full" loading="lazy">
+                    </div>
+                    <p class="text-brand-gray text-sm leading-relaxed max-w-xs">
+                        Kerala's premier watersports hub. Adventure, conservation, and community.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-serif text-lg font-bold text-brand-black mb-6">Contact Us</h4>
+                    <div class="space-y-2 text-brand-gray text-sm">
+                        <p>kayak@jellyfishwatersports.com</p>
+                        <p>+91 9400 23 88 33</p>
+                        <div class="flex gap-4 mt-4">
+                            <a href="https://www.instagram.com/jellyfish_watersports" class="text-brand-black hover:text-brand-orange transition-colors"><i class="ph-fill ph-instagram-logo text-xl"></i></a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-serif text-lg font-bold text-brand-black mb-6">Scan to Chat</h4>
+                    <div class="w-32 h-32 border border-brand-black/10 p-2 rounded-lg bg-white">
+                        <img src="link.png" alt="Scan QR Code" class="w-full h-full object-contain" loading="lazy">
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-brand-black/5 pt-10 text-center text-[0.75rem] text-brand-gray/60 font-medium uppercase tracking-wider">
+                <p>&copy; 2025 Jellyfish Watersports. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.remove('py-6');
+                navbar.classList.add('py-3');
+                navbar.querySelector('.glass-panel').classList.add('bg-white/90', 'backdrop-blur-xl', 'shadow-xl');
+            } else {
+                navbar.classList.add('py-6');
+                navbar.classList.remove('py-3');
+                navbar.querySelector('.glass-panel').classList.remove('bg-white/90', 'backdrop-blur-xl', 'shadow-xl');
+            }
+        });
+
+        const mobileMenu = document.getElementById('mobile-menu');
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => mobileMenu.classList.remove('translate-x-full'));
+        document.getElementById('close-mobile-menu').addEventListener('click', () => mobileMenu.classList.add('translate-x-full'));
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        });
+        document.querySelectorAll('.reveal-up').forEach(el => observer.observe(el));
+
+        // Fixed Scroll Spy Logic
+        const navItems = document.querySelectorAll('.blob-nav-item');
+        const sections = document.querySelectorAll('section');
+
+        const navObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute('id');
+                    navItems.forEach(link => link.classList.remove('active'));
+                    const activeLink = document.querySelector(`.blob-nav-item[href="#${id}"]`);
+                    if (activeLink) activeLink.classList.add('active');
+                }
+            });
+        }, {
+            threshold: 0.25, 
+            rootMargin: "-20% 0px -50% 0px"
+        });
+
+        sections.forEach(section => navObserver.observe(section));
+    </script>
+</body>
+</html>

@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth antialiased">
+<head>
+    <link rel="icon" type="image/png" href="logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>Jellyfish Watersports </title>
+    <meta name="title" content="Cafe Calamari | Riverside Dining at Jellyfish Watersports">
+    <meta name="description" content="Experience authentic Malabar flavors and international cafe culture at Cafe Calamari. Wood-fired pizzas, fresh seafood, and riverside views in Calicut. Open for breakfast, lunch, and dinner.">
+    <meta name="keywords" content="Cafe Calamari, Riverside Cafe Calicut, Wood Fired Pizza Kerala, Seafood Restaurant Kozhikode, Jellyfish Watersports Dining, Breakfast Place Calicut, Weekend Brunch Kerala">
+    <meta name="author" content="Jellyfish Watersports">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="language" content="English">
+    <meta name="geo.region" content="IN-KL">
+    <meta name="geo.placename" content="Kozhikode">
+    <meta name="geo.position" content="11.1866;75.8077">
+    <meta name="ICBM" content="11.1866, 75.8077">
+
+    <meta property="og:type" content="restaurant">
+    <meta property="og:url" content="https://jellyfishwatersports.com/cafe.html">
+    <meta property="og:title" content="Cafe Calamari | Riverside Dining">
+    <meta property="og:description" content="Wood-fired magic, fresh seafood, and river views. The perfect spot for food and vibes.">
+    <meta property="og:image" content="cafe/1.png">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="Jellyfish Watersports">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://jellyfishwatersports.com/cafe.html">
+    <meta property="twitter:title" content="Cafe Calamari | Riverside Dining">
+    <meta property="twitter:description" content="Wood-fired magic, fresh seafood, and river views.">
+    <meta property="twitter:image" content="cafe/1.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "Cafe Calamari",
+      "image": "cafe/1.png",
+      "@id": "https://jellyfishwatersports.com/cafe.html",
+      "url": "https://jellyfishwatersports.com/cafe.html",
+      "telephone": "+919400238833",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Chaliyar River Bank",
+        "addressLocality": "Calicut",
+        "addressRegion": "Kerala",
+        "postalCode": "673001",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 11.1866,
+        "longitude": 75.8077
+      },
+      "servesCuisine": ["Continental", "Kerala", "Seafood"],
+      "priceRange": "$$",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "08:00",
+        "closes": "22:00"
+      },
+      "menu": "https://jellyfishwatersports.com/cafe.html#menu"
+    }
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            orange: '#F97316', 
+                            black: '#0a0a0a', 
+                            charcoal: '#1c1c1c',
+                            gray: '#6b7280',
+                            light: '#FAFAFA',
+                            cream: '#F2F0E9', 
+                            surface: '#ffffff'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Manrope', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    boxShadow: {
+                        'glass': '0 4px 30px rgba(0, 0, 0, 0.1)',
+                        'glow': '0 0 20px rgba(249, 115, 22, 0.15)',
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* SCROLL FIX for Fixed Navbar */
+        html { 
+            scroll-behavior: smooth; 
+            scroll-padding-top: 120px; 
+        }
+
+        /* Base Styles */
+        ::-webkit-scrollbar { width: 0.5rem; }
+        ::-webkit-scrollbar-track { background: #F2F0E9; }
+        ::-webkit-scrollbar-thumb { background: rgba(249, 115, 22, 0.6); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(249, 115, 22, 1); }
+        ::selection { background: #F97316; color: white; }
+        body { cursor: default; }
+        
+        /* Glassmorphism */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .glass-dark {
+            background: rgba(28, 28, 28, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        /* Animations */
+        .reveal-up { opacity: 0; transform: translateY(2.5rem); transition: all 1s cubic-bezier(0.16, 1, 0.3, 1); }
+        .reveal-up.active { opacity: 1; transform: translateY(0); }
+        
+        .delay-100 { transition-delay: 0.1s; }
+        .delay-200 { transition-delay: 0.2s; }
+        .delay-300 { transition-delay: 0.3s; }
+
+        /* Blob Nav Styles */
+        .blob-nav-item {
+            width: 0.75rem;
+            height: 0.75rem;
+            border-radius: 9999px;
+            background-color: #d1d5db; /* gray-300 */
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .blob-nav-item::after {
+            content: attr(data-label);
+            position: absolute;
+            right: 1.5rem;
+            top: 50%;
+            transform: translateY(-50%) translateX(10px);
+            opacity: 0;
+            background: #F97316;
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+            font-weight: bold;
+            white-space: nowrap;
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+        .blob-nav-item:hover::after {
+            opacity: 1;
+            transform: translateY(-50%) translateX(0);
+        }
+        .blob-nav-item.active {
+            background-color: #F97316;
+            height: 2rem;
+        }
+
+        /* Menu Item Hover */
+        .menu-item-row {
+            border-bottom: 1px dashed rgba(0,0,0,0.1);
+            padding-bottom: 0.5rem;
+            margin-bottom: 0.75rem;
+        }
+    </style>
+</head>
+<body class="bg-brand-cream text-brand-black relative overflow-x-hidden">
+
+    <div class="fixed right-8 top-1/2 -translate-y-1/2 z-50 hidden lg:flex flex-col gap-4 items-center">
+        <a href="#hero" class="blob-nav-item active" data-label="Cafe Calamari"></a>
+        <a href="#about" class="blob-nav-item" data-label="Concept"></a>
+        <a href="#gallery" class="blob-nav-item" data-label="Gallery"></a>
+        <a href="#menu" class="blob-nav-item" data-label="Our Menu"></a>
+        <a href="#packages" class="blob-nav-item" data-label="Group Packages"></a>
+    </div>
+
+    <nav id="navbar" class="fixed top-0 inset-x-0 z-50 transition-all duration-500 py-6">
+        <div class="max-w-[95rem] mx-auto px-6">
+            <div class="glass-panel rounded-full px-8 py-4 flex justify-between items-center shadow-glass transition-all duration-500 hover:shadow-lg">
+                <a href="index.html" class="block w-24 md:w-32 z-50 relative shrink-0">
+                    <img src="logo.png" alt="Jellyfish Logo" class="w-full h-auto object-contain">
+                </a>
+
+                <div class="hidden lg:flex items-center gap-6 xl:gap-8">
+                    <div class="flex items-center gap-5 xl:gap-7 text-[0.8rem] font-medium tracking-wide uppercase whitespace-nowrap">
+                        <a href="index.html#hero" class="hover:text-brand-orange transition-colors">Who are we</a>
+                        <a href="blog.html" class="hover:text-brand-orange transition-colors">Blog</a>
+                        <a href="exp.html" class="hover:text-brand-orange transition-colors">Book an Experience</a>
+                        <a href="explearn.html" class="hover:text-brand-orange transition-colors">Experiential Learning</a>
+                        <a href="food.html" class="hover:text-brand-orange transition-colors">Food & Stay</a>
+                        <a href="yacht.html" class="hover:text-brand-orange transition-colors"> Yacht Club</a>
+                        <a href="shop.html" class="hover:text-brand-orange transition-colors">Shop</a>
+                    </div>
+                    <a href="exp.html" class="group relative px-6 py-2.5 rounded-full bg-brand-black text-white text-[0.8rem] font-bold tracking-wider overflow-hidden transition-all hover:scale-105 shrink-0 block text-center">
+                        <div class="absolute inset-0 bg-brand-orange translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></div>
+                        <span class="relative z-10">Book Now</span>
+                    </a>
+                </div>
+
+                <button id="mobile-menu-btn" class="lg:hidden p-2 text-brand-black hover:text-brand-orange transition z-50">
+                    <i class="ph ph-list text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div id="mobile-menu" class="fixed inset-0 z-[60] bg-brand-cream transform translate-x-full transition-transform duration-500 lg:hidden flex flex-col justify-center items-center space-y-6 text-center">
+        <button id="close-mobile-menu" class="absolute top-8 right-8 p-4 text-3xl hover:text-brand-orange transition-colors z-[70]"><i class="ph ph-x"></i></button>
+        <a href="index.html#hero" class="mobile-link font-serif text-[1.5rem] hover:text-brand-orange transition-colors">Who are we</a>
+        <a href="blog.html" class="mobile-link font-serif text-[1.5rem] hover:text-brand-orange transition-colors">Blog</a>
+        <a href="exp.html" class="mobile-link font-serif text-[1.5rem] hover:text-brand-orange transition-colors">Book an Experience</a>
+        <a href="explearn.html" class="mobile-link font-serif text-[1.5rem] hover:text-brand-orange transition-colors">Experiential Learning</a>
+        <a href="food.html" class="mobile-link font-serif text-[1.5rem] hover:text-brand-orange transition-colors">Food and Stay</a>
+        <a href="yacht.html" class="mobile-link font-serif text-[1.5rem] hover:text-brand-orange transition-colors">Jellyfish Yacht Club</a>
+        <a href="shop.html" class="mobile-link font-serif text-[1.5rem] hover:text-brand-orange transition-colors">Shop</a>
+        <a href="exp.html" class="px-8 py-3 rounded-full bg-brand-orange text-white text-lg font-bold tracking-wide mt-4 inline-block">Book Now</a>
+    </div>
+
+    <section id="hero" class="relative min-h-screen w-full flex items-center justify-center overflow-hidden -mt-[120px]">
+        <div class="absolute inset-0 z-0">
+            <img src="cafe/1.png" alt="Cafe Calamari Ambiance" class="w-full h-full object-cover" fetchpriority="high">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-brand-cream"></div>
+        </div>
+
+        <div class="relative z-10 max-w-[90rem] mx-auto px-6 w-full pt-20 text-center">
+            <div class="reveal-up active">
+                <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full glass-panel text-brand-black text-[0.75rem] font-bold tracking-[0.2em] uppercase mb-8 w-fit mx-auto">
+                    <span class="w-2 h-2 rounded-full bg-brand-orange animate-pulse"></span>
+                    Riverside Dining
+                </div>
+                <h1 class="font-serif text-[4rem] lg:text-[7rem] leading-[0.9] text-white mix-blend-overlay opacity-90 mb-6 tracking-tighter">
+                    Cafe <br><span class="italic font-light">Calamari.</span>
+                </h1>
+                <p class="text-[1.25rem] lg:text-[1.5rem] text-white/90 font-light leading-relaxed max-w-xl mx-auto mb-12 mix-blend-plus-lighter">
+                    Where international café vibes meet local Malabar heritage. Authentic flavors, wood-fired magic, and river views.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 bg-brand-cream relative">
+        <div class="max-w-[90rem] mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="reveal-up">
+                    <span class="text-brand-orange font-bold tracking-[0.2em] uppercase text-[0.75rem] mb-4 block">The Concept</span>
+                    <h2 class="font-serif text-[3rem] lg:text-[4rem] text-brand-black leading-[1] mb-6">
+                        Comfort, Flavor, <br><span class="italic text-brand-orange">Community.</span>
+                    </h2>
+                    <p class="text-brand-gray text-[1.125rem] font-light leading-relaxed mb-6">
+                        Cafe Calamari is more than just a place to eat; it's an international-style riverside hub that proudly promotes local ingredients and spices.
+                    </p>
+                    <p class="text-brand-gray text-[1.125rem] font-light leading-relaxed mb-8">
+                        On weekdays, enjoy comforting café staples. On weekends, we transform into a lively destination featuring wood-fired pizzas, BBQ grills, fresh seafood, and family brunches.
+                    </p>
+                </div>
+                <div class="relative aspect-square reveal-up delay-100">
+                    <div class="w-full h-full rounded-2xl overflow-hidden shadow-2xl relative z-10">
+                        <img src="cafe/2.png" alt="Wood Fired Oven" class="w-full h-full object-cover" loading="lazy">
+                    </div>
+                    <div class="absolute -top-10 -left-10 w-40 h-40 bg-brand-orange/10 rounded-full blur-xl z-0"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-12 bg-brand-cream">
+        <div class="max-w-[90rem] mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="aspect-[4/3] rounded-xl overflow-hidden reveal-up">
+                    <img src="cafe/3.png" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700" alt="Cafe Interior" loading="lazy">
+                </div>
+                <div class="aspect-[4/3] rounded-xl overflow-hidden reveal-up delay-100">
+                    <img src="cafe/4.png" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700" alt="Food Shot" loading="lazy">
+                </div>
+                <div class="aspect-[4/3] rounded-xl overflow-hidden reveal-up delay-200">
+                    <img src="cafe/5.png" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700" alt="Evening Vibes" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="py-32 bg-white relative">
+        <div class="max-w-[90rem] mx-auto px-6">
+            <div class="text-center mb-20 reveal-up">
+                <span class="text-brand-orange font-bold tracking-[0.2em] uppercase text-[0.75rem] mb-4 block">Eat & Drink</span>
+                <h2 class="font-serif text-[3.5rem] lg:text-[5rem] text-brand-black leading-[1]">Our Menu</h2>
+                <p class="text-brand-gray mt-4 italic text-sm">*Prices exclusive of taxes</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-8">
+                
+                <div class="p-8 bg-brand-light rounded-2xl border border-brand-black/5 reveal-up">
+                    <h3 class="font-serif text-2xl mb-8 text-brand-black border-b border-brand-orange pb-2 inline-block">All Day </h3>
+                    
+                    <div class="menu-item-row flex justify-between items-end">
+                        <span class="font-medium text-brand-black/80">Choice of 2 Eggs</span>
+                        <span class="font-bold text-brand-orange">₹100</span>
+                    </div>
+                    <div class="menu-item-row flex justify-between items-end">
+                        <span class="font-medium text-brand-black/80">French Toast</span>
+                        <span class="font-bold text-brand-orange">₹100</span>
+                    </div>
+                    <div class="menu-item-row flex justify-between items-end">
+                        <span class="font-medium text-brand-black/80">Chicken Nuggets (6 pcs)</span>
+                        <span class="font-bold text-brand-orange">₹100</span>
+                    </div>
+                    <div class="menu-item-row flex justify-between items-end">
+                        <span class="font-medium text-brand-black/80">Chicken Burger</span>
+                        <span class="font-bold text-brand-orange">₹200</span>
+                    </div>
+                    <div class="menu-item-row flex justify-between items-end">
+                        <span class="font-medium text-brand-black/80">Chicken Momos (6 pcs)</span>
+                        <span class="font-bold text-brand-orange">₹200</span>
+                    </div>
+                     <div class="menu-item-row flex justify-between items-end">
+                        <span class="font-medium text-brand-black/80">Veg Momos (6 pcs)</span>
+                        <span class="font-bold text-brand-orange">₹200</span>
+                    </div>
+                    <div class="menu-item-row flex justify-between items-end">
+                        <span class="font-medium text-brand-black/80">Calamari Rings</span>
+                        <span class="font-bold text-brand-orange">₹250</span>
+                    </div>
+                    <div class="menu-item-row flex justify-between items-end">
+                        <span class="font-medium text-brand-black/80">French Fries</span>
+                        <span class="font-bold text-brand-orange">₹100</span>
+                    </div>
+                     <div class="menu-item-row flex justify-between items-end">
+                        <span class="font-medium text-brand-black/80">Maggi Noodles</span>
+                        <span class="font-bold text-brand-orange">₹100</span>
+                    </div>
+                </div>
+
+                <div class="p-8 bg-brand-light rounded-2xl border border-brand-black/5 reveal-up delay-100">
+                    <h3 class="font-serif text-2xl mb-8 text-brand-black border-b border-brand-orange pb-2 inline-block">Weekend Specials (Sat-Sun)</h3>
+                    
+                    <div class="menu-item-row flex justify-between items-end">
+                        <span class="font-medium text-brand-black/80">Avocado Toast (2 Poached Eggs)</span>
+                        <span class="font-bold text-brand-orange">₹250</span>
+                    </div>
+                    <div class="menu-item-row flex justify-between items-end">
+                        <span class="font-medium text-brand-black/80">Mac & Cheese</span>
+                        <span class="font-bold text-brand-orange">₹250</span>
+                    </div>
+                    <div class="menu-item-row flex justify-between items-end">
+                        <span class="font-medium text-brand-black/80">Fish & Chips</span>
+                        <span class="font-bold text-brand-orange">₹350</span>
+                    </div>
+                    <div class="menu-item-row flex justify-between items-end">
+                        <span class="font-medium text-brand-black/80">Chicken Curry with Rice</span>
+                        <span class="font-bold text-brand-orange">₹250</span>
+                    </div>
+                    <div class="menu-item-row flex justify-between items-end">
+                        <span class="font-medium text-brand-black/80">Veg Curry with Rice</span>
+                        <span class="font-bold text-brand-orange">₹200</span>
+                    </div>
+                    <div class="menu-item-row flex justify-between items-end">
+                        <span class="font-medium text-brand-black/80">Butter Chicken with Paratha</span>
+                        <span class="font-bold text-brand-orange">₹250</span>
+                    </div>
+                     <h3 class="font-serif text-xl mt-8 mb-4 text-brand-black">Desserts</h3>
+                    <div class="menu-item-row flex justify-between items-end">
+                        <span class="font-medium text-brand-black/80">Ice Cream (Single/Double)</span>
+                        <span class="font-bold text-brand-orange">₹75/125</span>
+                    </div>
+                    <div class="menu-item-row flex justify-between items-end">
+                        <span class="font-medium text-brand-black/80">Tres Leches / Lotus Cake</span>
+                        <span class="font-bold text-brand-orange">₹150</span>
+                    </div>
+                     <div class="menu-item-row flex justify-between items-end">
+                        <span class="font-medium text-brand-black/80">Calicut Halwa Platter</span>
+                        <span class="font-bold text-brand-orange">₹100</span>
+                    </div>
+                </div>
+
+                <div class="p-8 bg-brand-light rounded-2xl border border-brand-black/5 reveal-up delay-200">
+                    <h3 class="font-serif text-2xl mb-8 text-brand-black border-b border-brand-orange pb-2 inline-block">Sips & Brews</h3>
+                    
+                    <div class="menu-item-row flex justify-between items-end">
+                        <span class="font-medium text-brand-black/80">Espresso / Americano</span>
+                        <span class="font-bold text-brand-orange">₹75/₹110</span>
+                    </div>
+                    <div class="menu-item-row flex justify-between items-end">
+                        <span class="font-medium text-brand-black/80">Cappuccino / Latte</span>
+                        <span class="font-bold text-brand-orange">₹125</span>
+                    </div>
+                     <div class="menu-item-row flex justify-between items-end">
+                        <span class="font-medium text-brand-black/80">French Press / Moka Pot</span>
+                        <span class="font-bold text-brand-orange">₹150</span>
+                    </div>
+                    <div class="menu-item-row flex justify-between items-end">
+                        <span class="font-medium text-brand-black/80">Vietnamese / Turkish Coffee</span>
+                        <span class="font-bold text-brand-orange">₹150</span>
+                    </div>
+                    <div class="menu-item-row flex justify-between items-end">
+                        <span class="font-medium text-brand-black/80">Masala Chai / Matcha Latte</span>
+                        <span class="font-bold text-brand-orange">₹100/₹125</span>
+                    </div>
+                     <div class="menu-item-row flex justify-between items-end">
+                        <span class="font-medium text-brand-black/80">Milkshakes / Cold pressed Juices</span>
+                        <span class="font-bold text-brand-orange">₹150</span>
+                    </div>
+                     <div class="menu-item-row flex justify-between items-end">
+                        <span class="font-medium text-brand-black/80">Instant Coffee/Tea with milk </span>
+                        <span class="font-bold text-brand-orange">₹50</span>
+                    </div>
+                    <h4 class="font-serif text-lg mt-6 mb-2 text-brand-orange">Signature Mocktails</h4>
+                    <div class="menu-item-row flex justify-between items-end">
+                        <span class="font-medium text-brand-black/80">Puzhayoram Punch</span>
+                        <span class="font-bold text-brand-orange">₹125</span>
+                    </div>
+                    <div class="menu-item-row flex justify-between items-end">
+                        <span class="font-medium text-brand-black/80">Pina Colada / Mojito</span>
+                        <span class="font-bold text-brand-orange">₹125</span>
+                    </div>
+                    <div class="menu-item-row flex justify-between items-end">
+                        <span class="font-medium text-brand-black/80">Fresh Tender Coconut</span>
+                        <span class="font-bold text-brand-orange">₹75</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="packages" class="py-32 bg-brand-charcoal text-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-[40rem] h-[40rem] bg-brand-orange/10 rounded-full blur-[100px] pointer-events-none"></div>
+        
+        <div class="max-w-[90rem] mx-auto px-6 relative z-10">
+            <div class="text-center mb-16 reveal-up">
+                <span class="text-brand-orange font-bold tracking-[0.2em] uppercase text-[0.75rem] mb-4 block">For Teams & Groups</span>
+                <h2 class="font-serif text-[3rem] lg:text-[4.5rem] leading-[1] mb-6">Feast Together.</h2>
+                <p class="text-white/70 max-w-2xl mx-auto font-light leading-relaxed">
+                    Thoughtfully curated meal packages for corporate offsites, school trips, and large gatherings. Authentic Malabar flavors served with love.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                
+                <div class="glass-dark p-10 rounded-2xl reveal-up">
+                    <div class="flex items-center gap-4 mb-8">
+                        <i class="ph ph-coffee text-4xl text-brand-orange"></i>
+                        <h3 class="font-serif text-3xl">Breakfast</h3>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="flex justify-between border-b border-white/10 pb-4">
+                            <div>
+                                <h4 class="font-bold text-lg text-brand-orange">Local Favorites</h4>
+                                <p class="text-sm text-white/60">Puttu with kadala curry OR Appam with stew/egg curry</p>
+                            </div>
+                            <span class="text-xl font-serif">₹250</span>
+                        </div>
+                        <div class="flex justify-between border-b border-white/10 pb-4">
+                            <div>
+                                <h4 class="font-bold text-lg text-brand-orange">Continental</h4>
+                                <p class="text-sm text-white/60">Bread, Butter, Jam, Yogurt, Fruits, Cereal</p>
+                            </div>
+                            <span class="text-xl font-serif">₹350</span>
+                        </div>
+                        <div class="flex justify-between pb-4">
+                            <div>
+                                <h4 class="font-bold text-lg text-brand-orange">English</h4>
+                                <p class="text-sm text-white/60">Eggs, Sausages, Baked Beans, Toast, Mushrooms</p>
+                            </div>
+                            <span class="text-xl font-serif">₹450</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-dark p-10 rounded-2xl reveal-up delay-100">
+                    <div class="flex items-center gap-4 mb-8">
+                        <i class="ph ph-bowl-food text-4xl text-brand-orange"></i>
+                        <h3 class="font-serif text-3xl">Lunch & Dinner</h3>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="flex justify-between border-b border-white/10 pb-4">
+                            <div>
+                                <h4 class="font-bold text-lg text-brand-orange">Standard Meals</h4>
+                                <p class="text-sm text-white/60">Biriyani, Fried Rice, or Curries (Veg / Chicken / Fish)</p>
+                            </div>
+                            <div class="text-right">
+                                <span class="block text-sm text-white/50">Veg: ₹350</span>
+                                <span class="block text-sm text-white/50">Chicken: ₹450</span>
+                                <span class="block text-sm text-white/50">Seafood: ₹500</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between pb-4">
+                            <div>
+                                <h4 class="font-bold text-lg text-brand-orange">Kerala Sadya</h4>
+                                <p class="text-sm text-white/60">18 Dishes served on Banana Leaf. The ultimate feast.</p>
+                            </div>
+                            <div class="text-right">
+                                <span class="block text-sm text-white/50">Veg: ₹450</span>
+                                <span class="block text-sm text-white/50">Non-Veg: ₹550</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="mt-12 text-center reveal-up">
+                <p class="text-white/50 text-sm mb-6">*All group meals must be booked one day in advance.</p>
+                <button class="px-10 py-4 bg-brand-orange text-white rounded-full font-bold tracking-widest uppercase hover:bg-white hover:text-brand-orange transition-all duration-300">
+                    Pre-Book Meals
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-white pt-20 pb-12 border-t border-brand-black/5">
+        <div class="max-w-[90rem] mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16 reveal-up">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="w-24 mb-6">
+                         <img src="logo.png" alt="Logo" class="w-full" loading="lazy">
+                    </div>
+                    <p class="text-brand-gray text-sm leading-relaxed max-w-xs">
+                        Kerala's premier watersports hub. Adventure, conservation, and community.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-serif text-lg font-bold text-brand-black mb-6">Contact Us</h4>
+                    <div class="space-y-2 text-brand-gray text-sm">
+                        <p>kayak@jellyfishwatersports.com</p>
+                        <p>+91 9400 23 88 33</p>
+                        <div class="flex gap-4 mt-4">
+                            <a href="https://www.instagram.com/jellyfish_watersports" class="text-brand-black hover:text-brand-orange transition-colors"><i class="ph-fill ph-instagram-logo text-xl"></i></a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-serif text-lg font-bold text-brand-black mb-6">Scan to Chat</h4>
+                    <div class="w-32 h-32 border border-brand-black/10 p-2 rounded-lg bg-white">
+                        <img src="link.png" alt="Scan QR Code" class="w-full h-full object-contain" loading="lazy">
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-brand-black/5 pt-10 text-center text-[0.75rem] text-brand-gray/60 font-medium uppercase tracking-wider">
+                <p>&copy; 2025 Jellyfish Watersports. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar Glass Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.remove('py-6');
+                navbar.classList.add('py-3');
+                navbar.querySelector('.glass-panel').classList.add('bg-white/90', 'backdrop-blur-xl', 'shadow-xl');
+            } else {
+                navbar.classList.add('py-6');
+                navbar.classList.remove('py-3');
+                navbar.querySelector('.glass-panel').classList.remove('bg-white/90', 'backdrop-blur-xl', 'shadow-xl');
+            }
+        });
+
+        // Mobile Menu Logic
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const closeMobileMenuBtn = document.getElementById('close-mobile-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        function toggleMobileMenu(show) {
+            if (show) {
+                mobileMenu.classList.remove('translate-x-full');
+            } else {
+                mobileMenu.classList.add('translate-x-full');
+            }
+        }
+
+        mobileMenuBtn.addEventListener('click', () => toggleMobileMenu(true));
+        closeMobileMenuBtn.addEventListener('click', () => toggleMobileMenu(false));
+        mobileLinks.forEach(link => link.addEventListener('click', () => toggleMobileMenu(false)));
+
+        // Reveal Animation Logic
+        function initScrollAnimations() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+
+            document.querySelectorAll('.reveal-up').forEach(el => observer.observe(el));
+        }
+
+        // Blob Navigation Spy Logic
+        function initBlobSpy() {
+            const sections = document.querySelectorAll('section');
+            const navItems = document.querySelectorAll('.blob-nav-item');
+
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navItems.forEach(item => {
+                    item.classList.remove('active');
+                    if (item.getAttribute('href').includes(current)) {
+                        item.classList.add('active');
+                    }
+                });
+            });
+        }
+
+        window.onload = function() { 
+            initScrollAnimations();
+            initBlobSpy();
+        }
+    </script>
+</body>
+</html>

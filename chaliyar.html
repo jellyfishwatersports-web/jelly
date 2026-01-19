@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth antialiased">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>Jellyfish Watersports </title>
+    <link rel="icon" type="image/png" href="logo.png">
+<meta name="title" content="Chaliyar River Festival | Culture, Adventure & Events in Calicut (Kozhikode), Kerala">
+<meta name="description" content="The Chaliyar River Festival celebrates culture, adventure and nature on the iconic Chaliyar River in Calicut (Kozhikode), Kerala. Enjoy kayaking, SUP, rafting, river activities, food, music and community events hosted by Jellyfish Watersports.">
+<meta name="keywords" content="Chaliyar River Festival, Chaliyar River Calicut, Chaliyar River Kozhikode, River Festival Kerala, Chaliyar Kayaking Festival, Chaliyar SUP Event, Adventure Festival Calicut, Watersports Festival Kerala, Jellyfish Watersports Events">
+<meta name="author" content="Jellyfish Watersports">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="language" content="English">
+<meta name="geo.region" content="IN-KL">
+<meta name="geo.placename" content="Calicut, Kozhikode">
+<meta name="geo.position" content="11.1866;75.8077">
+<meta name="ICBM" content="11.1866, 75.8077">
+
+<meta property="og:type" content="event">
+<meta property="og:url" content="https://jellyfishwatersports.com/chaliyar-river-festival.html">
+<meta property="og:title" content="Chaliyar River Festival | Celebrate the Chaliyar River in Calicut">
+<meta property="og:description" content="A vibrant river festival on the Chaliyar River in Calicut, Kerala featuring kayaking, SUP, rafting, cultural programs, food and outdoor experiences by Jellyfish Watersports.">
+<meta property="og:image" content="festival/1.png">
+<meta property="og:locale" content="en_IN">
+<meta property="og:site_name" content="Jellyfish Watersports">
+
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://jellyfishwatersports.com/chaliyar-river-festival.html">
+<meta property="twitter:title" content="Chaliyar River Festival | Calicut (Kozhikode), Kerala">
+<meta property="twitter:description" content="Celebrate culture, adventure and nature at the Chaliyar River Festival in Calicut. Kayaking, SUP, rafting and riverfront events on the Chaliyar River.">
+<meta property="twitter:image" content="festival/1.png">
+
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            orange: '#F97316', 
+                            black: '#0a0a0a', 
+                            charcoal: '#1c1c1c',
+                            gray: '#6b7280',
+                            light: '#FAFAFA',
+                            cream: '#F2F0E9', 
+                            surface: '#ffffff'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Manrope', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    boxShadow: {
+                        'glass': '0 4px 30px rgba(0, 0, 0, 0.1)',
+                        'glow': '0 0 20px rgba(249, 115, 22, 0.15)',
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; scroll-padding-top: 120px; }
+        ::-webkit-scrollbar { width: 0.5rem; }
+        ::-webkit-scrollbar-track { background: #F2F0E9; }
+        ::-webkit-scrollbar-thumb { background: rgba(249, 115, 22, 0.6); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(249, 115, 22, 1); }
+        ::selection { background: #F97316; color: white; }
+        body { cursor: default; }
+        
+        .glass-panel { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.3); }
+        .reveal-up { opacity: 0; transform: translateY(2.5rem); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+        .reveal-up.active { opacity: 1; transform: translateY(0); }
+        
+        /* Video Background */
+        .video-bg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: 0;
+            transform: translateX(-50%) translateY(-35%);
+            object-fit: cover;
+        }
+
+        /* Blob Nav */
+        .blob-nav-item { width: 0.75rem; height: 0.75rem; border-radius: 9999px; background-color: #d1d5db; transition: all 0.3s ease; position: relative; }
+        .blob-nav-item::after { content: attr(data-label); position: absolute; right: 1.5rem; top: 50%; transform: translateY(-50%) translateX(10px); opacity: 0; background: #F97316; color: white; padding: 0.25rem 0.75rem; border-radius: 0.25rem; font-size: 0.75rem; font-weight: bold; white-space: nowrap; transition: all 0.3s ease; pointer-events: none; }
+        .blob-nav-item:hover::after { opacity: 1; transform: translateY(-50%) translateX(0); }
+        .blob-nav-item.active { background-color: #F97316; height: 2rem; }
+
+        /* Form Toggle Animation */
+        .form-container { display: none; opacity: 0; transition: opacity 0.5s ease; }
+        .form-container.active { display: block; opacity: 1; }
+        .tab-btn.active { background-color: #F97316; color: white; border-color: #F97316; }
+    </style>
+</head>
+<body class="bg-brand-cream text-brand-black relative overflow-x-hidden">
+
+    <div class="fixed right-8 top-1/2 -translate-y-1/2 z-50 hidden lg:flex flex-col gap-4 items-center">
+        <a href="#hero" class="blob-nav-item active" data-label="The River Calls"></a>
+        <a href="#about" class="blob-nav-item" data-label="The Journey"></a>
+        <a href="#facts" class="blob-nav-item" data-label="Expedition Facts"></a>
+        <a href="#register" class="blob-nav-item" data-label="Register"></a>
+    </div>
+
+    <nav id="navbar" class="fixed top-0 inset-x-0 z-50 transition-all duration-500 py-6">
+        <div class="max-w-[95rem] mx-auto px-6">
+            <div class="glass-panel rounded-full px-8 py-4 flex justify-between items-center shadow-glass transition-all duration-500 hover:shadow-lg">
+                <a href="index.html" class="block w-24 md:w-32 z-50 relative shrink-0">
+                    <img src="logo.png" alt="Jellyfish Logo" class="w-full h-auto object-contain">
+                </a>
+                <div class="hidden lg:flex items-center gap-6 xl:gap-8">
+                    <div class="flex items-center gap-5 xl:gap-7 text-[0.8rem] font-medium tracking-wide uppercase whitespace-nowrap">
+                        <a href="index.html#hero" class="hover:text-brand-orange transition-colors">Who are we</a>
+                        <a href="blog.html" class="hover:text-brand-orange transition-colors">Blog</a>
+                        <a href="exp.html" class="hover:text-brand-orange transition-colors">Book an Experience</a>
+                        <a href="explearn.html" class="hover:text-brand-orange transition-colors">Experiential Learning</a>
+                        <a href="food.html" class="hover:text-brand-orange transition-colors">Food & Stay</a>
+                        <a href="yacht.html" class="hover:text-brand-orange transition-colors"> Yacht Club</a>
+                        <a href="shop.html" class="hover:text-brand-orange transition-colors">Shop</a>
+                    </div>
+                    <a href="exp.html" class="group relative px-6 py-2.5 rounded-full bg-brand-black text-white text-[0.8rem] font-bold tracking-wider overflow-hidden transition-all hover:scale-105 shrink-0 block text-center">
+                        <div class="absolute inset-0 bg-brand-orange translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></div>
+                        <span class="relative z-10">Book Now</span>
+                    </a>
+                </div>
+                <button id="mobile-menu-btn" class="lg:hidden p-2 text-brand-black hover:text-brand-orange transition z-50">
+                    <i class="ph ph-list text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div id="mobile-menu" class="fixed inset-0 z-[60] bg-brand-cream transform translate-x-full transition-transform duration-500 lg:hidden flex flex-col justify-center items-center space-y-6 text-center">
+        <button id="close-mobile-menu" class="absolute top-8 right-8 p-4 text-3xl hover:text-brand-orange transition-colors z-[70]"><i class="ph ph-x"></i></button>
+        <a href="index.html#hero" class="mobile-link font-serif text-[1.5rem] hover:text-brand-orange transition-colors">Who are we</a>
+        <a href="blog.html" class="mobile-link font-serif text-[1.5rem] hover:text-brand-orange transition-colors">Blog</a>
+        <a href="exp.html" class="mobile-link font-serif text-[1.5rem] hover:text-brand-orange transition-colors">Book an Experience</a>
+        <a href="explearn.html" class="mobile-link font-serif text-[1.5rem] hover:text-brand-orange transition-colors">Experiential Learning</a>
+        <a href="food.html" class="mobile-link font-serif text-[1.5rem] hover:text-brand-orange transition-colors">Food and Stay</a>
+        <a href="yacht.html" class="mobile-link font-serif text-[1.5rem] hover:text-brand-orange transition-colors">Jellyfish Yacht Club</a>
+        <a href="shop.html" class="mobile-link font-serif text-[1.5rem] hover:text-brand-orange transition-colors">Shop</a>
+        <a href="exp.html" class="px-8 py-3 rounded-full bg-brand-orange text-white text-lg font-bold tracking-wide mt-4 inline-block">Book Now</a>
+    </div>
+
+    <section id="hero" class="relative h-screen w-full flex items-center justify-center overflow-hidden bg-brand-black -mt-[120px]">
+        <div class="absolute inset-0 z-0 overflow-hidden">
+            <video autoplay muted loop playsinline class="video-bg opacity-60">
+                <source src="chaliyar/chaliyar.mp4" type="video/mp4">
+            </video>
+            <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-brand-cream"></div>
+        </div>
+        
+        <div class="relative z-10 text-center px-6 pt-32">
+            <span class="text-brand-orange font-bold tracking-[0.4em] uppercase text-xs md:text-sm mb-6 block animate-pulse">October 2025</span>
+            <h1 class="font-serif text-[4rem] lg:text-[7rem] leading-[0.9] text-white mix-blend-overlay opacity-90 mb-8 tracking-tighter">
+                The River <br><span class="italic font-light text-brand-orange">Calls.</span>
+            </h1>
+            <p class="text-[1.25rem] text-white/80 font-light max-w-lg mx-auto mb-10">
+                68 km. 3 Days. One Purpose. <br> Join the source-to-sea expedition to save our rivers.
+            </p>
+            <a href="#register" class="inline-block px-10 py-4 bg-brand-orange text-white rounded-full font-bold tracking-widest uppercase hover:bg-white hover:text-brand-orange transition-all duration-300">
+                Join the Expedition
+            </a>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 bg-brand-cream">
+        <div class="max-w-[90rem] mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                <div class="reveal-up">
+                    <span class="text-brand-orange font-bold tracking-[0.2em] uppercase text-[0.75rem] mb-4 block">About the Paddle</span>
+                    <h2 class="font-serif text-[3rem] lg:text-[4rem] text-brand-black leading-[1] mb-8">
+                        Source to Sea <br><span class="italic text-brand-gray/50">Odyssey.</span>
+                    </h2>
+                    <p class="text-brand-gray text-lg font-light leading-relaxed mb-6">
+                        The Chaliyar River Paddle is not just an event; it's a movement. Starting from the lush forests of Nilambur and ending at the historic port of Beypore, this 3-day journey covers 68 km of Kerala's most scenic waterway.
+                    </p>
+                    <p class="text-brand-gray text-lg font-light leading-relaxed">
+                        Beyond the thrill of paddling, we unite for a cause. As a plastic-negative event, we clean as we go, celebrating the river that sustains us. Camping under the stars, local music, and authentic food make this a cultural immersion like no other.
+                    </p>
+                </div>
+                <div class="relative reveal-up delay-100">
+                    <div class="aspect-video rounded-2xl overflow-hidden shadow-2xl">
+                        <img src="chaliyar/1.png" alt="Chaliyar Paddle Highlights" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="facts" class="py-24 bg-brand-charcoal text-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-[50rem] h-[50rem] bg-brand-orange/5 rounded-full blur-[120px] pointer-events-none"></div>
+        
+        <div class="max-w-[90rem] mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 text-center reveal-up">
+                
+                <div class="p-8 border border-white/10 rounded-2xl bg-white/5 backdrop-blur-sm">
+                    <i class="ph-fill ph-path text-4xl text-brand-orange mb-4"></i>
+                    <h3 class="text-4xl font-serif mb-2">68 KM</h3>
+                    <p class="text-xs uppercase tracking-widest text-white/50">Total Distance</p>
+                </div>
+
+                <div class="p-8 border border-white/10 rounded-2xl bg-white/5 backdrop-blur-sm delay-100">
+                    <i class="ph-fill ph-calendar text-4xl text-brand-orange mb-4"></i>
+                    <h3 class="text-4xl font-serif mb-2">3 Days</h3>
+                    <p class="text-xs uppercase tracking-widest text-white/50">Duration</p>
+                </div>
+
+                <div class="p-8 border border-white/10 rounded-2xl bg-white/5 backdrop-blur-sm delay-200">
+                    <i class="ph-fill ph-users-three text-4xl text-brand-orange mb-4"></i>
+                    <h3 class="text-4xl font-serif mb-2">200+</h3>
+                    <p class="text-xs uppercase tracking-widest text-white/50">Paddlers</p>
+                </div>
+
+                <div class="p-8 border border-white/10 rounded-2xl bg-white/5 backdrop-blur-sm delay-300">
+                    <i class="ph-fill ph-trash text-4xl text-brand-orange mb-4"></i>
+                    <h3 class="text-4xl font-serif mb-2">-ve</h3>
+                    <p class="text-xs uppercase tracking-widest text-white/50">Plastic Impact</p>
+                </div>
+
+            </div>
+
+            <div class="mt-20 text-center reveal-up">
+                <h3 class="text-2xl font-serif mb-4">2026 Participation</h3>
+                <p class="text-white/60 max-w-2xl mx-auto mb-8">
+                    Open to beginners and professionals. Includes kayak rental, camping gear, all meals, safety support, and return transport from Beypore to Calicut.
+                </p>
+                <div class="inline-block px-6 py-2 border border-brand-orange text-brand-orange rounded-full text-sm font-bold uppercase tracking-widest">
+                    Registration Fee: Coming Soon
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="register" class="py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-12 reveal-up">
+                <span class="text-brand-orange font-bold tracking-[0.2em] uppercase text-[0.75rem] mb-4 block">Get Involved</span>
+                <h2 class="font-serif text-[3rem] text-brand-black leading-[1]">Be Part of the Legacy.</h2>
+            </div>
+
+            <div class="flex justify-center gap-4 mb-12 reveal-up">
+                <button onclick="switchTab('participant')" id="btn-participant" class="tab-btn active px-8 py-3 rounded-full border border-brand-black text-brand-black hover:bg-brand-orange hover:text-white hover:border-brand-orange transition-all font-bold uppercase text-xs tracking-widest">
+                    Register as Participant
+                </button>
+                <button onclick="switchTab('sponsor')" id="btn-sponsor" class="tab-btn px-8 py-3 rounded-full border border-brand-black text-brand-black hover:bg-brand-orange hover:text-white hover:border-brand-orange transition-all font-bold uppercase text-xs tracking-widest">
+                    Register as Sponsor
+                </button>
+            </div>
+
+            <div id="form-participant" class="form-container active bg-brand-light p-10 rounded-3xl border border-brand-black/5 shadow-xl reveal-up">
+                
+                <div id="p_success" class="hidden flex flex-col items-center justify-center py-10 text-center">
+                    <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center text-green-500 text-4xl mb-6 shadow-sm">
+                        <i class="ph-fill ph-check"></i>
+                    </div>
+                    <h3 class="font-serif text-3xl text-brand-black mb-2">Registration Received!</h3>
+                    <p class="text-brand-gray max-w-md">Thank you for your interest. We have received your details and will contact you shortly with the next steps.</p>
+                </div>
+
+                <form id="p_form" class="space-y-6">
+                    <h3 class="font-serif text-2xl mb-6">Paddler Registration (Pre-Booking)</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-widest mb-2 text-brand-gray">Full Name</label>
+                            <input type="text" id="p_name" name="user_name" class="w-full bg-white border border-brand-black/10 rounded-lg p-3 focus:outline-none focus:border-brand-orange transition-colors" required>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-widest mb-2 text-brand-gray">Email Address</label>
+                            <input type="email" id="p_email" name="user_email" class="w-full bg-white border border-brand-black/10 rounded-lg p-3 focus:outline-none focus:border-brand-orange transition-colors" required>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-widest mb-2 text-brand-gray">Phone Number</label>
+                            <input type="tel" id="p_phone" name="user_phone" class="w-full bg-white border border-brand-black/10 rounded-lg p-3 focus:outline-none focus:border-brand-orange transition-colors" required>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-widest mb-2 text-brand-gray">Experience Level</label>
+                            <select id="p_exp" name="experience_level" class="w-full bg-white border border-brand-black/10 rounded-lg p-3 focus:outline-none focus:border-brand-orange transition-colors text-brand-black">
+                                <option value="Beginner">Beginner (First time)</option>
+                                <option value="Intermediate">Intermediate (Paddled before)</option>
+                                <option value="Expert">Expert (Professional)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-widest mb-2 text-brand-gray">Message / Queries</label>
+                        <textarea id="p_message" name="message" rows="4" class="w-full bg-white border border-brand-black/10 rounded-lg p-3 focus:outline-none focus:border-brand-orange transition-colors"></textarea>
+                    </div>
+                    <button type="button" onclick="sendParticipantMail()" id="p_btn" class="w-full py-4 bg-brand-black text-white font-bold uppercase tracking-widest rounded-lg hover:bg-brand-orange transition-colors">Submit Interest</button>
+                </form>
+            </div>
+
+            <div id="form-sponsor" class="form-container bg-brand-light p-10 rounded-3xl border border-brand-black/5 shadow-xl reveal-up">
+                
+                <div id="s_success" class="hidden flex flex-col items-center justify-center py-10 text-center">
+                    <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center text-green-500 text-4xl mb-6 shadow-sm">
+                        <i class="ph-fill ph-handshake"></i>
+                    </div>
+                    <h3 class="font-serif text-3xl text-brand-black mb-2">Proposal Requested!</h3>
+                    <p class="text-brand-gray max-w-md">Thank you for your interest in partnering with us. Our team will review your details and get back to you shortly.</p>
+                </div>
+
+                <form id="s_form" class="space-y-6">
+                    <h3 class="font-serif text-2xl mb-6">Partnership Opportunities</h3>
+                    <p class="text-sm text-brand-gray mb-6">Align your brand with sustainability and adventure. Support the River Clean-up initiative.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-widest mb-2 text-brand-gray">Company Name</label>
+                            <input type="text" id="s_company" name="company_name" class="w-full bg-white border border-brand-black/10 rounded-lg p-3 focus:outline-none focus:border-brand-orange transition-colors" required>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-widest mb-2 text-brand-gray">Contact Person</label>
+                            <input type="text" id="s_contact" name="contact_person" class="w-full bg-white border border-brand-black/10 rounded-lg p-3 focus:outline-none focus:border-brand-orange transition-colors" required>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-widest mb-2 text-brand-gray">Email Address</label>
+                            <input type="email" id="s_email" name="user_email" class="w-full bg-white border border-brand-black/10 rounded-lg p-3 focus:outline-none focus:border-brand-orange transition-colors" required>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-widest mb-2 text-brand-gray">Sponsorship Interest</label>
+                            <select id="s_interest" name="sponsorship_type" class="w-full bg-white border border-brand-black/10 rounded-lg p-3 focus:outline-none focus:border-brand-orange transition-colors text-brand-black">
+                                <option value="Title Sponsor">Title Sponsor</option>
+                                <option value="Eco-Partner">Eco-Partner (Cleanup)</option>
+                                <option value="Refreshment">Refreshment Partner</option>
+                                <option value="Gear">Gear Sponsor</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="button" onclick="sendSponsorMail()" id="s_btn" class="w-full py-4 bg-brand-orange text-white font-bold uppercase tracking-widest rounded-lg hover:bg-brand-black transition-colors">Request Proposal</button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="bg-white pt-20 pb-12 border-t border-brand-black/5">
+        <div class="max-w-[90rem] mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16 reveal-up">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="w-24 mb-6">
+                         <img src="logo.png" alt="Logo" class="w-full" loading="lazy">
+                    </div>
+                    <p class="text-brand-gray text-sm leading-relaxed max-w-xs">
+                        Kerala's premier watersports hub. Adventure, conservation, and community.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-serif text-lg font-bold text-brand-black mb-6">Contact Us</h4>
+                    <div class="space-y-2 text-brand-gray text-sm">
+                        <p>kayak@jellyfishwatersports.com</p>
+                        <p>+91 9400 23 88 33</p>
+                        <div class="flex gap-4 mt-4">
+                            <a href="https://www.instagram.com/jellyfish_watersports" class="text-brand-black hover:text-brand-orange transition-colors"><i class="ph-fill ph-instagram-logo text-xl"></i></a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-serif text-lg font-bold text-brand-black mb-6">Scan to Chat</h4>
+                    <div class="w-32 h-32 border border-brand-black/10 p-2 rounded-lg bg-white">
+                        <img src="link.png" alt="Scan QR Code" class="w-full h-full object-contain" loading="lazy">
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-brand-black/5 pt-10 text-center text-[0.75rem] text-brand-gray/60 font-medium uppercase tracking-wider">
+                <p>&copy; 2025 Jellyfish Watersports. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // --- EmailJS Initialization ---
+        (function(){
+            emailjs.init("mncYI3wYFg3AmqywF"); // Your Public Key
+        })();
+
+        // --- Send Participant Mail ---
+        function sendParticipantMail() {
+            const btn = document.getElementById('p_btn');
+            const originalText = btn.innerText;
+            btn.innerText = "Sending...";
+            btn.disabled = true;
+
+            const params = {
+                user_name: document.getElementById('p_name').value,
+                user_email: document.getElementById('p_email').value,
+                user_phone: document.getElementById('p_phone').value,
+                experience_level: document.getElementById('p_exp').value,
+                message: document.getElementById('p_message').value,
+                admin_email: 'raynjellyfish@gmail.com'
+            };
+
+            emailjs.send("service_pbw17hr", "template_xeabewr", params)
+                .then(function(res) {
+                    // Hide Form and Show Success Message
+                    document.getElementById('p_form').classList.add('hidden');
+                    document.getElementById('p_success').classList.remove('hidden');
+                })
+                .catch(function(err) {
+                    alert("Failed to send. Please try again later.");
+                    console.error("EmailJS Error:", err);
+                    btn.innerText = originalText;
+                    btn.disabled = false;
+                });
+        }
+
+        // --- Send Sponsor Mail ---
+        function sendSponsorMail() {
+            const btn = document.getElementById('s_btn');
+            const originalText = btn.innerText;
+            btn.innerText = "Sending...";
+            btn.disabled = true;
+
+            const params = {
+                company_name: document.getElementById('s_company').value,
+                contact_person: document.getElementById('s_contact').value,
+                user_email: document.getElementById('s_email').value,
+                sponsorship_type: document.getElementById('s_interest').value,
+                admin_email: 'raynjellyfish@gmail.com'
+            };
+
+            emailjs.send("service_pbw17hr", "template_jro3kh7", params)
+                .then(function(res) {
+                     // Hide Form and Show Success Message
+                     document.getElementById('s_form').classList.add('hidden');
+                     document.getElementById('s_success').classList.remove('hidden');
+                })
+                .catch(function(err) {
+                    alert("Failed to send. Please try again later.");
+                    console.error("EmailJS Error:", err);
+                    btn.innerText = originalText;
+                    btn.disabled = false;
+                });
+        }
+
+        // --- Navbar Logic ---
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.remove('py-6');
+                navbar.classList.add('py-3');
+                navbar.querySelector('.glass-panel').classList.add('bg-white/90', 'backdrop-blur-xl', 'shadow-xl');
+            } else {
+                navbar.classList.add('py-6');
+                navbar.classList.remove('py-3');
+                navbar.querySelector('.glass-panel').classList.remove('bg-white/90', 'backdrop-blur-xl', 'shadow-xl');
+            }
+        });
+
+        const mobileMenu = document.getElementById('mobile-menu');
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => mobileMenu.classList.remove('translate-x-full'));
+        document.getElementById('close-mobile-menu').addEventListener('click', () => mobileMenu.classList.add('translate-x-full'));
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        });
+        document.querySelectorAll('.reveal-up').forEach(el => observer.observe(el));
+
+        // Blob Spy
+        const navItems = document.querySelectorAll('.blob-nav-item');
+        const sections = document.querySelectorAll('section');
+
+        const navObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute('id');
+                    // Remove active from all
+                    navItems.forEach(link => link.classList.remove('active'));
+                    // Add active to current
+                    const activeLink = document.querySelector(`.blob-nav-item[href="#${id}"]`);
+                    if (activeLink) activeLink.classList.add('active');
+                }
+            });
+        }, {
+            threshold: 0.3, // Trigger when 30% visible
+            rootMargin: "-20% 0px -50% 0px" // Adjust active zone
+        });
+
+        sections.forEach(section => navObserver.observe(section));
+
+        // Form Toggle Logic
+        function switchTab(tab) {
+            document.getElementById('btn-participant').classList.remove('active', 'bg-brand-orange', 'text-white', 'border-brand-orange');
+            document.getElementById('btn-sponsor').classList.remove('active', 'bg-brand-orange', 'text-white', 'border-brand-orange');
+            
+            document.getElementById('form-participant').classList.remove('active');
+            document.getElementById('form-sponsor').classList.remove('active');
+            
+            // Hide success messages when switching tabs (optional reset)
+            document.getElementById('p_success').classList.add('hidden');
+            document.getElementById('p_form').classList.remove('hidden');
+            document.getElementById('s_success').classList.add('hidden');
+            document.getElementById('s_form').classList.remove('hidden');
+
+            document.getElementById(`btn-${tab}`).classList.add('active', 'bg-brand-orange', 'text-white', 'border-brand-orange');
+            
+            const activeForm = document.getElementById(`form-${tab}`);
+            const otherForm = document.getElementById(tab === 'participant' ? 'form-sponsor' : 'form-participant');
+            
+            otherForm.style.display = "none";
+            activeForm.style.display = "block";
+            
+            setTimeout(() => activeForm.classList.add('active'), 10);
+        }
+    </script>
+</body>
+</html>
