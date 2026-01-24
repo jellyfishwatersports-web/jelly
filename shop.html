@@ -249,7 +249,7 @@
                             <span class="text-xs font-bold block">Apparel</span>
                         </div>
                         <div class="text-center p-4 bg-brand-light rounded-xl">
-                            <i class="ph-fill ph-life-buoy text-2xl text-brand-orange mb-2"></i>
+                            <i class="ph-fill ph-lifebuoy text-2xl text-brand-orange mb-2"></i>
                             <span class="text-xs font-bold block">Safety</span>
                         </div>
                         <div class="text-center p-4 bg-brand-light rounded-xl">
@@ -399,18 +399,6 @@
     </footer>
 
     <script>
-        window.addEventListener('scroll', () => {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.remove('py-6');
-                navbar.classList.add('py-3');
-                navbar.querySelector('.glass-panel').classList.add('bg-white/90', 'backdrop-blur-xl', 'shadow-xl');
-            } else {
-                navbar.classList.add('py-6');
-                navbar.classList.remove('py-3');
-                navbar.querySelector('.glass-panel').classList.remove('bg-white/90', 'backdrop-blur-xl', 'shadow-xl');
-            }
-        });
 
         const mobileMenu = document.getElementById('mobile-menu');
         document.getElementById('mobile-menu-btn').addEventListener('click', () => mobileMenu.classList.remove('translate-x-full'));
@@ -445,5 +433,6 @@
 
         sections.forEach(section => navObserver.observe(section));
     </script>
+    <script src="navbar.js"></script>
 </body>
 </html>

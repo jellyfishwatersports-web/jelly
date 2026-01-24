@@ -364,7 +364,7 @@
                     </div>
                     <div class="lg:col-span-4 relative reveal-up delay-100 hidden lg:block">
                         <div class="sticky top-32">
-                            <img src="assets/people/kaushiq.png" alt="Founders of Jellyfish Watersports" class="rounded-2xl shadow-xl w-full h-auto object-cover aspect-[3/5]" loading="lazy" width="400" height="600">
+                            <img src="assets/people/core.jpg" alt="Founders of Jellyfish Watersports" class="rounded-2xl shadow-xl w-full h-auto object-cover aspect-[3/5]" loading="lazy" width="400" height="600">
                         </div>
                     </div>
                 </div>
@@ -693,23 +693,6 @@
             renderTeam();
             // Start Carousel
             slideInterval = setInterval(nextSlide, 7000);
-            
-            // Scroll Logic
-            const navbar = document.getElementById('navbar');
-            const navPanel = navbar.querySelector('.glass-panel');
-            
-            // Use Passive listener for better scroll performance
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 50) {
-                    navbar.classList.remove('lg:py-6');
-                    navbar.classList.add('lg:py-3');
-                    navPanel.classList.add('bg-white/90', 'backdrop-blur-xl', 'shadow-xl');
-                } else {
-                    navbar.classList.add('lg:py-6');
-                    navbar.classList.remove('lg:py-3');
-                    navPanel.classList.remove('bg-white/90', 'backdrop-blur-xl', 'shadow-xl');
-                }
-            }, { passive: true });
 
             // Reveal Animation
             const observer = new IntersectionObserver((entries) => {
@@ -769,5 +752,6 @@
             }
         };
     </script>
+    <script src="navbar.js"></script>
 </body>
 </html>

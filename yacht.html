@@ -119,8 +119,8 @@
 
     <section id="club" class="relative h-[85vh] w-full flex items-center justify-center overflow-hidden bg-brand-charcoal -mt-[120px]">
         <div class="absolute inset-0 z-0 opacity-70">
-            <img src="yacht/1.png" alt="Jellyfish Yacht Club" class="w-full h-full object-cover" fetchpriority="high">
-            <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-brand-cream"></div>
+            <img src="assets/hero/yachthero.jpg" alt="Jellyfish Yacht Club" class="w-full h-full object-cover" fetchpriority="high">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent"></div>
         </div>
         <div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
             <span class="text-brand-orange font-bold tracking-[0.3em] uppercase text-xs mb-4 block animate-pulse">More Than A Club. A Lifestyle.</span>
@@ -396,19 +396,19 @@
             </div>
             <div class="flex flex-wrap justify-center gap-12 lg:gap-20 opacity-70 grayscale hover:grayscale-0 transition-all duration-500 reveal-up delay-100">
                 <div class="text-center group">
-                    <img src="yacht/5.png" alt="Yachting Association of India" class="h-16 w-auto mx-auto mb-2 object-contain mix-blend-multiply">
+                    <img src="assets/logos/YAOI-logo.png" alt="Yachting Association of India" class="h-16 w-auto mx-auto mb-2 object-contain mix-blend-multiply">
                     <p class="text-[10px] tracking-widest uppercase group-hover:text-brand-orange transition-colors">Yachting Association of India</p>
                 </div>
                 <div class="text-center group">
-                    <img src="yacht/6.png" alt="ATOI" class="h-16 w-auto mx-auto mb-2 object-contain mix-blend-multiply">
+                    <img src="assets/logos/ATOAI-logo.png" alt="ATOI" class="h-16 w-auto mx-auto mb-2 object-contain mix-blend-multiply">
                     <p class="text-[10px] tracking-widest uppercase group-hover:text-brand-orange transition-colors">Adventure Tour Operators India</p>
                 </div>
                 <div class="text-center group">
-                    <img src="yacht/7.png" alt="KATPS" class="h-16 w-auto mx-auto mb-2 object-contain mix-blend-multiply">
+                    <img src="assets/logos/KATPS-logo.png" alt="KATPS" class="h-16 w-auto mx-auto mb-2 object-contain mix-blend-multiply">
                     <p class="text-[10px] tracking-widest uppercase group-hover:text-brand-orange transition-colors">Kerala Adventure Tourism</p>
                 </div>
                 <div class="text-center group">
-                    <img src="yacht/8.png" alt="ITCA" class="h-16 w-auto mx-auto mb-2 object-contain mix-blend-multiply">
+                    <img src="assets/logos/ITCA-logo.png" alt="ITCA" class="h-16 w-auto mx-auto mb-2 object-contain mix-blend-multiply">
                     <p class="text-[10px] tracking-widest uppercase group-hover:text-brand-orange transition-colors">Intl Topper Class Assoc</p>
                 </div>
             </div>
@@ -454,20 +454,6 @@
     </footer>
 
     <script>
-        // Navbar Scroll Logic
-        window.addEventListener('scroll', () => {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.remove('py-6');
-                navbar.classList.add('py-3');
-                navbar.querySelector('.glass-panel').classList.add('bg-white/90', 'backdrop-blur-xl', 'shadow-xl');
-            } else {
-                navbar.classList.add('py-6');
-                navbar.classList.remove('py-3');
-                navbar.querySelector('.glass-panel').classList.remove('bg-white/90', 'backdrop-blur-xl', 'shadow-xl');
-            }
-        });
-
         // Mobile Menu Logic
         const mobileMenu = document.getElementById('mobile-menu');
         document.getElementById('mobile-menu-btn').addEventListener('click', () => mobileMenu.classList.remove('translate-x-full'));
@@ -498,5 +484,6 @@
 
         sections.forEach(section => navObserver.observe(section));
     </script>
+    <script src="navbar.js"></script>
 </body>
 </html>

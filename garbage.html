@@ -171,9 +171,9 @@
 
     <section id="hero" class="relative h-[80vh] w-full flex items-center justify-center overflow-hidden bg-brand-charcoal -mt-[120px]">
         <div class="absolute inset-0 z-0 opacity-60">
-            <img src="garbage/1.png" alt="Cleaning the River" class="w-full h-full object-cover" fetchpriority="high">
-            <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-brand-cream"></div>
-            <div class="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-brand-cream to-transparent"></div>
+            <img src="assets/activities/catch.png" alt="Cleaning the River" class="w-full h-full object-cover" fetchpriority="high">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t to-transparent"></div>
         </div>
         <div class="relative z-10 text-center px-6 mt-20">
             <span class="text-brand-orange font-bold tracking-[0.3em] uppercase text-xs mb-4 block animate-pulse">Sustainability Initiative</span>
@@ -195,12 +195,15 @@
                         Launched in 2013, "Catch of the Day" is our flagship environmental initiative. It transforms a regular kayaking trip into a meaningful act of conservation.
                     </p>
                     <p class="text-brand-gray text-[1.125rem] font-light leading-relaxed mb-8">
-                        Participants collect floating garbage while paddling. The waste is then sorted, weighed, and sent for responsible recycling through our partner, <strong>Greenworms</strong>. [cite_start]This initiative was honored with the <strong>PROMISE Sustainability Award</strong> in 2022. [cite: 583-586]
+                        Participants collect floating garbage while paddling. The waste is then sorted, weighed, and sent for responsible recycling through our partner, <strong>Greenworms</strong>. This initiative was honored with the <strong>PROMISE Sustainability Award</strong> in 2022.
+                    </p>
+                    <p class="text-brand-gray text-[1.125rem] font-light leading-relaxed mb-8">
+                        Marine Cemetery -- "Worlds first marine cemetery" consisting of more than 2000 plastic bottle-designed graves as a conservation-led initiative to revive aquatic biodiversity.
                     </p>
                 </div>
                 <div class="relative aspect-square reveal-up delay-100">
                     <div class="w-full h-full rounded-2xl overflow-hidden shadow-2xl relative z-10 bg-gray-200">
-                        <img src="garbage/2.png" alt="River Cleanup" class="w-full h-full object-cover" loading="lazy">
+                        <img src="assets/activities/cemetery.webp" alt="River Cleanup" class="w-full h-full object-cover" loading="lazy">
                     </div>
                     <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-green-500/10 rounded-full blur-xl z-0"></div>
                 </div>
@@ -285,7 +288,7 @@
                     <h3 class="font-serif text-2xl mb-6">Perfect For</h3>
                     <div class="space-y-4">
                         <div class="p-4 bg-white/5 rounded-xl border border-white/5 hover:bg-white/10 transition-colors">
-                            <h4 class="font-bold">Corporate CSR</h4>
+                            <h4 class="font-bold">Environmental CSR</h4>
                             <p class="text-xs text-white/50 mt-1">Team building with social impact.</p>
                         </div>
                         <div class="p-4 bg-white/5 rounded-xl border border-white/5 hover:bg-white/10 transition-colors">
@@ -344,18 +347,6 @@
     </footer>
 
     <script>
-        window.addEventListener('scroll', () => {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.remove('py-6');
-                navbar.classList.add('py-3');
-                navbar.querySelector('.glass-panel').classList.add('bg-white/90', 'backdrop-blur-xl', 'shadow-xl');
-            } else {
-                navbar.classList.add('py-6');
-                navbar.classList.remove('py-3');
-                navbar.querySelector('.glass-panel').classList.remove('bg-white/90', 'backdrop-blur-xl', 'shadow-xl');
-            }
-        });
 
         const mobileMenu = document.getElementById('mobile-menu');
         document.getElementById('mobile-menu-btn').addEventListener('click', () => mobileMenu.classList.remove('translate-x-full'));
@@ -388,5 +379,6 @@
 
         sections.forEach(section => navObserver.observe(section));
     </script>
+    <script src="navbar.js" defer></script>
 </body>
 </html>
