@@ -438,18 +438,39 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div class="order-2 lg:order-1 reveal-up">
                     <div class="aspect-square rounded-2xl overflow-hidden shadow-2xl relative mb-6">
-                        <img src="food/20.png" alt="Cafe Calamari Ambiance" class="w-full h-full object-cover" loading="lazy">
+                        <img id="mainCafeImage"
+                        src="assets/activities/foodmain.png"
+                        alt="Cafe Calamari Ambiance"
+                        class="w-full h-full object-cover transition duration-300"
+                        loading="lazy">
+
                         <div class="absolute bottom-6 left-6 bg-white/90 backdrop-blur px-6 py-3 rounded-xl">
-                            <p class="font-serif text-xl">Wood-Fired Pizza</p>
-                            <p class="text-xs text-brand-orange uppercase font-bold">Weekend Special</p>
+                            <p class="font-serif text-xl">Book Now!</p>
+                            <p class="text-xs text-brand-orange uppercase font-bold">Exclusive Deals!</p>
                         </div>
                     </div>
-                    <div class="grid grid-cols-4 gap-2">
-                        <img src="food/21.png" class="h-20 w-full object-cover rounded-lg cursor-pointer hover:opacity-80 transition">
-                        <img src="food/22.png" class="h-20 w-full object-cover rounded-lg cursor-pointer hover:opacity-80 transition">
-                        <img src="food/23.png" class="h-20 w-full object-cover rounded-lg cursor-pointer hover:opacity-80 transition">
-                        <img src="food/24.png" class="h-20 w-full object-cover rounded-lg cursor-pointer hover:opacity-80 transition">
-                    </div>
+                    <div class="flex gap-4 mt-4">
+    <img src="assets/activities/food4.png"
+         onclick="changeCafeImage(this)"
+         class="max-h-24 w-auto rounded-lg cursor-pointer hover:opacity-80 transition">
+
+    <img src="assets/activities/food3.jpeg"
+         onclick="changeCafeImage(this)"
+         class="max-h-24 w-auto rounded-lg cursor-pointer hover:opacity-80 transition">
+
+    <img src="assets/activities/food2.png"
+         onclick="changeCafeImage(this)"
+         class="max-h-24 w-auto rounded-lg cursor-pointer hover:opacity-80 transition">
+
+    <img src="assets/activities/food1.jpeg"
+         onclick="changeCafeImage(this)"
+         class="max-h-24 w-auto rounded-lg cursor-pointer hover:opacity-80 transition">
+    
+    <img src="assets/activities/foodshot.jpg"
+         onclick="changeCafeImage(this)"
+         class="max-h-24 w-auto rounded-lg cursor-pointer hover:opacity-80 transition">
+</div>
+
                 </div>
                 <div class="order-1 lg:order-2 reveal-up delay-100">
                     <span class="text-brand-orange font-bold tracking-[0.2em] uppercase text-[0.75rem] mb-4 block">Riverside Dining</span>
@@ -479,7 +500,7 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div class="group reveal-up">
                     <div class="relative aspect-[4/3] rounded-2xl overflow-hidden mb-4 border border-brand-black/5 shadow-sm">
-                        <img src="food/25.png" alt="Private Terrace" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy">
+                        <img src="assets/activities/eventlawn.png" alt="Private Terrace" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy">
                         <div class="absolute inset-0 bg-black/60 flex items-center justify-center p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                             <p class="text-white text-sm font-medium text-center leading-relaxed">Perfect for birthdays, anniversaries, and small parties with stunning river views.</p>
                         </div>
@@ -490,7 +511,7 @@
 
                 <div class="group reveal-up delay-100">
                     <div class="relative aspect-[4/3] rounded-2xl overflow-hidden mb-4 border border-brand-black/5 shadow-sm">
-                        <img src="food/26.png" alt="Riverside Lawn" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy">
+                        <img src="assets/activities/riversidelawn.png" alt="Riverside Lawn" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy">
                         <div class="absolute inset-0 bg-black/60 flex items-center justify-center p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                             <p class="text-white text-sm font-medium text-center leading-relaxed">Scenic outdoor settings ideal for family gatherings, corporate retreats, or cultural programs.</p>
                         </div>
@@ -501,7 +522,7 @@
 
                 <div class="group reveal-up delay-200">
                     <div class="relative aspect-[4/3] rounded-2xl overflow-hidden mb-4 border border-brand-black/5 shadow-sm">
-                        <img src="food/27.png" alt="Bonfire Area" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy">
+                        <img src="assets/activities/bonfire.png" alt="Bonfire Area" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy">
                         <div class="absolute inset-0 bg-black/60 flex items-center justify-center p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                             <p class="text-white text-sm font-medium text-center leading-relaxed">Perfect for evening gatherings and storytelling under the stars.</p>
                         </div>
@@ -587,5 +608,16 @@
         sections.forEach(section => navObserver.observe(section));
     </script>
     <script src="navbar.js"></script>
+    <script>
+        function changeCafeImage(el) {
+            const main = document.getElementById('mainCafeImage');
+            // small fade effect
+            main.style.opacity = 0;
+            setTimeout(() => {
+                main.src = el.src;
+                main.style.opacity = 1;
+            }, 150);
+        }
+    </script>
 </body>
 </html>
