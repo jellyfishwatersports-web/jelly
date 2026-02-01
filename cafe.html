@@ -526,7 +526,7 @@
             
             <div class="mt-12 text-center reveal-up">
                 <p class="text-white/50 text-sm mb-6">*All group meals must be booked one day in advance.</p>
-                <button class="px-10 py-4 bg-brand-orange text-white rounded-full font-bold tracking-widest uppercase hover:bg-white hover:text-brand-orange transition-all duration-300">
+                <button onclick="openEnquiry('Cafè Enquiry')" class="px-10 py-4 bg-brand-orange text-white rounded-full font-bold tracking-widest uppercase hover:bg-white hover:text-brand-orange transition-all duration-300">
                     Pre-Book Meals
                 </button>
             </div>
@@ -636,6 +636,41 @@
             initBlobSpy();
         }
     </script>
+    <div id="enquiry-modal" class="fixed inset-0 z-[100] hidden bg-black/60 backdrop-blur flex items-center justify-center p-4 transition-opacity duration-300">
+  <div class="bg-white rounded-2xl max-w-md w-full p-6 relative shadow-2xl transform scale-95 transition-transform duration-300">
+    
+    <button onclick="closeEnquiry()" class="absolute top-3 right-3 text-gray-400 hover:text-brand-orange text-xl transition-colors">✕</button>
+    
+    <h3 class="font-serif text-2xl mb-1 text-brand-black">Send Enquiry</h3>
+    <p class="text-xs text-brand-gray mb-4 uppercase tracking-widest">Start your adventure</p>
+    
+    <form id="enquiry-form" class="space-y-3" onsubmit="event.preventDefault(); submitEnquiry(this);">
+      <input required name="name" minlength="2" placeholder="Your Name" class="w-full border border-gray-200 rounded-lg p-3 focus:outline-none focus:border-brand-orange transition-colors text-sm">
+      <input required name="phone" pattern="[0-9+ ]{8,15}" placeholder="Phone" class="w-full border border-gray-200 rounded-lg p-3 focus:outline-none focus:border-brand-orange transition-colors text-sm">
+      <input name="email" type="email" placeholder="Email" class="w-full border border-gray-200 rounded-lg p-3 focus:outline-none focus:border-brand-orange transition-colors text-sm">
+      
+      <div class="grid grid-cols-2 gap-3">
+         <div class="relative">
+             <label class="block text-[10px] text-gray-400 uppercase tracking-wider mb-1">Date</label>
+             <input required type="date" name="booking_date" id="booking_date" class="w-full border border-gray-200 rounded-lg p-3 focus:outline-none focus:border-brand-orange text-sm text-gray-600">
+         </div>
+         <div class="relative">
+             <label class="block text-[10px] text-gray-400 uppercase tracking-wider mb-1">Time</label>
+             <input required type="time" name="booking_time" class="w-full border border-gray-200 rounded-lg p-3 focus:outline-none focus:border-brand-orange text-sm text-gray-600">
+         </div>
+      </div>
+
+      <textarea required name="message" minlength="5" placeholder="Tell us more (e.g. number of people)" class="w-full border border-gray-200 rounded-lg p-3 focus:outline-none focus:border-brand-orange transition-colors text-sm h-24 resize-none"></textarea>
+      
+      <input type="hidden" id="enquiryType">
+      <input type="text" name="website" tabindex="-1" autocomplete="off" class="hidden">
+      
+      <button type="submit" class="w-full bg-brand-orange text-white py-3 rounded-lg font-bold hover:bg-brand-black transition-colors shadow-lg">Submit Request</button>
+    </form>
+  </div>
+</div>
     <script src="navbar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script> 
+    <script src="enquiry.js"></script>
 </body>
 </html>

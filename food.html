@@ -244,7 +244,7 @@
 
                         <div class="flex items-center justify-between">
                             <a href="exp.html#explore" class="text-xs font-bold text-brand-gray uppercase tracking-widest hover:text-brand-orange border-b border-brand-gray/30 hover:border-brand-orange transition-colors pb-0.5">To book a day cruise click here</a>
-                            <button class="px-6 py-3 bg-brand-black text-white rounded-full text-xs font-bold uppercase tracking-widest hover:bg-brand-orange transition-colors">Book Stay</button>
+                            <button onclick="openEnquiry('HouseBoat Enquiry')" class="px-6 py-3 bg-brand-black text-white rounded-full text-xs font-bold uppercase tracking-widest hover:bg-brand-orange transition-colors">Book Stay</button>
                         </div>
                     </div>
                 </article>
@@ -275,7 +275,7 @@
                                 <span class="block text-xs font-bold text-brand-gray uppercase tracking-widest">Starts At</span>
                                 <span class="font-serif text-xl text-brand-orange">Contact for Price</span>
                             </div>
-                            <button class="px-6 py-3 bg-brand-black text-white rounded-full text-xs font-bold uppercase tracking-widest hover:bg-brand-orange transition-colors">Inquire</button>
+                            <button onclick="openEnquiry('GuestHouse Enquiry')" class="px-6 py-3 bg-brand-black text-white rounded-full text-xs font-bold uppercase tracking-widest hover:bg-brand-orange transition-colors">Enquire</button>
                         </div>
                     </div>
                 </article>
@@ -294,7 +294,7 @@
                     <i class="ph-fill ph-tent text-2xl text-brand-orange mb-2"></i>
                     <h4 class="font-serif text-lg mb-1 leading-tight">Riverside Glamping</h4>
                     <p class="text-xs text-brand-gray mb-3">Premium tents setup at Jellyfish Calicut branch. Sleep under the stars.</p>
-                    <span class="text-xs font-bold uppercase border-b border-brand-black pb-1 cursor-pointer hover:text-brand-orange">Book Tent</span>
+                    <button onclick="openEnquiry('Tent Enquiry')" class="text-xs font-bold uppercase border-b border-brand-black pb-1 cursor-pointer hover:text-brand-orange">Book Tent</button>
                 </article>
 
                 <article class="p-4 bg-brand-light rounded-2xl border border-brand-black/5 reveal-up delay-75 hover:shadow-lg transition-shadow">
@@ -305,10 +305,10 @@
                             <img src="food/13.png" class="w-full h-full object-cover shrink-0 snap-center">
                         </div>
                     </div>
-                    <i class="ph-fill ph-bunk-bed text-2xl text-brand-orange mb-2"></i>
-                    <h4 class="font-serif text-lg mb-1 leading-tight">Kodanchery Dorms</h4>
+                    <i class="ph-fill ph-bed text-2xl text-brand-orange mb-2"></i>
+                    <h4 class="font-serif text-lg mb-1 leading-tight">Riverside Dorms</h4>
                     <p class="text-xs text-brand-gray mb-3">Budget-friendly dormitory stays in the scenic hills of Kodanchery.</p>
-                    <span class="text-xs font-bold uppercase border-b border-brand-black pb-1 cursor-pointer hover:text-brand-orange">Book Bed</span>
+                    <button onclick="openEnquiry('Riverside Dorm Enquiry')" class="text-xs font-bold uppercase border-b border-brand-black pb-1 cursor-pointer hover:text-brand-orange">Book Bed</button>
                 </article>
 
                 <article class="p-4 bg-brand-cream rounded-2xl border border-brand-orange/20 reveal-up delay-100 hover:shadow-lg transition-shadow">
@@ -379,6 +379,7 @@
                             <span class="font-bold">₹450</span>
                         </li>
                     </ul>
+                    <button onclick="openEnquiry('Breakfast Enquiry')" class="w-full mt-8 py-3 bg-brand-orange text-white font-bold uppercase text-xs tracking-widest rounded-lg hover:bg-white hover:text-brand-orange transition-colors">Pre-Book Meal</button>
                 </div>
 
                 <div class="p-8 border border-brand-black/10 rounded-2xl hover:shadow-lg transition-all reveal-up delay-100">
@@ -400,6 +401,7 @@
                             <span class="font-bold">₹500</span>
                         </li>
                     </ul>
+                    <button onclick="openEnquiry('Lunch & Dinner Enquiry')" class="w-full mt-8 py-3 bg-brand-orange text-white font-bold uppercase text-xs tracking-widest rounded-lg hover:bg-white hover:text-brand-orange transition-colors">Pre-Book Meal</button>
                 </div>
 
                 <div class="p-8 bg-brand-charcoal text-white rounded-2xl shadow-xl transform md:-translate-y-4 reveal-up delay-200">
@@ -427,7 +429,7 @@
                             <span class="font-bold text-xl text-brand-orange">₹600</span>
                         </li>
                     </ul>
-                    <button class="w-full mt-8 py-3 bg-brand-orange text-white font-bold uppercase text-xs tracking-widest rounded-lg hover:bg-white hover:text-brand-orange transition-colors">Pre-Book Meal</button>
+                    <button onclick="openEnquiry('Kerala Sadya')" class="w-full mt-8 py-3 bg-brand-orange text-white font-bold uppercase text-xs tracking-widest rounded-lg hover:bg-white hover:text-brand-orange transition-colors">Pre-Book Meal</button>
                 </div>
             </div>
         </div>
@@ -474,7 +476,7 @@
                 </div>
                 <div class="order-1 lg:order-2 reveal-up delay-100">
                     <span class="text-brand-orange font-bold tracking-[0.2em] uppercase text-[0.75rem] mb-4 block">Riverside Dining</span>
-                    <h2 class="font-serif text-[3rem] text-brand-black leading-[1] mb-6">Cafe Calamari.</h2>
+                    <h2 class="font-serif text-[3rem] text-brand-black leading-[1] mb-6">Cafe Calamari</h2>
                     <p class="text-brand-gray text-lg font-light leading-relaxed mb-6">
                         Where international café vibes meet local Malabar heritage. We specialize in authentic Wood-fired Pizzas, creamy Pastas, and fresh Seafood caught right from the river.
                     </p>
@@ -532,7 +534,7 @@
                 </div>
             </div>
             
-            <button class="mt-12 px-10 py-4 border border-brand-black text-brand-black rounded-full font-bold uppercase text-xs tracking-widest hover:bg-brand-black hover:text-white transition-colors">Inquire for Events</button>
+            <button onclick="openEnquiry('Venue Enquiry')" class="mt-12 px-10 py-4 border border-brand-black text-brand-black rounded-full font-bold uppercase text-xs tracking-widest hover:bg-brand-black hover:text-white transition-colors">Inquire for Events</button>
         </div>
     </section>
 
@@ -619,5 +621,36 @@
             }, 150);
         }
     </script>
+
+    <div id="enquiry-modal" class="fixed inset-0 z-[100] hidden bg-black/60 backdrop-blur flex items-center justify-center p-4 transition-opacity duration-300">
+  <div class="bg-white rounded-2xl max-w-md w-full p-6 relative shadow-2xl transform scale-95 transition-transform duration-300">
+    
+    <button onclick="closeEnquiry()" class="absolute top-3 right-3 text-gray-400 hover:text-brand-orange text-xl transition-colors">✕</button>
+    
+    <h3 class="font-serif text-2xl mb-1 text-brand-black">Send Enquiry</h3>
+    <p class="text-xs text-brand-gray mb-4 uppercase tracking-widest">Start your adventure</p>
+    
+    <form id="enquiry-form" class="space-y-3" onsubmit="event.preventDefault(); submitEnquiry(this);">
+      <input required name="name" minlength="2" placeholder="Your Name" class="w-full border border-gray-200 rounded-lg p-3 focus:outline-none focus:border-brand-orange transition-colors text-sm">
+      <input required name="phone" pattern="[0-9+ ]{8,15}" placeholder="Phone" class="w-full border border-gray-200 rounded-lg p-3 focus:outline-none focus:border-brand-orange transition-colors text-sm">
+      <input name="email" type="email" placeholder="Email" class="w-full border border-gray-200 rounded-lg p-3 focus:outline-none focus:border-brand-orange transition-colors text-sm">
+      
+      <p class="text-xs text-gray-500 mt-2">Preferred Date & Time:</p>
+      <div class="grid grid-cols-2 gap-3">
+         <input required type="date" name="booking_date" id="booking_date" class="w-full border border-gray-200 rounded-lg p-3 focus:outline-none focus:border-brand-orange text-sm text-gray-600">
+         <input required type="time" name="booking_time" class="w-full border border-gray-200 rounded-lg p-3 focus:outline-none focus:border-brand-orange text-sm text-gray-600">
+      </div>
+
+      <textarea required name="message" minlength="5" placeholder="Message (e.g. Number of people)" class="w-full border border-gray-200 rounded-lg p-3 focus:outline-none focus:border-brand-orange transition-colors text-sm h-24 resize-none"></textarea>
+      
+      <input type="hidden" id="enquiryType">
+      <input type="text" name="website" tabindex="-1" autocomplete="off" class="hidden">
+      
+      <button type="submit" class="w-full bg-brand-orange text-white py-3 rounded-lg font-bold hover:bg-brand-black transition-colors shadow-lg">Submit Request</button>
+    </form>
+  </div>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script> 
+    <script src="enquiry.js"></script>
 </body>
 </html>

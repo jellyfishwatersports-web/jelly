@@ -197,19 +197,58 @@
         
         // PASTE YOUR NEW BLOG POSTS INSIDE THIS ARRAY
         const blogPosts = [
-            /* // --- TEMPLATE ---
-            // Copy this block below to add a post. The first post in the list becomes the "Featured Hero" post.
+            // HERO POST (The first one will be the big featured image)
             {
                 id: 1,
-                title: "Your Post Title Here",
+                title: "Paddling Through Silence: A Sunrise on the Chaliyar",
                 category: "Adventure",
+                date: "October 24, 2025",
+                author: "Kaushiq Kodithodika",
+                image: "assets/hero/kayakscenic.jpg", // Ensure you have this image
+                excerpt: "There is a specific magic that happens at 6:00 AM on the Chaliyar River. The water is glass, the mist is rising, and for a moment, the world belongs only to you and your kayak. Discover why mornings are the best time to paddle.",
+                link: "#"
+            },
+            // GRID POSTS
+            {
+                id: 2,
+                title: "Catch of the Day: How We Removed 500kg of Plastic",
+                category: "Conservation",
                 date: "October 10, 2025",
-                author: "Author Name",
-                image: "https://your-image-url.com/image.jpg",
-                excerpt: "A short summary of the post goes here. Keep it to about 2-3 sentences.",
-                link: "your-post-page.html"
+                author: "Jellyfish Team",
+                image: "assets/hero/tour3.jpg", // Use your cleanup image
+                excerpt: "Kayaking isn't just about exploration; it's about protection. Join us as we recount our latest 'Catch of the Day' drive where students and locals turned a paddling trip into a massive river cleanup mission.",
+                link: "#"
+            },
+            {
+                id: 3,
+                title: "First Time on a Kayak? Read This First.",
+                category: "Guide",
+                date: "September 28, 2025",
+                author: "Tuku Ojee",
+                image: "assets/activities/kayak9.png", 
+                excerpt: "Nervous about tipping over? Don't be. Our lead instructor breaks down the 3 golden rules of kayaking that will have you gliding effortlessly in less than 15 minutes.",
+                link: "#"
+            },
+            {
+                id: 4,
+                title: "Beyond the Boat: Camping at the Jellyfish Yacht Club",
+                category: "Lifestyle",
+                date: "September 15, 2025",
+                author: "Rinzy Iqbal",
+                image: "assets/activities/eveningsetup.png", 
+                excerpt: "The adventure doesn't stop when you dock. Experience the charm of riverside camping, bonfire nights, and the community spirit that makes our club a second home for travelers.",
+                link: "#"
+            },
+            {
+                id: 5,
+                title: "The Chaliyar River Paddle 2026: Dates Announced",
+                category: "Events",
+                date: "September 01, 2025",
+                author: "Admin",
+                image: "assets/hero/chaliyarRiverPaddle5.png",
+                excerpt: "It's back and bigger than ever. Kerala's premier paddling event returns this winter. Check out the route map, new pitstops, and how to register for the Early Bird discount.",
+                link: "#"
             }
-            */
         ];
 
         // --- 2. RENDER LOGIC ---
@@ -374,5 +413,6 @@
             mobileClose.addEventListener('click', () => mobileMenu.classList.add('translate-x-full'));
         };
     </script>
+    <script src="navbar.js"></script>
 </body>
 </html>
