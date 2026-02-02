@@ -10,41 +10,14 @@
     <meta name="title" content="Jellyfish Yacht Club | Membership, Houseboats & Sailing in Kerala">
     <meta name="description" content="Join the Jellyfish Circle. Exclusive access to the Queen of Chaliyar Houseboat, sailing dinghies, and a global network of explorers. Lifetime and short-term memberships available.">
     
-    <script src="https://cdn.tailwindcss.com"></script>
-    
+    <link href="dist/output.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
     
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            orange: '#F97316', 
-                            black: '#0a0a0a', 
-                            charcoal: '#1c1c1c',
-                            gray: '#6b7280',
-                            light: '#FAFAFA',
-                            cream: '#F2F0E9', 
-                            surface: '#ffffff'
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Manrope', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif'],
-                    },
-                    boxShadow: {
-                        'glass': '0 4px 30px rgba(0, 0, 0, 0.1)',
-                        'glow': '0 0 20px rgba(249, 115, 22, 0.15)',
-                    },
-                }
-            }
-        }
-    </script>
+    
     <style>
         html { 
             scroll-behavior: smooth; 
@@ -117,7 +90,7 @@
         <a href="exp.html" class="px-8 py-3 rounded-full bg-brand-orange text-white text-lg font-bold tracking-wide mt-4 inline-block">Book Now</a>
     </div>
 
-    <section id="club" class="relative h-[85vh] w-full flex items-center justify-center overflow-hidden bg-brand-charcoal -mt-[120px]">
+    <section id="club" class="relative h-[85vh] w-full flex items-center justify-center overflow-hidden bg-brand-charcoal">
         <div class="absolute inset-0 z-0 opacity-70">
             <img src="assets/hero/yachthero.jpg" alt="Jellyfish Yacht Club" class="w-full h-full object-cover" fetchpriority="high">
             <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent"></div>

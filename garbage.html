@@ -60,7 +60,6 @@
     }
     </script>
     
-    <script src="https://cdn.tailwindcss.com"></script>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -68,33 +67,8 @@
     
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            orange: '#F97316', 
-                            black: '#0a0a0a', 
-                            charcoal: '#1c1c1c',
-                            gray: '#6b7280',
-                            light: '#FAFAFA',
-                            cream: '#F2F0E9', 
-                            surface: '#ffffff'
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Manrope', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif'],
-                    },
-                    boxShadow: {
-                        'glass': '0 4px 30px rgba(0, 0, 0, 0.1)',
-                        'glow': '0 0 20px rgba(249, 115, 22, 0.15)',
-                    },
-                }
-            }
-        }
-    </script>
+    <link href="dist/output.css" rel="stylesheet">
+    
     <style>
         /* SCROLL FIX */
         html { 
