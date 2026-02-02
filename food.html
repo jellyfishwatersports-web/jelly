@@ -99,6 +99,7 @@
         .carousel-container { -ms-overflow-style: none; scrollbar-width: none; }
         .carousel-container::-webkit-scrollbar { display: none; }
     </style>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 <body class="bg-brand-cream text-brand-black relative overflow-x-hidden">
 
@@ -618,7 +619,7 @@
       
       <input type="hidden" id="enquiryType">
       <input type="text" name="website" tabindex="-1" autocomplete="off" class="hidden">
-      
+      <div class="cf-turnstile mb-4" data-sitekey="0x4AAAAAACWwti2Jwl5vrX_o" data-theme="light"></div>
       <button type="submit" class="w-full bg-brand-orange text-white py-3 rounded-lg font-bold hover:bg-brand-black transition-colors shadow-lg">Submit Request</button>
     </form>
   </div>

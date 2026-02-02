@@ -70,6 +70,15 @@ async function submitEnquiry(form) {
   if (existingMsg) existingMsg.remove();
 
   const formData = new FormData(form);
+
+  const captchaToken = formData.get("cf-turnstile-response");
+  if (!captchaToken) {
+      showStatus(form, "Please complete the security check.", "error");
+      // Re-enable the button so they can try again
+      submitBtn.disabled = false; 
+      submitBtn.innerText = originalText; 
+      return;
+  }
   
   // Honeypot (Anti-Spam)
   if (formData.get("website")) return; 
@@ -111,31 +120,43 @@ async function submitEnquiry(form) {
     message: formData.get("message")?.trim(),
     booking_date, booking_time,
     enquiry_type: document.getElementById("enquiryType").value,
-    source: window.location.pathname
+    source: window.location.pathname,
+    captcha_token: captchaToken
+    
   };
 
   try {
-    // 1. Save to Supabase (Database triggers the email)
-    const { error } = await supabaseClient.from("enquiries").insert([payload]);
-    if (error) throw error;
+    // 1. Call the Secure Edge Function (Gatekeeper)
+    const { data, error } = await supabaseClient.functions.invoke('send-enquiry-email', {
+      body: payload
+    });
+
+    // Check for errors
+    if (error) throw error; // Network error
+    if (data && data.error) throw new Error(data.error); // Logic error (e.g. invalid captcha)
 
     // 2. Success State
     showStatus(form, "✅ Enquiry sent! We'll contact you shortly.", "success");
     form.reset();
+    
+    // Reset Turnstile for next use
+    if (window.turnstile) window.turnstile.reset();
     
     // Auto-close after 2 seconds
     setTimeout(() => {
         closeEnquiry();
         submitBtn.disabled = false;
         submitBtn.innerText = originalText;
-        // Clean up success message so it's not there next time
         const successMsg = form.querySelector(".status-msg");
         if (successMsg) successMsg.remove();
     }, 2000);
 
   } catch (err) {
     console.error(err);
-    showStatus(form, "Something went wrong. Please try again.", "error");
+    // User-friendly error message
+    const msg = err.message === "Captcha failed" ? "Security check failed." : "Something went wrong. Please try again.";
+    showStatus(form, msg, "error");
+    
     submitBtn.disabled = false;
     submitBtn.innerText = originalText;
   }
