@@ -224,6 +224,7 @@
                         <i class="ph-fill ph-binoculars text-3xl text-brand-orange"></i>
                         <h3 class="font-serif text-2xl text-brand-black">Eco-Exploration</h3>
                     </div>
+                    <p class="text-xs text-brand-gray mb-3">Excluding GST</p>
                     <div class="space-y-6">
                         <div class="border-b border-brand-black/10 pb-4">
                             <div class="flex justify-between items-baseline mb-1">
@@ -255,6 +256,7 @@
                         <i class="ph-fill ph-waves text-3xl text-brand-orange"></i>
                         <h3 class="font-serif text-2xl text-white">Seascapes</h3>
                     </div>
+                    <p class="text-xs text-brand-white mb-3">Excluding GST</p>
                     <div class="space-y-6">
                         <div class="border-b border-white/10 pb-4">
                             <div class="flex justify-between items-baseline mb-1">
@@ -289,6 +291,7 @@
                         <i class="ph-fill ph-compass text-3xl text-brand-orange"></i>
                         <h3 class="font-serif text-2xl text-brand-black">High-Adrenaline</h3>
                     </div>
+                    <p class="text-xs text-brand-black mb-3">Excluding GST</p>
                     <div class="space-y-6">
                         <div class="border-b border-brand-black/10 pb-4">
                             <div class="flex justify-between items-baseline mb-1">
@@ -514,7 +517,7 @@
                 image: 'assets/activities/flatwater.png',
                 desc: 'Relaxed group floating on calm river stretches. Ideal for families.',
                 packages: [
-                    { title: '2-Hour Basic', price: '₹999', desc: 'Min 3 Pax. Guided float.' }
+                    { title: '2-Hour Basic', price: '₹999', desc: 'Per person. Guided float.' }
                 ]
             },
             {
@@ -524,7 +527,7 @@
                 image: 'assets/activities/raftflag.jpg',
                 desc: 'Explore by Combining hiking and paddling by using a lightweight, durable, inflatable boat',
                 packages: [
-                    { title: '2-Hour Basic', price: '₹999', desc: 'Min 3 Pax. Guided float.' }
+                    { title: '2-Hour Basic', price: '₹999', desc: 'Per person. Guided float.' }
                 ]
             },
             {
@@ -565,7 +568,7 @@
                 id: 'land-pass', 
                 name: 'Land Activity Day Pass', 
                 category: 'Land', 
-                image: 'assets/activities/wallClimb.png', 
+                image: 'assets/activities/wallc.png', 
                 desc: 'Unlimited access to our adventure park. Includes Wall Climbing, Trampoline, Soft Archery, Giant Chess, Rope Course, Mountain Biking, and Fishing.', 
                 packages: [
                     { title: 'Day Pass', price: '₹500', desc: 'Per Person + GST. Access to all land activities for the day.' }
@@ -665,11 +668,17 @@
             document.getElementById('modal-desc').innerText = act.desc;
 
             const pkgContainer = document.getElementById('modal-packages');
-            pkgContainer.innerHTML = '';
+            pkgContainer.innerHTML = `
+    <div class="flex justify-between items-end mb-4 border-b border-gray-100 pb-2">
+        <h4 class="font-bold text-lg text-brand-black">Select a Package</h4>
+        <span class="text-[10px] text-brand-gray/60 font-bold uppercase tracking-widest bg-gray-50 px-2 py-1 rounded">Excl. GST</span>
+    </div>
+`;
 
             let lastSubcategory = '';
 
             act.packages.forEach(pkg => {
+                const cleanPrice = pkg.price.replace('+ GST', '').trim();
                 if(pkg.subcategory && pkg.subcategory !== lastSubcategory) {
                     const header = document.createElement('h4');
                     header.className = 'font-bold text-brand-orange text-sm uppercase tracking-widest mt-6 mb-2 border-b border-brand-orange/20 pb-1';
@@ -683,7 +692,7 @@
                 row.innerHTML = `
                     <div class="flex justify-between items-start mb-2">
                         <h4 class="font-bold text-lg text-brand-black">${pkg.title}</h4>
-                        <span class="font-serif text-xl text-brand-orange whitespace-nowrap">${pkg.price}</span>
+                        <span class="font-serif text-lg text-brand-orange whitespace-nowrap">${cleanPrice}</span>
                     </div>
                     <p class="text-brand-gray text-sm font-light mb-4">${pkg.desc}</p>
                     <button onclick="closeModal(); openEnquiry('${act.name}: ${pkg.title}')" class="w-full py-2 rounded-lg border border-brand-black text-xs font-bold uppercase tracking-widest hover:bg-brand-black hover:text-white transition-all">Book This</button>
