@@ -110,6 +110,7 @@ async function submitEnquiry(form) {
     showStatus(form, "Please enter a valid email.", "error");
     submitBtn.disabled = false; submitBtn.innerText = originalText; return;
   }
+  
   if (!formData.get("message") || formData.get("message").length < 5) {
     showStatus(form, "Message too short.", "error");
     submitBtn.disabled = false; submitBtn.innerText = originalText; return;
@@ -121,12 +122,17 @@ async function submitEnquiry(form) {
     booking_date, booking_time,
     enquiry_type: document.getElementById("enquiryType").value,
     source: window.location.pathname,
-    captcha_token: captchaToken
+    captcha_token: captchaToken,
     
+    consent_given: true,
+    consent_timestamp: new Date().toISOString(),
+    
+    marketing_consent: form.querySelector('input[name="marketing_consent"]')?.checked || false
   };
+console.log("🚀 Debugging Payload:", payload);
 
   try {
-    // 1. Call the Secure Edge Function (Gatekeeper)
+    // 1. Call the Secure Edge Function
     const { data, error } = await supabaseClient.functions.invoke('send-enquiry-email', {
       body: payload
     });

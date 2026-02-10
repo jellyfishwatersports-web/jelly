@@ -132,8 +132,6 @@
         .blob-nav-item.active { background-color: #F97316; height: 2rem; }
     </style>
 
-    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 <body class="bg-brand-cream text-brand-black relative overflow-x-hidden">
@@ -586,14 +584,6 @@
             }
         ];
 
-        // --- CALENDLY INTEGRATION ---
-        function openCalendly(pkgTitle, actName) {
-            const fullName = `${actName} - ${pkgTitle}`;
-            Calendly.initPopupWidget({
-                url: 'https://calendly.com/raynjellyfish?hide_landing_page_details=1&hide_gdpr_banner=1&primary_color=ffb000&a1=' + encodeURIComponent(fullName)
-            });
-            return false;
-        }
 
         // --- Filter Logic ---
         const grid = document.getElementById('activity-grid');
@@ -726,15 +716,6 @@
         // --- Init ---
         window.onload = function() {
             renderGrid('all');
-            
-            // Updated Badge Widget
-            Calendly.initBadgeWidget({
-                url: 'https://calendly.com/raynjellyfish?hide_gdpr_banner=1&primary_color=ffa303',
-                text: 'Book a session',
-                color: '#ffa500',
-                textColor: '#ffffff',
-                branding: true
-            });
 
             const mobileMenuBtn = document.getElementById('mobile-menu-btn');
             const closeMobileMenuBtn = document.getElementById('close-mobile-menu');
@@ -765,7 +746,7 @@
             });
         };
     </script>
-    <div id="enquiry-modal" class="fixed inset-0 z-[100] hidden bg-black/60 backdrop-blur flex items-center justify-center p-4 transition-opacity duration-300">
+     <div id="enquiry-modal" class="fixed inset-0 z-[100] hidden bg-black/60 backdrop-blur flex items-center justify-center p-4 transition-opacity duration-300">
   <div class="bg-white rounded-2xl max-w-md w-full p-6 relative shadow-2xl transform scale-95 transition-transform duration-300">
     
     <button onclick="closeEnquiry()" class="absolute top-3 right-3 text-gray-400 hover:text-brand-orange text-xl transition-colors">✕</button>
@@ -789,11 +770,87 @@
       <input type="hidden" id="enquiryType">
       <input type="text" name="website" tabindex="-1" autocomplete="off" class="hidden">
       <div class="cf-turnstile mb-4" data-sitekey="0x4AAAAAACWwti2Jwl5vrX_o" data-theme="light"></div>
-      
+      <div class="flex items-start gap-3 mb-3">
+    <div class="flex items-center h-5">
+        <input 
+            id="marketing-checkbox" 
+            name="marketing_consent" 
+            type="checkbox" 
+            class="w-4 h-4 border border-brand-gray/30 rounded bg-white text-brand-orange focus:ring-brand-orange cursor-pointer"
+        >
+    </div>
+    <div class="ml-1 text-[10px] text-gray-500 leading-snug">
+        <label for="marketing-checkbox" class="cursor-pointer select-none">
+            Keep me updated on new adventures, offers, and events via WhatsApp/Email.
+        </label>
+    </div>
+</div>
+      <div class="flex items-start gap-3 mb-6">
+    <div class="flex items-center h-5">
+        <input 
+            id="consent-checkbox" 
+            name="consent" 
+            type="checkbox" 
+            required 
+            style="accent-color: #16a34a;" 
+            class="w-4 h-4 border border-brand-gray/30 rounded bg-white cursor-pointer focus:ring-0"
+        >
+    </div>
+    <div class="ml-1 text-[10px] text-gray-500 leading-snug">
+        <label for="consent-checkbox" class="cursor-pointer select-none">
+            I consent to the processing of my personal data for this enquiry. I confirm I am 18+ or have parental consent. Read our <a href="privacy.html" target="_blank" class="text-brand-orange hover:underline">Privacy Notice</a>.
+        </label>
+    </div>
+</div>
       <button type="submit" class="w-full bg-brand-orange text-white py-3 rounded-lg font-bold hover:bg-brand-black transition-colors shadow-lg">Submit Request</button>
     </form>
   </div>
 </div>
+    <div id="cookie-banner" class="fixed bottom-0 inset-x-0 z-[100] transform translate-y-full transition-transform duration-700 hidden">
+    <div class="max-w-7xl mx-auto px-6 pb-6">
+        <div class="bg-black/80 backdrop-blur-xl text-white p-6 md:p-8 rounded-3xl shadow-2xl border border-white/10 flex flex-col md:flex-row items-center justify-between gap-8">
+            
+            <div class="flex items-start gap-5">
+                <div class="w-12 h-12 rounded-full bg-brand-orange/20 flex items-center justify-center text-brand-orange shrink-0">
+                    <i class="ph-fill ph-cookie text-2xl"></i>
+                </div>
+                <div>
+                    <h4 class="font-serif text-xl leading-tight mb-2">We value your privacy</h4>
+                    <p class="text-sm text-white/70 font-light leading-relaxed max-w-2xl">
+                        We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By continuing to browse, you agree to our <a href="privacy.html" class="text-brand-orange underline hover:text-white transition-colors">Privacy Policy</a>.
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex gap-4 shrink-0">
+                <button onclick="acceptCookies()" class="px-8 py-3 bg-brand-orange text-white text-sm font-bold uppercase tracking-widest rounded-full hover:bg-white hover:text-brand-black transition-colors shadow-lg">
+                    Accept
+                </button>
+                <button onclick="acceptCookies()" class="px-8 py-3 border border-white/20 text-white text-sm font-bold uppercase tracking-widest rounded-full hover:bg-white/10 transition-colors">
+                    Close
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        if (!localStorage.getItem('cookieConsent')) {
+            const banner = document.getElementById('cookie-banner');
+            banner.classList.remove('hidden');
+            setTimeout(() => {
+                banner.classList.remove('translate-y-full');
+            }, 1000);
+        }
+    });
+
+    function acceptCookies() {
+        localStorage.setItem('cookieConsent', 'true');
+        document.getElementById('cookie-banner').classList.add('translate-y-full');
+    }
+</script>
     <script src="navbar.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script> 
     <script src="enquiry.js"></script>
