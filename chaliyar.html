@@ -81,6 +81,7 @@
         .form-container.active { display: block; opacity: 1; }
         .tab-btn.active { background-color: #F97316; color: white; border-color: #F97316; }
     </style>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 <body class="bg-brand-cream text-brand-black relative overflow-x-hidden">
 
@@ -220,106 +221,44 @@
     </section>
 
     <section id="register" class="py-24 bg-white">
-        <div class="max-w-4xl mx-auto px-6">
-            <div class="text-center mb-12 reveal-up">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            
+            <div class="mb-16 reveal-up">
                 <span class="text-brand-orange font-bold tracking-[0.2em] uppercase text-[0.75rem] mb-4 block">Get Involved</span>
                 <h2 class="font-serif text-[3rem] text-brand-black leading-[1]">Be Part of the Legacy.</h2>
+                <p class="text-brand-gray mt-6 max-w-lg mx-auto">
+                    Whether you want to paddle 68km to the sea or support the cause as a partner, we have a spot for you.
+                </p>
             </div>
 
-            <div class="flex justify-center gap-4 mb-12 reveal-up">
-                <button onclick="switchTab('participant')" id="btn-participant" class="tab-btn active px-8 py-3 rounded-full border border-brand-black text-brand-black hover:bg-brand-orange hover:text-white hover:border-brand-orange transition-all font-bold uppercase text-xs tracking-widest">
-                    Register as Participant
-                </button>
-                <button onclick="switchTab('sponsor')" id="btn-sponsor" class="tab-btn px-8 py-3 rounded-full border border-brand-black text-brand-black hover:bg-brand-orange hover:text-white hover:border-brand-orange transition-all font-bold uppercase text-xs tracking-widest">
-                    Register as Sponsor
-                </button>
-            </div>
-
-            <div id="form-participant" class="form-container active bg-brand-light p-10 rounded-3xl border border-brand-black/5 shadow-xl reveal-up">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 reveal-up">
                 
-                <div id="p_success" class="hidden flex flex-col items-center justify-center py-10 text-center">
-                    <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center text-green-500 text-4xl mb-6 shadow-sm">
-                        <i class="ph-fill ph-check"></i>
+                <div class="group p-10 rounded-[2.5rem] border border-brand-black/10 hover:border-brand-orange/30 hover:shadow-2xl transition-all duration-500 bg-brand-light cursor-pointer" onclick="openEnquiry('Chaliyar Participant Registration')">
+                    <div class="w-16 h-16 mx-auto bg-brand-orange/10 rounded-full flex items-center justify-center text-brand-orange text-3xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="ph-fill ph-person"></i>
                     </div>
-                    <h3 class="font-serif text-3xl text-brand-black mb-2">Registration Received!</h3>
-                    <p class="text-brand-gray max-w-md">Thank you for your interest. We have received your details and will contact you shortly with the next steps.</p>
+                    <h3 class="font-serif text-2xl text-brand-black mb-3">As a Participant</h3>
+                    <p class="text-sm text-brand-gray mb-8 leading-relaxed">
+                        Join the expedition. Includes kayaking gear, camping, meals, and safety support for 3 days.
+                    </p>
+                    <button onclick="openEnquiry('Chaliyar River Paddle Inquiry')" class="px-8 py-3 rounded-full bg-brand-black text-white font-bold uppercase text-xs tracking-widest group-hover:bg-brand-orange transition-colors">
+                        Register Interest
+                    </button>
                 </div>
 
-                <form id="p_form" class="space-y-6">
-                    <h3 class="font-serif text-2xl mb-6">Paddler Registration (Pre-Booking)</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <label class="block text-xs font-bold uppercase tracking-widest mb-2 text-brand-gray">Full Name</label>
-                            <input type="text" id="p_name" name="user_name" class="w-full bg-white border border-brand-black/10 rounded-lg p-3 focus:outline-none focus:border-brand-orange transition-colors" required>
-                        </div>
-                        <div>
-                            <label class="block text-xs font-bold uppercase tracking-widest mb-2 text-brand-gray">Email Address</label>
-                            <input type="email" id="p_email" name="user_email" class="w-full bg-white border border-brand-black/10 rounded-lg p-3 focus:outline-none focus:border-brand-orange transition-colors" required>
-                        </div>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <label class="block text-xs font-bold uppercase tracking-widest mb-2 text-brand-gray">Phone Number</label>
-                            <input type="tel" id="p_phone" name="user_phone" class="w-full bg-white border border-brand-black/10 rounded-lg p-3 focus:outline-none focus:border-brand-orange transition-colors" required>
-                        </div>
-                        <div>
-                            <label class="block text-xs font-bold uppercase tracking-widest mb-2 text-brand-gray">Experience Level</label>
-                            <select id="p_exp" name="experience_level" class="w-full bg-white border border-brand-black/10 rounded-lg p-3 focus:outline-none focus:border-brand-orange transition-colors text-brand-black">
-                                <option value="Beginner">Beginner (First time)</option>
-                                <option value="Intermediate">Intermediate (Paddled before)</option>
-                                <option value="Expert">Expert (Professional)</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div>
-                        <label class="block text-xs font-bold uppercase tracking-widest mb-2 text-brand-gray">Message / Queries</label>
-                        <textarea id="p_message" name="message" rows="4" class="w-full bg-white border border-brand-black/10 rounded-lg p-3 focus:outline-none focus:border-brand-orange transition-colors"></textarea>
-                    </div>
-                    <button type="button" onclick="sendParticipantMail()" id="p_btn" class="w-full py-4 bg-brand-black text-white font-bold uppercase tracking-widest rounded-lg hover:bg-brand-orange transition-colors">Submit Interest</button>
-                </form>
-            </div>
-
-            <div id="form-sponsor" class="form-container bg-brand-light p-10 rounded-3xl border border-brand-black/5 shadow-xl reveal-up">
-                
-                <div id="s_success" class="hidden flex flex-col items-center justify-center py-10 text-center">
-                    <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center text-green-500 text-4xl mb-6 shadow-sm">
+                <div class="group p-10 rounded-[2.5rem] border border-brand-black/10 hover:border-brand-orange/30 hover:shadow-2xl transition-all duration-500 bg-brand-light cursor-pointer" onclick="openEnquiry('Chaliyar Sponsorship Registration')">
+                    <div class="w-16 h-16 mx-auto bg-brand-orange/10 rounded-full flex items-center justify-center text-brand-orange text-3xl mb-6 group-hover:scale-110 transition-transform">
                         <i class="ph-fill ph-handshake"></i>
                     </div>
-                    <h3 class="font-serif text-3xl text-brand-black mb-2">Proposal Requested!</h3>
-                    <p class="text-brand-gray max-w-md">Thank you for your interest in partnering with us. Our team will review your details and get back to you shortly.</p>
+                    <h3 class="font-serif text-2xl text-brand-black mb-3">As a Sponsor</h3>
+                    <p class="text-sm text-brand-gray mb-8 leading-relaxed">
+                        Align your brand with sustainability. Partner with us for clean-ups, gear, or event support.
+                    </p>
+                    <button onclick="openEnquiry('Chaliyar Sponsorship Inquiry')" class="px-8 py-3 rounded-full bg-brand-cream text-black font-bold uppercase text-xs tracking-widest group-hover:bg-brand-orange transition-colors">
+                        Register Interest
+                    </button>
                 </div>
 
-                <form id="s_form" class="space-y-6">
-                    <h3 class="font-serif text-2xl mb-6">Partnership Opportunities</h3>
-                    <p class="text-sm text-brand-gray mb-6">Align your brand with sustainability and adventure. Support the River Clean-up initiative.</p>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <label class="block text-xs font-bold uppercase tracking-widest mb-2 text-brand-gray">Company Name</label>
-                            <input type="text" id="s_company" name="company_name" class="w-full bg-white border border-brand-black/10 rounded-lg p-3 focus:outline-none focus:border-brand-orange transition-colors" required>
-                        </div>
-                        <div>
-                            <label class="block text-xs font-bold uppercase tracking-widest mb-2 text-brand-gray">Contact Person</label>
-                            <input type="text" id="s_contact" name="contact_person" class="w-full bg-white border border-brand-black/10 rounded-lg p-3 focus:outline-none focus:border-brand-orange transition-colors" required>
-                        </div>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <label class="block text-xs font-bold uppercase tracking-widest mb-2 text-brand-gray">Email Address</label>
-                            <input type="email" id="s_email" name="user_email" class="w-full bg-white border border-brand-black/10 rounded-lg p-3 focus:outline-none focus:border-brand-orange transition-colors" required>
-                        </div>
-                        <div>
-                            <label class="block text-xs font-bold uppercase tracking-widest mb-2 text-brand-gray">Sponsorship Interest</label>
-                            <select id="s_interest" name="sponsorship_type" class="w-full bg-white border border-brand-black/10 rounded-lg p-3 focus:outline-none focus:border-brand-orange transition-colors text-brand-black">
-                                <option value="Title Sponsor">Title Sponsor</option>
-                                <option value="Eco-Partner">Eco-Partner (Cleanup)</option>
-                                <option value="Refreshment">Refreshment Partner</option>
-                                <option value="Gear">Gear Sponsor</option>
-                                <option value="Other">Other</option>
-                            </select>
-                        </div>
-                    </div>
-                    <button type="button" onclick="sendSponsorMail()" id="s_btn" class="w-full py-4 bg-brand-orange text-white font-bold uppercase tracking-widest rounded-lg hover:bg-brand-black transition-colors">Request Proposal</button>
-                </form>
             </div>
 
         </div>
@@ -364,70 +303,6 @@
     </footer>
 
     <script>
-        // --- EmailJS Initialization ---
-        (function(){
-            emailjs.init("mncYI3wYFg3AmqywF"); // Your Public Key
-        })();
-
-        // --- Send Participant Mail ---
-        function sendParticipantMail() {
-            const btn = document.getElementById('p_btn');
-            const originalText = btn.innerText;
-            btn.innerText = "Sending...";
-            btn.disabled = true;
-
-            const params = {
-                user_name: document.getElementById('p_name').value,
-                user_email: document.getElementById('p_email').value,
-                user_phone: document.getElementById('p_phone').value,
-                experience_level: document.getElementById('p_exp').value,
-                message: document.getElementById('p_message').value,
-                admin_email: 'raynjellyfish@gmail.com'
-            };
-
-            emailjs.send("service_pbw17hr", "template_xeabewr", params)
-                .then(function(res) {
-                    // Hide Form and Show Success Message
-                    document.getElementById('p_form').classList.add('hidden');
-                    document.getElementById('p_success').classList.remove('hidden');
-                })
-                .catch(function(err) {
-                    alert("Failed to send. Please try again later.");
-                    console.error("EmailJS Error:", err);
-                    btn.innerText = originalText;
-                    btn.disabled = false;
-                });
-        }
-
-        // --- Send Sponsor Mail ---
-        function sendSponsorMail() {
-            const btn = document.getElementById('s_btn');
-            const originalText = btn.innerText;
-            btn.innerText = "Sending...";
-            btn.disabled = true;
-
-            const params = {
-                company_name: document.getElementById('s_company').value,
-                contact_person: document.getElementById('s_contact').value,
-                user_email: document.getElementById('s_email').value,
-                sponsorship_type: document.getElementById('s_interest').value,
-                admin_email: 'raynjellyfish@gmail.com'
-            };
-
-            emailjs.send("service_pbw17hr", "template_jro3kh7", params)
-                .then(function(res) {
-                     // Hide Form and Show Success Message
-                     document.getElementById('s_form').classList.add('hidden');
-                     document.getElementById('s_success').classList.remove('hidden');
-                })
-                .catch(function(err) {
-                    alert("Failed to send. Please try again later.");
-                    console.error("EmailJS Error:", err);
-                    btn.innerText = originalText;
-                    btn.disabled = false;
-                });
-        }
-
         // --- Navbar Logic ---
         window.addEventListener('scroll', () => {
             const navbar = document.getElementById('navbar');
@@ -500,6 +375,116 @@
             setTimeout(() => activeForm.classList.add('active'), 10);
         }
     </script>
+
     <script src="navbar.js" defer></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script> 
+    <script src="enquiry.js"></script>
+    
+    <div id="enquiry-modal" class="fixed inset-0 z-[100] hidden bg-black/60 backdrop-blur flex items-center justify-center p-4 transition-opacity duration-300">
+  <div class="bg-white rounded-2xl max-w-md w-full p-6 relative shadow-2xl transform scale-95 transition-transform duration-300">
+    
+    <button onclick="closeEnquiry()" class="absolute top-3 right-3 text-gray-400 hover:text-brand-orange text-xl transition-colors">✕</button>
+    
+    <h3 class="font-serif text-2xl mb-1 text-brand-black">Send Enquiry</h3>
+    <p class="text-xs text-brand-gray mb-4 uppercase tracking-widest">Start your adventure</p>
+    
+    <form id="enquiry-form" class="space-y-3" onsubmit="event.preventDefault(); submitEnquiry(this);">
+      <input required name="name" minlength="2" placeholder="Your Name" class="w-full border border-gray-200 rounded-lg p-3 focus:outline-none focus:border-brand-orange transition-colors text-sm">
+      <input required name="phone" pattern="[0-9+ ]{8,15}" placeholder="Phone" class="w-full border border-gray-200 rounded-lg p-3 focus:outline-none focus:border-brand-orange transition-colors text-sm">
+      <input name="email" type="email" placeholder="Email" class="w-full border border-gray-200 rounded-lg p-3 focus:outline-none focus:border-brand-orange transition-colors text-sm">
+      
+      <p class="text-xs text-gray-500 mt-2">Preferred Date & Time:</p>
+      <div class="grid grid-cols-2 gap-3">
+         <input required type="date" name="booking_date" id="booking_date" class="w-full border border-gray-200 rounded-lg p-3 focus:outline-none focus:border-brand-orange text-sm text-gray-600">
+         <input required type="time" name="booking_time" class="w-full border border-gray-200 rounded-lg p-3 focus:outline-none focus:border-brand-orange text-sm text-gray-600">
+      </div>
+
+      <textarea required name="message" minlength="5" placeholder="Message (e.g. Number of people)" class="w-full border border-gray-200 rounded-lg p-3 focus:outline-none focus:border-brand-orange transition-colors text-sm h-24 resize-none"></textarea>
+      
+      <input type="hidden" id="enquiryType">
+      <input type="text" name="website" tabindex="-1" autocomplete="off" class="hidden">
+      <div class="cf-turnstile mb-4" data-sitekey="0x4AAAAAACWwti2Jwl5vrX_o" data-theme="light"></div>
+      <div class="flex items-start gap-3 mb-3">
+    <div class="flex items-center h-5">
+        <input 
+            id="marketing-checkbox" 
+            name="marketing_consent" 
+            type="checkbox" 
+            class="w-4 h-4 border border-brand-gray/30 rounded bg-white text-brand-orange focus:ring-brand-orange cursor-pointer"
+        >
+    </div>
+    <div class="ml-1 text-[10px] text-gray-500 leading-snug">
+        <label for="marketing-checkbox" class="cursor-pointer select-none">
+            Keep me updated on new adventures, offers, and events via WhatsApp/Email.
+        </label>
+    </div>
+</div>
+      <div class="flex items-start gap-3 mb-6">
+    <div class="flex items-center h-5">
+        <input 
+            id="consent-checkbox" 
+            name="consent" 
+            type="checkbox" 
+            required 
+            style="accent-color: #16a34a;" 
+            class="w-4 h-4 border border-brand-gray/30 rounded bg-white cursor-pointer focus:ring-0"
+        >
+    </div>
+    <div class="ml-1 text-[10px] text-gray-500 leading-snug">
+        <label for="consent-checkbox" class="cursor-pointer select-none">
+            I consent to the processing of my personal data for this enquiry. I confirm I am 18+ or have parental consent. Read our <a href="privacy.html" target="_blank" class="text-brand-orange hover:underline">Privacy Notice</a>.
+        </label>
+    </div>
+</div>
+      <button type="submit" class="w-full bg-brand-orange text-white py-3 rounded-lg font-bold hover:bg-brand-black transition-colors shadow-lg">Submit Request</button>
+    </form>
+  </div>
+</div>
+    <div id="cookie-banner" class="fixed bottom-0 inset-x-0 z-[100] transform translate-y-full transition-transform duration-700 hidden">
+    <div class="max-w-7xl mx-auto px-6 pb-6">
+        <div class="bg-black/80 backdrop-blur-xl text-white p-6 md:p-8 rounded-3xl shadow-2xl border border-white/10 flex flex-col md:flex-row items-center justify-between gap-8">
+            
+            <div class="flex items-start gap-5">
+                <div class="w-12 h-12 rounded-full bg-brand-orange/20 flex items-center justify-center text-brand-orange shrink-0">
+                    <i class="ph-fill ph-cookie text-2xl"></i>
+                </div>
+                <div>
+                    <h4 class="font-serif text-xl leading-tight mb-2">We value your privacy</h4>
+                    <p class="text-sm text-white/70 font-light leading-relaxed max-w-2xl">
+                        We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By continuing to browse, you agree to our <a href="privacy.html" class="text-brand-orange underline hover:text-white transition-colors">Privacy Policy</a>.
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex gap-4 shrink-0">
+                <button onclick="acceptCookies()" class="px-8 py-3 bg-brand-orange text-white text-sm font-bold uppercase tracking-widest rounded-full hover:bg-white hover:text-brand-black transition-colors shadow-lg">
+                    Accept
+                </button>
+                <button onclick="acceptCookies()" class="px-8 py-3 border border-white/20 text-white text-sm font-bold uppercase tracking-widest rounded-full hover:bg-white/10 transition-colors">
+                    Close
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        if (!localStorage.getItem('cookieConsent')) {
+            const banner = document.getElementById('cookie-banner');
+            banner.classList.remove('hidden');
+            setTimeout(() => {
+                banner.classList.remove('translate-y-full');
+            }, 1000);
+        }
+    });
+
+    function acceptCookies() {
+        localStorage.setItem('cookieConsent', 'true');
+        document.getElementById('cookie-banner').classList.add('translate-y-full');
+    }
+</script>
 </body>
 </html>
