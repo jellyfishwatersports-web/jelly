@@ -400,7 +400,12 @@
                 </div>
 
                 <div class="mb-12">
-                    <h3 class="font-serif text-2xl text-brand-black mb-6 border-b border-brand-black/10 pb-2">Core Leadership</h3>
+                    <h3 class="font-serif text-2xl text-brand-black mb-6 border-b border-brand-black/10 pb-2">Our Founder</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" id="founder-grid"></div>
+                </div>
+
+                <div class="mb-12">
+                    <h3 class="font-serif text-2xl text-brand-black mb-6 border-b border-brand-black/10 pb-2">Management Team</h3>
                     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" id="leadership-grid"></div>
                 </div>
 
@@ -597,7 +602,7 @@
         // --- TEAM DATA ---
         const teamData = [
             // Leadership
-            { cat: 'leadership', aspectRatio: 'aspect-[3/4]', name: 'Kaushiq Kodithodika', role: 'Founder', img: 'assets/people/kaushiq.png', bio: 'An avid kayaker and sailor, Kaushiq has completed multiple international expeditions and was a crew member in the Clipper Round the World Ocean Race 2023–24. With 30 years of corporate experience across fintech, agritech, and active sports, he combines strong business leadership with deep outdoor expertise. He serves as an advisor to the Kerala State Planning Board and holds a Singapore Book of Records title in kayaking.' },
+            { cat: 'founder', aspectRatio: 'aspect-[3/4]', name: 'Kaushiq Kodithodika', role: 'Founder', img: 'assets/people/kaushiq.png', bio: 'An avid kayaker and sailor, Kaushiq has completed multiple international expeditions and was a crew member in the Clipper Round the World Ocean Race 2023–24. With 30 years of corporate experience across fintech, agritech, and active sports, he combines strong business leadership with deep outdoor expertise. He serves as an advisor to the Kerala State Planning Board and holds a Singapore Book of Records title in kayaking.' },
             { cat: 'leadership', aspectRatio: 'aspect-[3/4]', name: 'Rinzy Iqbal', role: 'Managing Director', img: 'assets/people/rinzy.png', bio: 'A qualified teacher and homemaker, Rinzy brings the eye of an educator into Jellyfish—strengthening child safety, structured learning, HR systems, and people development. She champions women entrepreneurship, ensuring Jellyfish remains an inclusive organization.' },
             { cat: 'leadership', aspectRatio: 'aspect-[3/4]', name: 'Prasad Thumbani', role: 'Manager', img: 'assets/people/prasad.jpg', bio: 'Ex-Indian Army. Oversees on-ground operations with precision, discipline, and strong expertise in safety and logistics.' },
             { cat: 'leadership', aspectRatio: 'aspect-[3/4]', name: 'Ashalal Pookat', role: 'General Manager', img: 'assets/people/ashalal.png', bio: 'Ashalal P. is a seasoned entrepreneur with over 40 years of experience in manufacturing, construction, and operations. A strong believer in sports and active living, he brings practical leadership, project supervision expertise, and a passion for building spaces that support outdoor and adventure-driven lifestyles.' },
@@ -607,8 +612,10 @@
             { cat: 'staff', aspectRatio: 'aspect-[3/4]', name: 'Babaji Raiti', role: 'Sailing & Rowing Instructor', img: 'assets/people/babaji.png', bio: 'Ex-Indian Navy. Expert trainer in sailing and rowing, bringing naval professionalism and deep on-water experience.' },
             { cat: 'staff', aspectRatio: 'aspect-[3/4]', name: 'Tuku Ojee', role: 'Kayak & SUP Instructor', img: 'assets/people/tuku.png', bio: 'Multi-disciplinary waterman skilled in kayaking, surfing, and SUP, with a strong record in rescue and safety.' },
             { cat: 'staff', aspectRatio: 'aspect-[3/4]', name: 'Akshay Ashok', role: 'Whitewater Kayaking Instructor', img: 'assets/people/akshay.png', bio: 'Multi-disciplinary waterman skilled in kayaking, surfing, and SUP, with a strong record in rescue and safety.' },
-            { cat: 'staff', aspectRatio: 'aspect-[3/4]', name: 'Shahla Sherin', role: 'Guest Relations & Front Office Executive', img: 'assets/people/shehla.png', bio: 'Multi-disciplinary waterman skilled in kayaking, surfing, and SUP, with a strong record in rescue and safety.' },
-            { cat: 'staff', aspectRatio: 'aspect-[3/4]', name: 'Roshan A', role: 'Captain of The Queen of Chaliyar', img: 'assets/people/roshan.png', bio: 'Multi-disciplinary waterman skilled in kayaking, surfing, and SUP, with a strong record in rescue and safety.' },
+            { cat: 'staff', aspectRatio: 'aspect-[3/4]', name: 'Shahla Sherin', role: 'Guest Relations & Front Office Executive', img: 'assets/people/shehla.png', bio: 'Delivers a welcoming guest experience by managing front office operations, assisting with inquiries, and ensuring smooth, professional service aligned with Jellyfish’s standards.' },
+            { cat: 'staff', aspectRatio: 'aspect-[3/4]', name: 'Roshan A', role: 'Captain of The Queen of Chaliyar', img: 'assets/people/roshan.png', bio: 'Captain skilled in cruising, with a strong record in smooth and safe crusies.' },
+            { cat: 'staff', aspectRatio: 'aspect-[3/4]', name: 'Uday Sarkar', role: 'Café All-Rounder', img: 'assets/people/uday.webp', bio: 'Dedicated Café All-Rounder at Cafe Calamari, committed to delivering quality service and maintaining high standards in every guest experience.' },
+            { cat: 'staff', aspectRatio: 'aspect-[3/4]', name: 'Surajit Das', role: 'Café Assistant', img: 'assets/people/surajit.webp', bio: 'Dedicated Cafe assistant at Cafe Calamari, committed to delivering quality service and maintaining high standards in every guest experience.' },
     
             // Housekeeping
             { cat: 'housekeeping', aspectRatio: 'aspect-[3/4]', name: 'Jisha V', role: 'Housekeeping', img: 'assets/people/jisha.jpeg', bio: 'Ensures cleanliness, comfort, and guest care across all Jellyfish facilities.' },
@@ -617,6 +624,7 @@
 
         function renderTeam() {
             const categories = {
+                'founder': document.getElementById('founder-grid'),
                 'leadership': document.getElementById('leadership-grid'),
                 'nextgen': document.getElementById('nextgen-grid'),
                 'staff': document.getElementById('staff-grid'),
