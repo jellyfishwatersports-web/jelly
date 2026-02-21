@@ -43,18 +43,166 @@
 </head>
 <body class="bg-brand-cream text-brand-black relative">
 
-    <nav id="navbar" class="fixed top-0 inset-x-0 z-50 py-6 transition-transform duration-300">
-        <div class="max-w-[95rem] mx-auto px-6">
-            <div class="glass-panel rounded-full px-8 py-4 flex justify-between items-center shadow-lg">
-                <a href="index.html" class="block w-24 relative shrink-0">
-                    <img src="logo.png" alt="Jellyfish Logo" class="w-full h-auto object-contain">
+    <!-- NAVBAR -->
+<nav id="navbar"
+     class="fixed top-0 left-0 w-full z-50 transition-all duration-500 py-6">
+
+    <!-- CONTAINER (THIS FIXES ALIGNMENT) -->
+    <div class="max-w-[95rem] mx-auto px-4 lg:px-6">
+
+        <!-- GLASS PANEL -->
+        <div class="glass-panel rounded-full px-6 md:px-8 py-3 md:py-4 
+                    flex justify-between items-center shadow-glass 
+                    transition-all duration-500 hover:shadow-lg">
+
+            <!-- LOGO -->
+            <a href="index.html"
+               class="block w-20 md:w-32 relative shrink-0"
+               aria-label="Jellyfish Watersports Home">
+
+                <img src="logo.png"
+                     alt="Jellyfish Watersports Logo"
+                     width="128"
+                     height="64"
+                     class="w-full h-auto object-contain">
+            </a>
+
+            <!-- DESKTOP NAV -->
+            <div class="hidden lg:flex items-center gap-6 xl:gap-8">
+
+                <div class="flex items-center gap-5 xl:gap-7 
+                            text-[0.8rem] font-medium tracking-wide 
+                            uppercase whitespace-nowrap">
+
+                    <a href="index.html"
+                       class="hover:text-brand-orange transition-colors">
+                       Who are we
+                    </a>
+
+                    <a href="blog.html"
+                       class="hover:text-brand-orange transition-colors">
+                       Blog
+                    </a>
+
+                    <a href="exp.html"
+                       class="hover:text-brand-orange transition-colors">
+                       Book an Experience
+                    </a>
+
+                    <a href="explearn.html"
+                       class="hover:text-brand-orange transition-colors">
+                       Experiential Learning
+                    </a>
+
+                    <a href="food.html"
+                       class="hover:text-brand-orange transition-colors">
+                       Food and Stay
+                    </a>
+
+                    <a href="yacht.html"
+                       class="hover:text-brand-orange transition-colors">
+                       Yacht Club
+                    </a>
+
+                    <a href="shop.html"
+                       class="hover:text-brand-orange transition-colors">
+                       Shop
+                    </a>
+
+                </div>
+
+                <!-- PHONE -->
+                <a href="tel:+919288004942"
+                   class="flex items-center gap-2 text-brand-black 
+                          hover:text-brand-orange transition-colors 
+                          font-bold text-[0.85rem] tracking-wide">
+
+                    <i class="ph-fill ph-phone-call text-brand-orange text-xl"></i>
+
+                    <span class="hidden xl:inline">
+                        +91 9288 00 49 42
+                    </span>
+
                 </a>
-                <a href="index.html" class="hidden md:flex items-center gap-2 text-xs font-bold uppercase tracking-widest hover:text-brand-orange transition-colors">
-                    <i class="ph-bold ph-arrow-left"></i> Back to Home
+
+                <!-- CTA BUTTON -->
+                <a href="exp.html"
+                   class="group relative px-6 py-2.5 rounded-full 
+                          bg-brand-black text-white text-[0.8rem] 
+                          font-bold tracking-wider overflow-hidden 
+                          transition-all hover:scale-105">
+
+                    <div class="absolute inset-0 bg-brand-orange 
+                                translate-y-full group-hover:translate-y-0 
+                                transition-transform duration-300">
+                    </div>
+
+                    <span class="relative z-10">
+                        Book Now
+                    </span>
+
                 </a>
+
             </div>
+
+            <!-- MOBILE BUTTON -->
+            <button id="mobile-menu-btn"
+                    class="lg:hidden p-2 -mr-2 touch-target 
+                           text-brand-black hover:text-brand-orange transition"
+                    aria-label="Open Menu">
+
+                <i class="ph ph-list text-2xl"></i>
+
+            </button>
+
         </div>
-    </nav>
+    </div>
+</nav>
+
+
+<!-- MOBILE MENU -->
+<div id="mobile-menu"
+     class="fixed inset-0 z-[60] bg-brand-cream 
+            transform translate-x-full transition-transform duration-500
+            lg:hidden flex flex-col justify-center items-center
+            space-y-6 text-center">
+
+    <button id="close-mobile-menu"
+            class="absolute top-6 right-6 p-4 text-3xl">
+
+        <i class="ph ph-x"></i>
+
+    </button>
+
+    <a href="index.html" class="mobile-link font-serif text-[1.5rem] py-2">
+        Who are we
+    </a>
+
+    <a href="blog.html" class="mobile-link font-serif text-[1.5rem] py-2">
+        Blog
+    </a>
+
+    <a href="exp.html" class="mobile-link font-serif text-[1.5rem] py-2">
+        Book an Experience
+    </a>
+
+    <a href="explearn.html" class="mobile-link font-serif text-[1.5rem] py-2">
+        Experiential Learning
+    </a>
+
+    <a href="food.html" class="mobile-link font-serif text-[1.5rem] py-2">
+        Food and Stay
+    </a>
+
+    <a href="yacht.html" class="mobile-link font-serif text-[1.5rem] py-2">
+        Yacht Club
+    </a>
+
+    <a href="shop.html" class="mobile-link font-serif text-[1.5rem] py-2">
+        Shop
+    </a>
+
+</div>
 
     <header class="pt-40 pb-20 px-6 text-center">
         <span class="text-brand-orange font-bold tracking-[0.2em] uppercase text-xs mb-4 block">Legal & Compliance</span>
