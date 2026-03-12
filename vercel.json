@@ -1,0 +1,35 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/", "destination": "/index.html" },
+    { "source": "/exp", "destination": "/exp.html" },
+    { "source": "/blog", "destination": "/blog.html" },
+    { "source": "/food", "destination": "/food.html" },
+    { "source": "/yacht", "destination": "/yacht.html" },
+    { "source": "/shop", "destination": "/shop.html" },
+    { "source": "/cafe", "destination": "/cafe.html" },
+    { "source": "/chaliyar", "destination": "/chaliyar.html" },
+    { "source": "/garbage", "destination": "/garbage.html" },
+    { "source": "/explearn", "destination": "/explearn.html" },
+    { "source": "/acad", "destination": "/acad.html" },
+    { "source": "/privacy", "destination": "/privacy.html" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "X-XSS-Protection", "value": "1; mode=block" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+      ]
+    },
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    }
+  ]
+}
